@@ -27,37 +27,80 @@ CURRENCY_PATTERNS = [
     (r'AUD', 'AUD'), (r'US\$|USD', 'USD'), (r'\$', 'USD'),
 ]
 
-# Keyword vocabulary. A keyword is attached ONLY if its pattern appears in the
-# posting's own title or department text. This is text matching on real text,
-# not an inference about the position.
-KEYWORDS = {
+# ----------------------------------------------------------------------------
+# KEYWORD VOCABULARY
+#
+# Bug fixed 2026-07-28: the previous version matched bare words, so any posting
+# mentioning machine learning was labelled "Machine Learning for Structures",
+# "structural enzymology" and "structural geology" were read as structural
+# engineering, and "soil microbiology" as soil-structure interaction. Seven
+# unrelated postings carried structural-engineering labels as a result.
+#
+# Fix: structural-engineering keywords are gated. A posting only becomes
+# eligible for them if it shows STRUCT_CONTEXT and does not trip FALSE_FRIEND.
+# ----------------------------------------------------------------------------
+
+# Words that are only structural engineering in a built-environment / solid
+# mechanics setting. At least one must be present before any STRUCT_KEYWORD applies.
+STRUCT_CONTEXT = re.compile(
+    r"structural engineering|civil engineering|earthquake engineer|seismic design|"
+    r"steel structure|concrete structure|reinforced concrete|masonry|timber structure|"
+    r"geotechnic|foundation engineer|soil.structure|bridge engineer|"
+    r"structural dynamic|structural mechanic|structural analys|structural design|"
+    r"solid mechanic|computational mechanic|finite element|fracture mechanic|"
+    r"built environment|infrastructure|construction|dam\b|tunnel|breakwater|"
+    r"land reclamation|highway|railway engineer|cement|"
+    r"impact engineering|structural manufacturing|resilient infrastructure", re.I)
+
+# If any of these appear, the posting is NOT structural engineering no matter
+# what other words it contains. These are the exact collisions that caused the bug.
+FALSE_FRIEND = re.compile(
+    r"structural biolog|structural enzymolog|protein structure|crystallograph|cryo.em|"
+    r"structural geolog|soil microbiolog|soil biolog|soil ecolog|soil microbiome|"
+    r"food structure|structural equation|structural racism|structural inequalit|"
+    r"structural causal|microstructur(?!.*(steel|weld|concrete|alloy|fracture))", re.I)
+
+# Structural-engineering keywords. Only applied when the gate above passes.
+STRUCT_KEYWORDS = {
     "Earthquake Engineering": r"earthquake|seismic",
-    "Structural Optimization": r"structural optimi|topology optimi|design optimi",
+    "Structural Optimization": r"structural optimi|topology optimi|design optimi|shape optimi",
     "Steel Structures": r"steel",
-    "Soil-Structure Interaction": r"soil.structure|geotechnic",
-    "Structural Dynamics": r"structural dynamic|vibration|dynamics of structure",
-    "Computational Mechanics": r"computational mechanic|computational engineering|solid mechanic",
+    "Soil-Structure Interaction": r"soil.structure|geotechnic|foundation",
+    "Structural Dynamics": r"structural dynamic|vibration|resonance|damper|dynamics of structure",
+    "Computational Mechanics": r"computational mechanic|computational engineering|solid mechanic|numerical simulation",
     "Finite Element Analysis": r"finite element|\bfem\b|\bfea\b",
-    "Concrete Structures": r"concrete",
+    "Concrete Structures": r"concrete|cement",
     "Composite Structures": r"composite",
-    "Structural Health Monitoring": r"health monitoring|condition monitoring|structural monitoring",
+    "Structural Health Monitoring": r"health monitoring|condition monitoring|structural monitoring|digital twin",
     "Bridge Engineering": r"bridge",
-    "Wind Engineering": r"wind",
+    "Timber & Mass Timber Structures": r"timber|wooden|veneer",
     "Fatigue & Fracture": r"fatigue|fracture|crack",
-    "Machine Learning for Structures": r"machine learning|deep learning|neural network|artificial intelligence|\bai\b|\bml\b",
-    "Metaheuristic Optimization": r"metaheuristic|genetic algorithm|optimi[sz]ation",
-    "Materials Engineering": r"material|alloy|polymer|nanolith|metallurg",
-    "Manufacturing": r"manufactur|additive|3d print|welding",
+    "Blast & Impact Engineering": r"impact engineering|blast|crashworth",
+    "Machine Learning for Structures": r"machine learning|deep learning|neural network|artificial intelligence|\bai\b",
+    "Metaheuristic Optimization": r"metaheuristic|genetic algorithm|particle swarm|evolutionary algorithm",
+    "Resilience & Risk Assessment": r"resilien|risk assessment|hazard",
+    "Geotechnical Engineering": r"geotechnic|land reclamation|soil mechanic|excavation",
+}
+
+# General discipline labels. Applied to everything, gate or no gate, so that
+# non-structural postings get an accurate label instead of a misleading one.
+GENERAL_KEYWORDS = {
+    "Materials Engineering": r"material|alloy|polymer|metallurg|microstructur",
+    "Manufacturing": r"manufactur|additive|3d print|welding|solidification",
     "Robotics": r"robot|autonomous vehicle|manipulation",
     "Quantum": r"quantum",
-    "Energy Systems": r"energy|hydrogen|battery|photovolta|hydropower|solar",
-    "Water & Hydrology": r"water|hydrolog|hydroclimat|catchment",
-    "Life Sciences": r"biolog|genom|protein|cell|neuro|immunolog|microbio|cancer|ribosome|epigenom|physiolog|enzym|bacteri|plant|agri|veterinar|marine|algae|dialysis|medicine|clinical|dental|health",
-    "Computing & Data": r"computing|computer science|data science|software|high.performance|comput(er|ational) vision|language model|informatic|cyber|wireless|telecommunication|network|iot|cryptograph",
+    "Energy Systems": r"energy|hydrogen|battery|photovolta|hydropower|solar|turbine",
+    "Water & Hydrology": r"hydrolog|hydroclimat|catchment|water resource",
+    "Life Sciences": r"biolog|genom|protein|cell|neuro|immunolog|microbio|cancer|ribosome|"
+                     r"epigenom|physiolog|enzym|bacteri|plant|agri|veterinar|marine|algae|"
+                     r"dialysis|medicine|clinical|dental|health|zoolog|biodiversity",
+    "Computing & Data": r"computing|computer science|data science|software|high.performance|"
+                        r"comput(er|ational) vision|language model|informatic|cyber|wireless|"
+                        r"telecommunication|network|\biot\b|cryptograph",
     "Chemistry": r"chemistr|chemical|catalys|electrocatalys|proteomic|spectrosc",
     "Physics": r"physic|photon|laser|optic|plasma|semiconductor|x-ray|metrolog|isotope|synchrotron|neutron",
-    "Earth & Environment": r"geolog|environment|climate|snow|soil|urban|earth observation|reservoir|phosphate|mining",
-    "Social Sciences & Humanities": r"sociolog|demograph|anthropolog|philosoph|law|legal|humanities|archaeolog|border studies|economics|history",
+    "Earth & Environment": r"geolog|environment|climate|snow|urban|earth observation|reservoir|phosphate|mining|geospatial",
+    "Social Sciences & Humanities": r"sociolog|demograph|anthropolog|philosoph|\blaw\b|legal|humanities|archaeolog|border studies|economics|history",
 }
 
 def detect_currency(text):
@@ -91,13 +134,48 @@ def parse_amount(text, currency):
         return round(low / 12), "figure above 20k treated as annual, divided by 12"
     return round(low), "figure as stated, basis not specified on the page"
 
-def keywords_for(*texts):
-    blob = " ".join(t for t in texts if t).lower()
-    out = []
-    for k, pat in KEYWORDS.items():
-        if re.search(pat, blob):
-            out.append(k)
-    return out
+def classify(*texts):
+    """Return (keywords, fieldRelevance, reason).
+
+    fieldRelevance is one of:
+      core      — clearly the target discipline (structural / civil / earthquake / solid mechanics)
+      adjacent  — engineering a structural researcher could plausibly apply to
+      unrelated — a different discipline entirely
+
+    The gate is what stops 'structural biology' and 'soil microbiology' being
+    read as structural engineering.
+    """
+    blob = " ".join(t for t in texts if t)
+    low = blob.lower()
+
+    false_friend = bool(FALSE_FRIEND.search(blob))
+    has_context = bool(STRUCT_CONTEXT.search(blob))
+
+    kws, relevance, reason = [], "unrelated", ""
+
+    if false_friend:
+        reason = "a structural/soil word appears, but in another discipline's sense"
+    elif has_context:
+        for k, pat in STRUCT_KEYWORDS.items():
+            if re.search(pat, low):
+                kws.append(k)
+        relevance = "core" if kws else "adjacent"
+        reason = "built-environment or solid-mechanics context present"
+
+    general = [k for k, pat in GENERAL_KEYWORDS.items() if re.search(pat, low)]
+
+    # Adjacent engineering that isn't built-environment but shares the methods.
+    if relevance == "unrelated" and not false_friend:
+        if re.search(r"mechanical engineering|materials engineering|aerospace|"
+                     r"computational|numerical|simulation|modelling|modeling|"
+                     r"engineering science|applied mechanic", low):
+            relevance = "adjacent"
+            reason = "engineering methods overlap, but not built-environment"
+
+    for g in general:
+        if g not in kws:
+            kws.append(g)
+    return kws, relevance, reason
 
 def status_for(deadline):
     if not deadline:
@@ -108,6 +186,17 @@ def status_for(deadline):
 def main():
     raw = json.load(open(RAW_PATH))
     raw.setdefault("fetchedAt", TODAY)
+
+    # Optional extra ingest files merged in (e.g. a field-targeted pass).
+    # Later files win on source metadata; records are deduped by URL below.
+    for extra in sys.argv[4:]:
+        ex = json.load(open(extra))
+        by_id = {s["id"]: s for s in raw["sources"]}
+        for s in ex.get("sources", []):
+            by_id[s["id"]] = s
+        raw["sources"] = list(by_id.values())
+        raw["records"] = ex.get("records", []) + raw["records"]
+
     src_by_id = {s["id"]: s for s in raw["sources"]}
     ok_sources = {s["id"] for s in raw["sources"] if s["status"] == "OK"}
 
@@ -130,9 +219,17 @@ def main():
         amt, basis = parse_amount(r.get("sal"), cur)
         if amt:
             computed.append({"field": "stipendMonthly", "how": "parsed from the salary text shown on the page: " + basis})
-        kws = keywords_for(r.get("t"), r.get("dp"))
+        kws, relevance, reason = classify(r.get("t"), r.get("dp"))
         if kws:
-            computed.append({"field": "researchKeywords", "how": "matched against words present in the posting's own title/department text"})
+            computed.append({"field": "researchKeywords", "how": "matched against words present in the posting's own title/department text, gated so that structural-engineering labels require a built-environment or solid-mechanics context"})
+        # An explicit fieldConfidence from the ingest (a human-reviewed judgement
+        # made while reading the actual posting) overrides the automatic gate.
+        fc = r.get("fc")
+        if fc:
+            relevance = {"high": "core", "medium": "adjacent", "low": "adjacent"}.get(fc, relevance)
+            reason = "classified while reading the posting itself (confidence: %s)" % fc
+        if relevance != "unrelated":
+            computed.append({"field": "fieldRelevance", "how": reason})
 
         out.append({
             "id": "live_%s_%04d" % (sid, i),
@@ -156,6 +253,7 @@ def main():
             "description": None,
             "researchArea": kws[0] if kws else None,
             "researchKeywords": kws,
+            "fieldRelevance": relevance,
             "durationMonths": None,
             "startDate": None,
             "deadline": r.get("dl"),
@@ -206,6 +304,10 @@ def main():
             "withStipend": sum(1 for o in out if o["stipendMonthly"]),
             "countries": len({o["country"] for o in out if o["country"]}),
             "institutions": len({o["university"] for o in out if o["university"]}),
+            "core": sum(1 for o in out if o["fieldRelevance"] == "core"),
+            "adjacent": sum(1 for o in out if o["fieldRelevance"] == "adjacent"),
+            "unrelated": sum(1 for o in out if o["fieldRelevance"] == "unrelated"),
+            "coreOpen": sum(1 for o in out if o["fieldRelevance"] == "core" and o["status"] != "Closed"),
         },
         "rejected": rejected,
         "records": out,
