@@ -1,50 +1,485 @@
 {
-"sources": [
- {"id":"jobsacuk","name":"jobs.ac.uk","status":"OK","listUrls":["https://www.jobs.ac.uk/search/?keywords=structural+engineering&sort=re","https://www.jobs.ac.uk/search/?keywords=civil+engineering&sort=re","https://www.jobs.ac.uk/search/?keywords=finite+element&sort=re","https://www.jobs.ac.uk/search/?keywords=structural+dynamics&sort=re","https://www.jobs.ac.uk/search/?keywords=postdoctoral&sort=re&s=1"],"note":"Now queried by field, not just the generic word 'postdoctoral'. There is NO working civil-engineering category URL — /categories/civil-engineering-jobs/1 returns 404; use keyword search. The keyword 'earthquake engineering' returned literally 0 jobs; 'seismic' returned 2, both geoscience; 'geotechnical' returned 5, none postdoc-level. Search pages omit the year on dates, so years are marked derived."},
- {"id":"academicpositions","name":"AcademicPositions.com","status":"OK","listUrls":["https://academicpositions.com/jobs/position/post-doc/field/engineering","https://academicpositions.com/jobs/position/post-doc"],"note":"The engineering feed (188 postdocs, 7 pages) is now polled and keyword-filtered. There is NO civil-engineering field slug — /field/civil-engineering silently renders an empty directory shell rather than 404ing, which is a trap for a scraper: detect it by the absence of /ad/ links, not by HTTP status. Individual ad pages intermittently return 403; where that happened, fields were taken from the listing page only and the rest left null."},
- {"id":"the","name":"THE unijobs","status":"OK","listUrls":["https://www.timeshighereducation.com/unijobs/listings/civil-engineering/","https://www.timeshighereducation.com/unijobs/listings/engineering-and-technology/","https://www.timeshighereducation.com/unijobs/listings/postdoctoral/"],"note":"A dedicated /listings/civil-engineering/ route exists (39 hits) and is now polled — this was missed on the first build. Expired ads stay in the listings, so status is computed from the deadline rather than assumed. Listing cards often omit salary and closing date; those come from the individual page."},
- {"id":"researchersjob","name":"researchersjob.com","status":"OK","listUrls":["https://researchersjob.com/category/post-doc-fellowship/postdoc-india/","https://researchersjob.com/?s=structural+engineering","https://researchersjob.com/?s=civil+engineering","https://researchersjob.com/?s=earthquake","https://researchersjob.com/?s=geotechnical"],"note":"Now searched by field. The ?s= search works for every term tried. The site has NO engineering category — navigation is by position type only. Result: ZERO Indian structural/civil/earthquake postdocs currently listed. Its 'structural' hits are all structural biology or structural causal modelling; its civil hits are faculty posts or foreign PhD scholarships."},
- {"id":"indiabioscience","name":"IndiaBioscience","status":"OK","listUrls":["https://indiabioscience.org/jobs","https://indiabioscience.org/feed"],"note":"Life sciences only — will never carry structural engineering. Retained for completeness. Deadlines render without a year, so deadline is left null."},
- {"id":"iitd","name":"IIT Delhi","status":"OK","listUrls":["https://home.iitd.ac.in/jobs-iitd/index.php"],"note":"Institute Post Doctoral Fellow scheme explicitly names Civil Engineering and Applied Mechanics among eligible departments. Links to PDF advertisements; no HTML permalink exists."},
- {"id":"iitk","name":"IIT Kanpur — Civil Engineering","status":"OK","listUrls":["https://iitk.ac.in/ce/post-doc-positions"],"note":"Departmental postdoc page, added specifically for this field. States applications are accepted year-round with no fixed deadline, so deadline and stipend are null."},
- {"id":"iitr","name":"IIT Roorkee","status":"OK","listUrls":["https://iitr.ac.in/Careers/Other%20job%20openings/Post%20Doctoral%20Fellowship%20Position.html"],"note":"Added for this field. Its live project-jobs board has two Civil Engineering openings but both are Project Associate, below postdoc level, so they are excluded."},
- {"id":"jrecin","name":"JREC-IN Portal (Japan)","status":"QUARANTINED","listUrls":["https://jrecin.jst.go.jp/seek/SeekJorSearch"],"note":"QUARANTINED BY CONTROL PROBE. Requests for three deliberately invalid job IDs each returned complete, plausible postings instead of an error; two were byte-identical. The site executes search via POST with server-side session state and renders rows client-side, so a plain GET returns no listings and the fetch layer confabulated. Zero records accepted. Needs a JS-capable browser fetch."},
- {"id":"ajo","name":"Academic Jobs Online","status":"FAILED","listUrls":["https://academicjobsonline.org/ajo/jobs"],"note":"Rows were readable with [POSTDOC] tags and deadlines, but no per-row hyperlink survived the fetch. Records without an individual posting URL are rejected by policy, so all were dropped. Every visible row was also long expired."},
- {"id":"irdiitd","name":"IIT Delhi IRD vacancies board","status":"REJECTED","listUrls":["https://ird.iitd.ac.in/vacancies"],"note":"DEAD DATA. Every row carries a 2017 advertisement number (IITD/IRD/117-125/2017) with deadlines in July-August 2017. Also serves a TLS certificate that does not match its own hostname. Nothing taken from it."},
- {"id":"indiaeng","name":"Indian engineering-postdoc aggregators","status":"FAILED","listUrls":["https://www.facultyplus.com/category/research-jobs/post-doctoral-fellow/","https://facultytick.com/tag/civil-engineering/"],"note":"No Indian aggregator covers engineering postdocs. Four candidates were fetched and checked. FacultyPlus is the closest — real research-associate and postdoc index pages including engineering institutions — but across ~40 current listings not one was civil/structural/earthquake, and its civil-engineering page is entirely teaching-faculty ads from private colleges. FacultyTick's civil tag holds only administrative posts. ScholarshipDB's structural-engineering-in-India page returns Springer Nature editorial jobs and is worthless. The realistic route for this field in India is per-institution project-position pages, not aggregators."},
- {"id":"euraxess","name":"EURAXESS","status":"BLOCKED","listUrls":["https://euraxess.ec.europa.eu/jobs/search"],"note":"robots.txt ends with 'Disallow: /jobs/*' and 'Disallow: /*?', closing the search and every detail page plus all pagination. Also disallows */api/*, */rest/*, /*?_format=json. Not polled. This is the single biggest coverage loss for European structural engineering — the only sanctioned integration is institutions pushing XML in, via support@euraxess.eu."},
- {"id":"nature","name":"Nature Careers","status":"BLOCKED","listUrls":["https://www.nature.com/naturecareers/jobs/search"],"note":"robots.txt disallows /naturecareers/jobs/search and /naturecareers/jobsrss/, and issues 'Disallow: /' for User-Agent anthropic-ai and ClaudeBot by name. Not polled."},
- {"id":"findapostdoc","name":"FindAPostDoc","status":"REJECTED","listUrls":["https://www.findapostdoc.com/"],"note":"403 on robots.txt and every listing path. The one route that responds served postings with 2017 deadlines. Rejected as a stale-data hazard."},
- {"id":"higheredjobs","name":"HigherEdJobs","status":"BLOCKED","listUrls":["https://www.higheredjobs.com/rss/"],"note":"Incapsula WAF challenge on both the RSS path and search. Not pollable without dedicated anti-bot handling."},
- {"id":"indiagov","name":"ANRF / CSIR / DST (India, government)","status":"FAILED","listUrls":["https://anrfonline.in/ANRF/HomePage","https://csirhrdg.res.in/","https://dst.gov.in/whatsnew/announcement"],"note":"ANRF renders calls into empty client-side containers. CSIR-HRDG's front door is a language-selection splash and its RA page is a static guidelines document with no announcement stream. DST's announcement list carries no dates at all. Payloads are PDFs. No per-position stream exists to ingest."}
-],
-"records": [
-{"s":"jobsacuk","t":"Research Assistant/Associate in Sustainable and Resilient Infrastructure (Fixed Term)","u":"University of Cambridge","dp":"Department of Engineering, West Cambridge","c":"United Kingdom","ct":"Cambridge","sal":"£33,002 to £46,049 per annum","dl":"2026-07-31","pd":"2026-07-10","url":"https://www.jobs.ac.uk/job/DSF414/research-assistant-associate-in-sustainable-and-resilient-infrastructure-fixed-term","dv":["deadline.year","postedDate.year"],"fc":"high"},
-{"s":"jobsacuk","t":"Postdoctoral Research Assistant in Impact Engineering Composite Experimenting and Modelling for Aerospace Applications","u":"University of Oxford","dp":"Department of Engineering Science","c":"United Kingdom","ct":"Oxford","sal":"£39,424 to £47,779 per annum (Research Grade 7)","dl":"2026-08-13","pd":"2026-07-20","url":"https://www.jobs.ac.uk/job/DSH760/postdoctoral-research-assistant-in-impact-engineering-composite-experimenting-and-modelling-for-aerospace-applications","dv":["deadline.year","postedDate.year"],"fc":"medium"},
-{"s":"jobsacuk","t":"Research Fellow","u":"University of Sussex","dp":"Engineering and Informatics, Engineering and Design","c":"United Kingdom","ct":"Falmer","sal":"£38,784 to £46,049 per annum, pro rata if part time, Grade 7","dl":"2026-07-30","pd":"2026-07-17","url":"https://www.jobs.ac.uk/job/DSH210/research-fellow","dv":["deadline.year","postedDate.year"],"fc":"medium","warn":"Bare title, but the advert describes friction dampers, nonlinear vibration, resonance, FEA and Python-ANSYS interfaces on complex structures — i.e. structural dynamics. Strongest technical fit found on jobs.ac.uk despite the generic title."},
-{"s":"jobsacuk","t":"UCD Post-doctoral Research Fellow Level 1","u":"University College Dublin","dp":"UCD School of Mechanical and Materials Engineering","c":"Ireland","ct":"Dublin","sal":"€47,273 per annum","dl":"2026-08-07","pd":"2026-07-06","url":"https://www.jobs.ac.uk/job/DSC920/ucd-post-doctoral-research-fellow-level-1","dv":["deadline.year","postedDate.year"],"fc":"medium"},
-{"s":"jobsacuk","t":"Research Fellow in Geospatial Mapping and Analysis","u":"University of Southampton","dp":"Civil, Maritime & Environmental Engineering","c":"United Kingdom","ct":"Southampton","sal":"£36,636 to £41,064 per annum","dl":"2026-08-17","pd":"2026-07-20","url":"https://www.jobs.ac.uk/job/DSH942/research-fellow-in-geospatial-mapping-and-analysis","dv":["deadline.year","postedDate.year"],"fc":"low"},
-{"s":"academicpositions","t":"Postdoc in Finite Element Modelling and Testing of Wooden Veneer Structures","u":"Chalmers University of Technology","dp":"Division of Structural Engineering, Department of Architecture and Civil Engineering","c":"Sweden","ct":"Gothenburg","sal":null,"dl":"2026-08-16","pd":null,"url":"https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-finite-element-modelling-and-testing-of-wooden-veneer-structures/250532","dv":[],"fc":"high"},
-{"s":"academicpositions","t":"Postdoc in AI-driven road network performance prediction and maintenance","u":"KTH Royal Institute of Technology","dp":"Division of Highway and Railway Engineering","c":"Sweden","ct":"Stockholm","sal":null,"dl":"2026-08-20","pd":null,"url":"https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-ai-driven-road-network-performance-prediction-and-maintenance/249731","dv":[],"fc":"high"},
-{"s":"academicpositions","t":"Postdoc in Experimental and Computational Fracture Mechanics","u":"KTH Royal Institute of Technology","dp":null,"c":"Sweden","ct":"Stockholm","sal":null,"dl":"2026-08-24","pd":null,"url":"https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-experimental-and-computational-fracture-mechanics/250765","dv":[],"fc":"medium"},
-{"s":"academicpositions","t":"Postdoc in microstructure-informed modelling of fracture mechanics","u":"KTH Royal Institute of Technology","dp":null,"c":"Sweden","ct":"Stockholm","sal":null,"dl":"2026-08-24","pd":null,"url":"https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-microstructure-informed-modelling-of-fracture-mechanics/250833","dv":[],"fc":"medium"},
-{"s":"academicpositions","t":"Postdoc (3 years) on numerical simulation of composite hydrogen tanks","u":"Ghent University","dp":null,"c":"Belgium","ct":"Ghent","sal":null,"dl":null,"pd":null,"url":"https://academicpositions.com/ad/ghent-university/2026/postdoc-3-years-on-numerical-simulation-of-composite-hydrogen-tanks/248127","dv":[],"fc":"medium","warn":"The individual ad page returned HTTP 403. Title, employer and location come from the listing page only; deadline and salary were not shown there and are left null."},
-{"s":"academicpositions","t":"Postdoc (4 years) on simulation and optimization of snap fit joints","u":"Ghent University","dp":null,"c":"Belgium","ct":"Ghent","sal":null,"dl":null,"pd":null,"url":"https://academicpositions.com/ad/ghent-university/2026/postdoc-4-years-on-simulation-and-optimization-of-snap-fit-joints/248130","dv":[],"fc":"medium","warn":"The individual ad page returned HTTP 403. Fields come from the listing page only."},
-{"s":"the","t":"Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher","u":"NEW YORK UNIVERSITY ABU DHABI","dp":"Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES) and Division of Engineering","c":"UAE","ct":"Abu Dhabi","sal":"Competitive","dl":"2026-06-20","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411312/post-doctoral-associate-in-the-center-for-shores-mostafa-mobasher/","dv":[],"fc":"high"},
-{"s":"the","t":"Post-Doctoral Associate in the Division of Engineering (Civil Engineering) - Dr. Mostafa Mobasher","u":"NEW YORK UNIVERSITY ABU DHABI","dp":"Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES) and the Division of Engineering","c":"UAE","ct":"Abu Dhabi","sal":null,"dl":"2026-06-11","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/410842/post-doctoral-associate-in-the-division-of-engineering-civil-engineering-dr-mostafa-mobasher/","dv":[],"fc":"high"},
-{"s":"the","t":"Post-Doctoral Associate, Center for (SHORES)","u":"NEW YORK UNIVERSITY ABU DHABI","dp":"Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES) / Division of Engineering (Civil & Urban Engineering)","c":"UAE","ct":"Abu Dhabi","sal":"Competitive","dl":"2026-06-11","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/410839/post-doctoral-associate-center-for-shores-/","dv":[],"fc":"high"},
-{"s":"the","t":"Research Fellow / Engineer (Steel Structures and AI) - ZLL1","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":null,"c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-17","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411067/research-fellow-engineer-steel-structures-and-ai-zll1/","dv":[],"fc":"high"},
-{"s":"the","t":"Research Fellow / Research Engineer (AI for Civil Engineering) - MM1","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":null,"c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-17","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411070/research-fellow-research-engineer-ai-for-civil-engineering-mm1/","dv":[],"fc":"high"},
-{"s":"the","t":"ARC Grant-Funded Researcher (A)","u":"Adelaide University","dp":"School of Civil Engineering and Construction","c":"Australia","ct":"Mawson Lakes","sal":"$102,024 - $109,307 per annum (plus 17% superannuation)","dl":"2026-08-07","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/413208/arc-grant-funded-researcher-a-/","dv":[],"fc":"high","warn":"Level A at Australian universities is the postdoctoral grade."},
-{"s":"the","t":"Research Fellow / Engineer (Cement and Concrete) - ZMS2","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":"Engineering","c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-08-01","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/412928/research-fellow-engineer-cement-and-concrete-zms2/","dv":[],"fc":"high"},
-{"s":"the","t":"Research Fellow / Engineer (Cement and Concrete) - ZMS1","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":null,"c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-13","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/410958/research-fellow-engineer-cement-and-concrete-zms1/","dv":[],"fc":"high"},
-{"s":"the","t":"Senior / Research Fellow (Land Reclamation) - HJH3","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":"Engineering Division","c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-08-01","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/412930/senior-research-fellow-land-reclamation-hjh3/","dv":[],"fc":"medium"},
-{"s":"the","t":"Research Fellow (in AI-enabled cloud analytics and BIM-based Digital Twin systems) - NTQ1","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":null,"c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-20","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411309/research-fellow-in-ai-enabled-cloud-analytics-and-bim-based-digital-twin-systems-ntq1/","dv":[],"fc":"medium"},
-{"s":"the","t":"Research Fellow (Sound and Vibration) - ATCH2","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":"Engineering (Cluster)","c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-20","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411308/research-fellow-sound-and-vibration-atch2/","dv":[],"fc":"medium"},
-{"s":"the","t":"Research Engineer / Fellow (Floating Breakwater) - TZY11","u":"SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)","dp":null,"c":"Singapore","ct":"Singapore","sal":null,"dl":"2026-06-17","pd":null,"url":"https://www.timeshighereducation.com/unijobs/listing/411074/research-engineer-fellow-floating-breakwater-tzy11/","dv":[],"fc":"medium"},
-{"s":"iitk","t":"Post-Doc Positions","u":"IIT Kanpur","dp":"Department of Civil Engineering","c":"India","ct":"Kanpur","sal":null,"dl":null,"pd":null,"url":"https://iitk.ac.in/ce/post-doc-positions","dv":[],"fc":"high","warn":"The page states applications are accepted year-round with prompt consideration. No deadline or stipend is shown, so both are null."},
-{"s":"iitd","t":"ADVERTISEMENT FOR THE POSITION OF INSTITUTE POST DOCTORAL FELLOW","u":"Indian Institute of Technology Delhi","dp":"Civil Engineering; Applied Mechanics (among eligible departments)","c":"India","ct":"New Delhi","sal":"Fellowship of Rs. 80,000/- per month (Rs. 65,000 for candidates who have submitted their PhD thesis but not defended) plus House Rent Allowance","dl":"2026-04-15","pd":"2026-04-01","url":"https://home.iitd.ac.in/jobs-iitd/uploads/IPDF_Advertisement_Feb_26_2026-Final.pdf","dv":[],"fc":"high","warn":"Deadline of 15 April 2026 has already passed. Retained because the date was literally on the page and this scheme recurs in cycles — treat it as a scheme to watch, not an open call."},
-{"s":"iitr","t":"Advertisement for Post Doctoral Fellowship Position in International Centre of Excellence for DAMS","u":"IIT Roorkee","dp":"International Centre of Excellence for DAMS","c":"India","ct":"Roorkee","sal":null,"dl":null,"pd":null,"url":"https://iitr.ac.in/Careers/static/Post_Doctoral_Fellowship/ICED/2024/adv13092024.pdf","dv":[],"fc":"medium","warn":"Listed with a rolling deadline (until filled or project ends). Dam and civil-adjacent."},
-{"s":"researchersjob","t":"Institute Postdoctoral Fellow (IPDF)","u":"Indian Institute of Technology Guwahati","dp":"All Departments/Centres/Schools","c":"India","ct":"Guwahati","sal":"₹60,000/month + 18% HRA (1st year)","dl":"2026-04-14","pd":"2026-03-30","url":"https://researchersjob.com/institute-post-doctoral-fellowship-ipdf/","dv":[],"fc":"low","warn":"Deadline of 14 April 2026 has already passed. Open to all departments rather than civil specifically."}
-]
+ "sources": [
+  {
+   "id": "the",
+   "name": "THE unijobs",
+   "status": "OK",
+   "listUrls": [
+    "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/",
+    "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/2/",
+    "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/postdocs/",
+    "https://www.timeshighereducation.com/unijobs/listings/engineering-and-technology/",
+    "https://www.timeshighereducation.com/unijobs/listings/mechanical-and-aerospace-engineering/",
+    "https://www.timeshighereducation.com/unijobs/listings/other-research-related/2/"
+   ],
+   "note": "CONTROL PROBE DEGRADED THIS RUN. The mandated invalid-URL probe could not be executed: this run's fetch layer refuses any URL that has not been surfaced by a search engine or by an already-fetched page, so a deliberately fabricated URL cannot be submitted at all. Substituted a DIFFERENTIAL probe that targets the same failure mode (the JREC-IN signature of identical/plausible content returned for distinct requests): fetch several distinct real identifiers on the domain and require that the responses differ from one another and are internally consistent. THE PASSED: the civil-engineering (39 hits), engineering-and-technology (309), mechanical-and-aerospace (64) and other-research-related (144) slugs each returned distinct content, and distinct numeric ids for the same NYUAD job title returned distinct posted/closing dates with correct 'This job has expired' notices rather than byte-identical text. TRAPS CONFIRMED THIS RUN: (1) expired ads stay listed, so status must come from the individual page; (2) the listing cards' relative countdown text is UNRELIABLE - the Adelaide ARC card read '18 days ago' while its own posting page shows a closing date of 7 August 2026, still open. Countdown text was therefore never converted into a deadline; deadlines come only from individual pages. (3) Pagination on this route is a /2/ path suffix, not ?page=2. (4) The engineering-and-technology listing truncates its hrefs to the bare numeric id, and a bare-id URL could not be opened this run, so those rows were DROPPED rather than reconstructed - a real coverage loss of roughly 20 newer NYUAD/SIT/Lingnan postings visible but unreachable."
+  },
+  {
+   "id": "academicpositions",
+   "name": "AcademicPositions.com",
+   "status": "OK",
+   "listUrls": [
+    "https://academicpositions.com/jobs/position/post-doc/field/engineering",
+    "https://academicpositions.com/jobs/position/post-doc/field/engineering?page=2",
+    "https://academicpositions.com/jobs/position/post-doc"
+   ],
+   "note": "The engineering postdoc feed reports 125 jobs across 5 pages; pages 1-2 and the all-fields post-doc listing were read this run. Listing pages only - individual /ad/ pages were not opened, so department and posted date are never populated. TRAP CONFIRMED: the narrower slugs /field/structural-engineering and /field/engineering-civil-engineering both returned HTTP 403 this run even though search results show them carrying 3 and several postdocs respectively; nothing was taken from them. Substantive finding: across the ~85 engineering and all-fields postdocs read, NOT ONE is structural, civil, earthquake or geotechnical engineering - the feed is dominated by photonics, robotics, quantum, energy chemistry and Mohammed VI Polytechnic life-sciences ads. Many listed deadlines are already in the past, so this feed is not recency-sorted."
+  },
+  {
+   "id": "iitk",
+   "name": "IIT Kanpur - Civil Engineering",
+   "status": "OK",
+   "listUrls": [
+    "https://iitk.ac.in/ce/post-doc-positions"
+   ],
+   "note": "Departmental postdoc page. States applications are invited from persons holding a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are submitted through the Pingala portal. No dated vacancy, no deadline, no stipend figure and no location string are shown, so all are null. Country is null because the page displays no location string - it is deliberately NOT deduced from the institution name."
+  },
+  {
+   "id": "researchersjob",
+   "name": "researchersjob.com",
+   "status": "OK",
+   "listUrls": [
+    "https://researchersjob.com/"
+   ],
+   "note": "Front page read this run. The four most recent items are frontier AI (EPFL), pharmacometrics (Uppsala), and two Indian teaching-faculty adverts. ZERO structural, civil, earthquake, geotechnical or mechanical engineering postings. This repeats the previous run's finding and is information, not a fetch failure. The ?s= field searches could not be run this run because the fetch layer would not accept those query URLs without prior provenance."
+  },
+  {
+   "id": "jobsacuk",
+   "name": "jobs.ac.uk",
+   "status": "QUARANTINED",
+   "listUrls": [
+    "https://www.jobs.ac.uk/search/?keywords=structural+engineering&sort=re",
+    "https://www.jobs.ac.uk/search/?keywords=civil+engineering&sort=re",
+    "https://www.jobs.ac.uk/search/?keywords=finite+element&sort=re",
+    "https://www.jobs.ac.uk/search/?keywords=structural+dynamics&sort=re",
+    "https://www.jobs.ac.uk/search/?keywords=computational+mechanics&sort=re",
+    "https://www.jobs.ac.uk/search/?keywords=earthquake+engineering&sort=re"
+   ],
+   "note": "QUARANTINED BY CONTROL PROBE - FAILED. The keyword parameter is not honoured. Seven different queries (structural engineering, civil engineering, finite element, structural dynamics, computational mechanics, earthquake engineering, and the deliberate nonsense string 'zzzqqxnonsenseterm', plus the off-discipline control 'medieval poetry') EACH returned the SAME 16 jobs, all civil/built-environment. A nonsense string and 'medieval poetry' returning 16 civil-engineering postings is the exact confabulation signature this probe exists to catch. Because the discovery layer is unreliable, no posting discovered through it can be trusted to be current or correctly associated, so ZERO records were accepted - including the handful that individually resolved. Note for contrast: individual /job/<ref>/ pages DID return coherent, correctly-expired content when opened directly, so the defect appears to be in the search endpoint rather than in the posting pages. Needs re-checking next run. This is the single largest coverage loss this run: jobs.ac.uk supplied a large share of the previous build."
+  },
+  {
+   "id": "iitd",
+   "name": "IIT Delhi",
+   "status": "FAILED",
+   "listUrls": [
+    "https://home.iitd.ac.in/jobs-iitd/index.php"
+   ],
+   "note": "NOT POLLED THIS RUN. The fetch layer refused the URL for lack of provenance (it accepts only URLs surfaced by a search engine or by an already-fetched page, and this run was unattended so the permission prompt could not be answered). No data carried forward from the previous build, because a stale record presented as current is exactly the hazard this system exists to avoid."
+  },
+  {
+   "id": "iitr",
+   "name": "IIT Roorkee",
+   "status": "FAILED",
+   "listUrls": [
+    "https://iitr.ac.in/Careers/Other%20job%20openings/Post%20Doctoral%20Fellowship%20Position.html"
+   ],
+   "note": "NOT POLLED THIS RUN. Same provenance refusal as IIT Delhi. Nothing carried forward."
+  },
+  {
+   "id": "indiabioscience",
+   "name": "IndiaBioscience",
+   "status": "FAILED",
+   "listUrls": [
+    "https://indiabioscience.org/jobs"
+   ],
+   "note": "NOT POLLED THIS RUN (provenance refusal). Life sciences only - it has never carried this field and its absence costs this dataset nothing in-discipline."
+  },
+  {
+   "id": "indiaeng",
+   "name": "Indian engineering-postdoc aggregators",
+   "status": "FAILED",
+   "listUrls": [
+    "https://www.facultyplus.com/category/research-jobs/post-doctoral-fellow/",
+    "https://facultytick.com/tag/civil-engineering/"
+   ],
+   "note": "No Indian aggregator covers engineering postdocs; confirmed over successive runs. FacultyPlus and FacultyTick carry teaching-faculty and administrative posts, not structural/civil postdocs. The realistic route for this field in India is per-institution project-position pages."
+  },
+  {
+   "id": "jrecin",
+   "name": "JREC-IN Portal (Japan)",
+   "status": "QUARANTINED",
+   "listUrls": [
+    "https://jrecin.jst.go.jp/seek/SeekJorSearch"
+   ],
+   "note": "QUARANTINED BY CONTROL PROBE. Requests for three deliberately invalid job IDs each returned complete, plausible postings instead of an error; two were byte-identical. The site executes search via POST with server-side session state and renders rows client-side, so a plain GET returns no listings and the fetch layer confabulated. Zero records accepted. Needs a JS-capable browser fetch. Not re-probed this run - a fabricated URL cannot be submitted through this run's fetch layer."
+  },
+  {
+   "id": "ajo",
+   "name": "Academic Jobs Online",
+   "status": "FAILED",
+   "listUrls": [
+    "https://academicjobsonline.org/ajo/jobs"
+   ],
+   "note": "Rows were readable with [POSTDOC] tags and deadlines, but no per-row hyperlink survived the fetch. Records without an individual posting URL are rejected by policy, so all were dropped. Every visible row was also long expired."
+  },
+  {
+   "id": "irdiitd",
+   "name": "IIT Delhi IRD vacancies board",
+   "status": "REJECTED",
+   "listUrls": [
+    "https://ird.iitd.ac.in/vacancies"
+   ],
+   "note": "DEAD DATA. Every row carries a 2017 advertisement number (IITD/IRD/117-125/2017) with deadlines in July-August 2017. Also serves a TLS certificate that does not match its own hostname. Nothing taken from it, deliberately not polled."
+  },
+  {
+   "id": "euraxess",
+   "name": "EURAXESS",
+   "status": "BLOCKED",
+   "listUrls": [
+    "https://euraxess.ec.europa.eu/jobs/search"
+   ],
+   "note": "robots.txt ends with 'Disallow: /jobs/*' and 'Disallow: /*?', closing the search and every detail page plus all pagination. Not polled. This remains the single biggest coverage loss for European structural engineering - the only sanctioned integration is institutions pushing XML in, via support@euraxess.eu."
+  },
+  {
+   "id": "nature",
+   "name": "Nature Careers",
+   "status": "BLOCKED",
+   "listUrls": [
+    "https://www.nature.com/naturecareers/jobs/search"
+   ],
+   "note": "robots.txt disallows /naturecareers/jobs/search and /naturecareers/jobsrss/, and issues 'Disallow: /' for User-Agent anthropic-ai and ClaudeBot by name. Not polled."
+  },
+  {
+   "id": "findapostdoc",
+   "name": "FindAPostDoc",
+   "status": "REJECTED",
+   "listUrls": [
+    "https://www.findapostdoc.com/"
+   ],
+   "note": "403 on robots.txt and every listing path. The one route that responds served postings with 2017 deadlines. Rejected as a stale-data hazard."
+  },
+  {
+   "id": "higheredjobs",
+   "name": "HigherEdJobs",
+   "status": "BLOCKED",
+   "listUrls": [
+    "https://www.higheredjobs.com/rss/"
+   ],
+   "note": "Incapsula WAF challenge on both the RSS path and search. Not pollable without dedicated anti-bot handling."
+  },
+  {
+   "id": "indiagov",
+   "name": "ANRF / CSIR / DST (India, government)",
+   "status": "FAILED",
+   "listUrls": [
+    "https://anrfonline.in/ANRF/HomePage",
+    "https://csirhrdg.res.in/",
+    "https://dst.gov.in/whatsnew/announcement"
+   ],
+   "note": "ANRF renders calls into empty client-side containers. CSIR-HRDG's front door is a language-selection splash and its RA page is a static guidelines document with no announcement stream. DST's announcement list carries no dates at all. Payloads are PDFs. No per-position stream exists to ingest."
+  }
+ ],
+ "records": [
+  {
+   "s": "the",
+   "t": "Post-doctoral Fellow in Intelligent Structural Engineering in the Department of Civil Engineering",
+   "u": "THE UNIVERSITY OF HONG KONG",
+   "dp": "Department of Civil Engineering",
+   "c": "Hong Kong",
+   "ct": "Pok Fu Lam",
+   "sal": "Competitive salary",
+   "dl": "2026-09-20",
+   "pd": "2026-07-16",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413462/post-doctoral-fellow-in-intelligent-structural-engineering-in-the-department-of-civil-engineering/",
+   "fc": "high",
+   "warn": "Advert body names physics deep learning, digital twin, smart and resilient infrastructure. Individual page states job reference 536424 and does not show an expiry notice."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Division of Engineering (Civil Engineering) - Dr. Mostafa Mobasher",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Division of Engineering; Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES)",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "dl": "2026-08-15",
+   "pd": "2026-07-16",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413417/post-doctoral-associate-in-the-division-of-engineering-civil-engineering-dr-mostafa-mobasher/",
+   "fc": "high",
+   "warn": "Advert body: machine-learning powered digital twin for the structural performance of civil engineering structures; structural and geotechnical modelling, structural sensing, physical experiments, computational model validation. Salary not shown on the page."
+  },
+  {
+   "s": "the",
+   "t": "ARC Grant-Funded Researcher (A)",
+   "u": "ADELAIDE UNIVERSITY",
+   "dp": "School of Civil Engineering and Construction, College of Engineering and Information Technology",
+   "c": "Australia",
+   "ct": "Mawson Lakes, SA",
+   "sal": "$102,024 - $109,307 per annum (plus 17% superannuation)",
+   "dl": "2026-08-07",
+   "pd": "2026-07-10",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413208/arc-grant-funded-researcher-a-/",
+   "fc": "high",
+   "warn": "CONTRADICTION recorded, not resolved silently: the /listings/civil-engineering/2/ card showed the countdown '18 days ago' (i.e. closed) while the individual posting page shows a closing date of 7 August 2026 (still open). Body value taken. Topic: low-carbon concrete using calcined halloysite, recycled plastic fibres and AI-assisted optimisation."
+  },
+  {
+   "s": "the",
+   "t": "Senior / Research Fellow (Land Reclamation) - HJH3",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "dp": "Engineering Division",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dl": "2026-08-01",
+   "pd": "2026-07-02",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412930/senior-research-fellow-land-reclamation-hjh3/?LinkSource=PremiumListing",
+   "fc": "high",
+   "warn": "Advert body: sustainable geomaterials for land reclamation; carbonation-engineered geomaterials (demolition fines, incineration bottom ash), laboratory testing, pilot-scale trials, field validation. Geotechnical. Salary not shown."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS2",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "dp": "Engineering Division",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dl": "2026-08-01",
+   "pd": "2026-07-02",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412928/research-fellow-engineer-cement-and-concrete-zms2/?LinkSource=PremiumListing",
+   "fc": "high",
+   "warn": "Advert body: ultra-low carbon concrete systems including LC3- and steel slag-based materials and steel fibre reinforced concrete (SFRC); mix design optimisation, durability, XRD/SEM-EDX/TGA. Salary not shown."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Steel Structures and AI) - ZLL1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dl": "2026-06-17",
+   "pd": "2026-05-18",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411067/research-fellow-engineer-steel-structures-and-ai-zll1/",
+   "fc": "high",
+   "warn": "Individual page states 'This job has expired'. Closest single match to the steel-structures / structural-optimisation interest found this run. Body: advanced welding and automation for steel fabrication; AI-enabled structural analysis, optimisation and design tools for low-carbon composite building systems."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Center for (SHORES) - Dr. Tarek Abdoun",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES), Division of Engineering, Civil and Urban Engineering Program",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "dl": "2026-07-26",
+   "pd": "2026-06-26",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412722/post-doctoral-associate-in-the-center-for-shores-dr-tarek-abdoun/",
+   "fc": "high",
+   "warn": "Individual page states 'This job has expired' (closed 26 July 2026, three days before this run). Body: development, testing and analysis of resilient geotechnical systems using centrifuge modelling, laboratory testing and numerical simulation."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Center for (SHORES)",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "sal": "Competitive",
+   "dl": "2026-07-23",
+   "pd": "2026-06-22",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412499/post-doctoral-associate-in-the-center-for-shores-mostafa-mobasher/",
+   "fc": "high",
+   "warn": "Individual page states 'This job has expired'. NYUAD re-lists this role monthly under a new numeric id (411312 closed 20 Jun 2026, 412499 closed 23 Jul 2026, and a further id 413858 appears in the engineering-and-technology listing but could not be opened this run for lack of a full slug URL). Treat as a recurring reposting."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Division of Engineering (Civil and Urban Engineering)",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "S.M.A.R.T. Construction Research Group",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "dl": "2026-08-13",
+   "pd": "2026-07-13",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413330/post-doctoral-associate-in-the-division-of-engineering-civil-and-urban-engineering-/",
+   "fc": "medium",
+   "warn": "Civil and Urban Engineering by department, but the advert body is digital construction technologies and cybersecurity (automation, AI, robotics, digital twins, BIM) rather than structural mechanics. Classified adjacent on the body text, not on the department name."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow (Sound and Vibration) - ATCH2",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "dp": "Engineering Cluster",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dl": "2026-06-20",
+   "pd": "2026-05-21",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411308/research-fellow-sound-and-vibration-atch2/",
+   "fc": "medium",
+   "warn": "Individual page states 'This job has expired'. Vibration work, but the body is lift-generated noise in residential buildings (building acoustics), not structural dynamics of load-bearing systems."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/410958/research-fellow-engineer-cement-and-concrete-zms1/",
+   "fc": "high",
+   "warn": "Listing card only; the card showed no salary and no closing date, so both are null. Individual page not opened this run."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Research Engineer (AI for Civil Engineering) - MM1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411070/research-fellow-research-engineer-ai-for-civil-engineering-mm1/",
+   "fc": "high",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Engineer / Fellow (Floating Breakwater) - TZY11",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411074/research-engineer-fellow-floating-breakwater-tzy11/",
+   "fc": "high",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Coastal and Hydrodynamic Modelling) - EA6-1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/410969/research-fellow-engineer-coastal-and-hydrodynamic-modelling-ea6-1/",
+   "fc": "medium",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow (in AI-enabled cloud analytics and BIM-based Digital Twin systems) - NTQ1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411309/research-fellow-in-ai-enabled-cloud-analytics-and-bim-based-digital-twin-systems-ntq1/",
+   "fc": "medium",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow (Building Energy Optimization and Predictive Control) - DS1",
+   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411310/research-fellow-building-energy-optimization-and-predictive-control-ds1/",
+   "fc": "low",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate / Associate Research Scientist in the Division of Engineering",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Division of Engineering",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "sal": "Competitive",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413221/post-doctoral-associate-associate-research-scientist-in-the-division-of-engineering/",
+   "fc": "low",
+   "warn": "Listing card only, surfaced under the civil-engineering/postdocs slug; the card does not name a sub-discipline, so field confidence is low. No closing date on the card."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Division of Engineering (Mechanical Engineering) - Dr. Mohammed Daqaq",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Division of Engineering (Mechanical Engineering)",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411573/post-doctoral-associate-in-the-division-of-engineering-mechanical-engineering-dr-mohammed-daqaq/",
+   "fc": "medium",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Center on Stability, Instability and Turbulence, Dr. Nader Masmoudi",
+   "u": "NEW YORK UNIVERSITY ABU DHABI",
+   "dp": "Center on Stability, Instability and Turbulence",
+   "c": "United Arab Emirates",
+   "ct": "Abu Dhabi",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411398/post-doctoral-associate-in-the-center-on-stability-instability-and-turbulence-dr-nader-masmoudi-/",
+   "fc": "low",
+   "warn": "Listing card only; no salary or closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow in Experimental Fluid Mechanics",
+   "u": "UNIVERSITY OF SOUTHAMPTON",
+   "c": "United Kingdom",
+   "ct": "Southampton",
+   "sal": "£38,784 to £43,482 per annum",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411346/research-fellow-in-experimental-fluid-mechanics/",
+   "fc": "medium",
+   "warn": "Listing card only; no closing date shown on the card."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow in Materials' Degradation in Energy Systems",
+   "u": "CRANFIELD UNIVERSITY",
+   "c": "United Kingdom",
+   "ct": "Cranfield",
+   "sal": "£37,897 to £38,887 per annum",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/410927/research-fellow-in-materials-degradation-in-energy-systems/",
+   "fc": "medium",
+   "warn": "Listing card only. Card showed the countdown '1 day left' rather than a date; countdown text is not a date and the Adelaide record on this same source proves the countdowns can be wrong, so deadline is left null."
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc (3 Years) on Numerical Simulation of Composite Hydrogen Tanks",
+   "u": "Ghent University",
+   "c": "Belgium",
+   "ct": "Ghent",
+   "sal": "From €2,900/month",
+   "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-3-years-on-numerical-simulation-of-composite-hydrogen-tanks/248127",
+   "fc": "medium",
+   "warn": "Listing page only; individual /ad/ page not opened. No deadline shown on the listing."
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc (4 Years) on Simulation and Optimization of Snap Fit Joints",
+   "u": "Ghent University",
+   "c": "Belgium",
+   "ct": "Ghent",
+   "sal": "From €2,900/month",
+   "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-4-years-on-simulation-and-optimization-of-snap-fit-joints/248130",
+   "fc": "medium",
+   "warn": "Listing page only. Connection/joint simulation and optimisation, adjacent to the connection-topology and structural-optimisation interest, but the substrate is polymer snap-fit joints, not steel connections."
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in Real-Time Computational Biomechanics",
+   "u": "University of Luxembourg",
+   "c": "Luxembourg",
+   "ct": "Esch-sur-Alzette",
+   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-real-time-computational-biomechanics/244126",
+   "fc": "medium",
+   "warn": "Listing page only. Computational mechanics methods, biological application domain."
+  },
+  {
+   "s": "academicpositions",
+   "t": "A postdoctoral researcher on optimizing synchromodal transport networks for construction logistics",
+   "u": "Eindhoven University of Technology",
+   "c": "The Netherlands",
+   "ct": "Eindhoven",
+   "dl": "2026-07-16",
+   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/a-postdoctoral-researcher-on-optimizing-synchromodal-transport-networks-for-construction-logistics/250022",
+   "fc": "low",
+   "warn": "Listing page only. Deadline shown on the listing has already passed relative to this run date."
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in Modeling of Human-like Balance and Step Recovery",
+   "u": "Chalmers University of Technology",
+   "c": "Sweden",
+   "ct": "Gothenburg",
+   "dl": "2026-08-15",
+   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-modeling-of-human-like-balance-and-step-recovery/249862",
+   "fc": "low",
+   "warn": "Listing page only. Dynamics and modelling, but biomechanics rather than structural."
+  },
+  {
+   "s": "iitk",
+   "t": "Institute Post-Doctoral Fellowship, Department of Civil Engineering",
+   "u": "Indian Institute of Technology Kanpur",
+   "dp": "Department of Civil Engineering",
+   "url": "https://iitk.ac.in/ce/post-doc-positions",
+   "fc": "high",
+   "warn": "Not a dated vacancy. The page states applications are invited from persons having a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are made through the Pingala portal. No deadline, no stipend figure and no location string are shown on the page, so all three are null. Country is null because no location string is displayed — it is not deduced from the institution name."
+  }
+ ]
 }
