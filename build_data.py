@@ -209,9 +209,16 @@ def main():
             rejected.append({"title": r.get("t"), "reason": "source not OK: " + sid}); continue
         if not r.get("url"):
             rejected.append({"title": r.get("t"), "reason": "no individual posting URL"}); continue
-        if r["url"] in seen_urls:
+        # Dedup key ignores tracking query parameters (utm_*, LinkSource, ref) so the
+        # same posting reached via different marketing links collapses to one record.
+        from urllib.parse import urlsplit, parse_qsl, urlencode, urlunsplit
+        parts = urlsplit(r["url"])
+        q = [(k, v) for k, v in parse_qsl(parts.query)
+             if not (k.lower().startswith("utm_") or k in ("LinkSource", "ref", "source"))]
+        dedup_key = urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), urlencode(q), ""))
+        if dedup_key in seen_urls:
             rejected.append({"title": r.get("t"), "reason": "duplicate URL"}); continue
-        seen_urls.add(r["url"])
+        seen_urls.add(dedup_key)
 
         src = src_by_id[sid]
         computed = []
