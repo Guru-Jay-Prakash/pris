@@ -1,0 +1,53 @@
+name: PRIS daily data refresh
+
+# Runs on GitHub's servers. Free for public repositories. No Claude account involved.
+# 01:30 UTC = 07:00 IST. Also runnable by hand: Actions tab -> this workflow -> "Run workflow".
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pris-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet requests beautifulsoup4
+
+      - name: Scrape sources (control probes + robots.txt honored)
+        run: python scraper.py raw_ingest.json
+
+      - name: Validate and build dataset
+        # build_data.py enforces the gates: no posting URL -> record rejected;
+        # fewer than 20 surviving records -> exit 2 and NOTHING is written,
+        # so a broken run can never overwrite a good dataset.
+        run: python build_data.py raw_ingest.json pris_data.js "$(date -u +%F)" raw_struct.json
+
+      - name: Publish if changed
+        run: |
+          git config user.name "PRIS refresh"
+          git config user.email "pris-refresh@users.noreply.github.com"
+          git add pris_data.js raw_ingest.json pris_data.json
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Data refresh $(date -u +%F)"
+            git push
+          fi
+      # If any step above fails, this workflow run is marked failed and GitHub
+      # emails the repository owner automatically. The site keeps serving the
+      # last good dataset; the app shows its own staleness warning after 3 days.
