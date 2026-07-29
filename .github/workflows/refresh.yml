@@ -35,7 +35,7 @@ jobs:
         # build_data.py enforces the gates: no posting URL -> record rejected;
         # fewer than 20 surviving records -> exit 2 and NOTHING is written,
         # so a broken run can never overwrite a good dataset.
-        run: python build_data.py raw_ingest.json pris_data.js "$(date -u +%F)" raw_struct.json
+        run: python build_data.py raw_ingest.json pris_data.js "$(date -u +%FT%H:%MZ)" raw_struct.json
 
       - name: Publish if changed
         run: |

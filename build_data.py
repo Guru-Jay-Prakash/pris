@@ -20,6 +20,8 @@ import json, re, sys, os, datetime
 RAW_PATH = sys.argv[1] if len(sys.argv) > 1 else "raw_ingest.json"
 OUT_PATH = sys.argv[2] if len(sys.argv) > 2 else "pris_data.js"
 TODAY = sys.argv[3] if len(sys.argv) > 3 else datetime.date.today().isoformat()
+BUILT_AT = TODAY               # full stamp -> distinct per publish, so browsers reload same-day fixes
+TODAY = TODAY[:10]             # date-only for status/deadline math
 
 CURRENCY_PATTERNS = [
     (r'£', 'GBP'), (r'€', 'EUR'), (r'₹|Rs\.?|INR', 'INR'), (r'HKD', 'HKD'),
@@ -301,7 +303,7 @@ def main():
 
     payload = {
         "schema": 4,
-        "builtAt": raw["fetchedAt"],
+        "builtAt": BUILT_AT,
         "sources": raw["sources"],
         "counts": {
             "accepted": len(out),
