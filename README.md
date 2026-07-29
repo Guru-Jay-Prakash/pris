@@ -43,3 +43,30 @@ Coverage is therefore uneven, and Indian coverage is partial: the national schem
 ## Privacy
 
 Saved positions, applications, notes, reminders and your profile are stored in your own browser and are never uploaded. Nothing about you leaves your machine.
+
+
+## How the data stays fresh (no Claude tokens)
+
+- **Daily, free:** a GitHub Actions workflow (`.github/workflows/refresh.yml`) runs every day
+  at 07:00 IST **on GitHub's own servers**. It scrapes the verified sources, runs the validator
+  (`build_data.py` — same gates: no URL means no record, <20 records aborts without writing),
+  and publishes `pris_data.js`. No Claude account is involved.
+- **Fortnightly, intelligent:** a Claude task runs on the 1st and 15th to do what the script
+  cannot — judgment-based deep sweeps (including India) written to `raw_struct.json`, and a
+  health check of this pipeline.
+- **Manual trigger:** Actions tab → "PRIS daily data refresh" → **Run workflow** button.
+- **If a run fails,** GitHub emails the repository owner automatically, and the site keeps
+  serving the last good dataset. The app shows its own amber staleness warning after 3 days.
+
+## Watchlist (verified 2026-07-29, control-probed)
+
+Scraped daily: THE unijobs (civil-engineering + postdoctoral routes) · AcademicPositions
+(engineering postdoc feed) · jobs.ac.uk (field keyword searches) · ETH Zurich · TU Delft
+(structural search) · UIUC CEE · Toronto Civil & Mineral · NUS CEE · Tokyo Earthquake
+Research Institute. Recurring programmes carried from published cycles: Humboldt Research
+Fellowship, JSPS International Fellowships, QuakeCoRE funding rounds.
+
+Tested and excluded, with reasons recorded in the app's Data Sources page: EURAXESS, Nature
+Careers, Canterbury NZ (robots-blocked) · Purdue, JREC-IN (failed the fabrication control
+probe) · DTU, NTNU, Bristol, SNSF, DAAD, MSCA portal, EPFL, Polimi, HKUST (JavaScript-only,
+AI-agent-blocked, or unreachable). Several JS portals likely expose JSON APIs — future work.
