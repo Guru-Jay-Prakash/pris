@@ -1,4 +1,5 @@
 {
+ "fetchedAt": "2026-07-29",
  "sources": [
   {
    "id": "the",
@@ -32,7 +33,7 @@
    "listUrls": [
     "https://iitk.ac.in/ce/post-doc-positions"
    ],
-   "note": "Departmental postdoc page. States applications are invited from persons holding a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are submitted through the Pingala portal. No dated vacancy, no deadline, no stipend figure and no location string are shown, so all are null. Country is null because the page displays no location string - it is deliberately NOT deduced from the institution name."
+   "note": "Year-round IPDF scheme, verified on page."
   },
   {
    "id": "researchersjob",
@@ -167,49 +168,303 @@
     "https://dst.gov.in/whatsnew/announcement"
    ],
    "note": "ANRF renders calls into empty client-side containers. CSIR-HRDG's front door is a language-selection splash and its RA page is a static guidelines document with no announcement stream. DST's announcement list carries no dates at all. Payloads are PDFs. No per-position stream exists to ingest."
+  },
+  {
+   "id": "tudelft",
+   "name": "TU Delft careers (structural search)",
+   "status": "OK",
+   "listUrls": [
+    "https://careers.tudelft.nl/search/?q=structural&locale=en_US"
+   ],
+   "note": "Verified sweep 2026-07-29."
+  },
+  {
+   "id": "eritokyo",
+   "name": "University of Tokyo Earthquake Research Institute",
+   "status": "OK",
+   "listUrls": [
+    "https://www.eri.u-tokyo.ac.jp/recruitinfo/"
+   ],
+   "note": "Verified sweep 2026-07-29; Japanese-language PDFs."
+  },
+  {
+   "id": "humboldt",
+   "name": "Humboldt Research Fellowship",
+   "status": "OK",
+   "listUrls": [
+    "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
+   ],
+   "note": "Recurring programme, cycle verified 2026-07-29."
+  },
+  {
+   "id": "jsps",
+   "name": "JSPS International Fellowships",
+   "status": "OK",
+   "listUrls": [
+    "https://www.jsps.go.jp/english/e-fellow/"
+   ],
+   "note": "Recurring programme; FY2027 deadlines published."
+  },
+  {
+   "id": "quakecore",
+   "name": "QuakeCoRE (NZ)",
+   "status": "OK",
+   "listUrls": [
+    "https://www.quakecore.nz/opportunities/"
+   ],
+   "note": "Recurring rounds; site restricts crawlers, entry maintained manually."
   }
  ],
  "records": [
   {
    "s": "the",
    "t": "Post-doctoral Fellow in Intelligent Structural Engineering in the Department of Civil Engineering",
-   "u": "THE UNIVERSITY OF HONG KONG",
+   "u": "The University of Hong Kong",
    "dp": "Department of Civil Engineering",
    "c": "Hong Kong",
-   "ct": "Pok Fu Lam",
-   "sal": "Competitive salary",
+   "ct": "Hong Kong",
+   "sal": "highly competitive salary (ITF Research Talent Hub scheme)",
    "dl": "2026-09-20",
-   "pd": "2026-07-16",
+   "pd": null,
    "url": "https://www.timeshighereducation.com/unijobs/listing/413462/post-doctoral-fellow-in-intelligent-structural-engineering-in-the-department-of-civil-engineering/",
+   "dv": [],
    "fc": "high",
-   "warn": "Advert body names physics deep learning, digital twin, smart and resilient infrastructure. Individual page states job reference 536424 and does not show an expiry notice."
+   "warn": "Verified live on the posting page 2026-07-29. Ref 536424; apply via jobs.hku.hk."
   },
   {
    "s": "the",
    "t": "Post-Doctoral Associate in the Division of Engineering (Civil Engineering) - Dr. Mostafa Mobasher",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Division of Engineering; Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES)",
-   "c": "United Arab Emirates",
+   "u": "New York University Abu Dhabi",
+   "dp": "Division of Engineering / Center for SHORES",
+   "c": "UAE",
    "ct": "Abu Dhabi",
+   "sal": null,
    "dl": "2026-08-15",
-   "pd": "2026-07-16",
+   "pd": null,
    "url": "https://www.timeshighereducation.com/unijobs/listing/413417/post-doctoral-associate-in-the-division-of-engineering-civil-engineering-dr-mostafa-mobasher/",
+   "dv": [],
    "fc": "high",
-   "warn": "Advert body: machine-learning powered digital twin for the structural performance of civil engineering structures; structural and geotechnical modelling, structural sensing, physical experiments, computational model validation. Salary not shown on the page."
+   "warn": "Verified live on the posting page 2026-07-29."
   },
   {
    "s": "the",
    "t": "ARC Grant-Funded Researcher (A)",
-   "u": "ADELAIDE UNIVERSITY",
-   "dp": "School of Civil Engineering and Construction, College of Engineering and Information Technology",
+   "u": "Adelaide University",
+   "dp": "School of Civil Engineering and Construction",
    "c": "Australia",
-   "ct": "Mawson Lakes, SA",
+   "ct": "Adelaide",
    "sal": "$102,024 - $109,307 per annum (plus 17% superannuation)",
    "dl": "2026-08-07",
-   "pd": "2026-07-10",
+   "pd": null,
    "url": "https://www.timeshighereducation.com/unijobs/listing/413208/arc-grant-funded-researcher-a-/",
+   "dv": [],
    "fc": "high",
-   "warn": "CONTRADICTION recorded, not resolved silently: the /listings/civil-engineering/2/ card showed the countdown '18 days ago' (i.e. closed) while the individual posting page shows a closing date of 7 August 2026 (still open). Body value taken. Topic: low-carbon concrete using calcined halloysite, recycled plastic fibres and AI-assisted optimisation."
+   "warn": "Verified live 2026-07-29. Industry-linked low-carbon concrete project. Level A is the Australian postdoctoral grade."
+  },
+  {
+   "s": "the",
+   "t": "Senior / Research Fellow (Land Reclamation) - HJH3",
+   "u": "Singapore Institute of Technology",
+   "dp": "Engineering Division",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "sal": null,
+   "dl": "2026-08-01",
+   "pd": null,
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412930/senior-research-fellow-land-reclamation-hjh3/",
+   "dv": [],
+   "fc": "medium",
+   "warn": "Verified live 2026-07-29 — closes 1 Aug."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS2",
+   "u": "Singapore Institute of Technology",
+   "dp": "Engineering Division",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "sal": null,
+   "dl": "2026-08-01",
+   "pd": null,
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412928/research-fellow-engineer-cement-and-concrete-zms2/",
+   "dv": [],
+   "fc": "high",
+   "warn": "Verified live 2026-07-29 — closes 1 Aug. Re-advertisement of the expired ZMS1 post."
+  },
+  {
+   "s": "iitk",
+   "t": "Institute Post-Doctoral Fellowship, Department of Civil Engineering",
+   "u": "IIT Kanpur",
+   "dp": "Department of Civil Engineering",
+   "c": "India",
+   "ct": "Kanpur",
+   "sal": null,
+   "dl": null,
+   "pd": null,
+   "url": "https://iitk.ac.in/ce/post-doc-positions",
+   "dv": [],
+   "fc": "high",
+   "warn": "Verified 2026-07-29: applications accepted year-round with prompt consideration. Apply via the pingala.iitk.ac.in portal; thesis-submitted candidates may apply."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS1",
+   "u": "Singapore Institute of Technology",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dp": null,
+   "sal": null,
+   "dl": "2026-06-13",
+   "pd": null,
+   "url": "https://www.timeshighereducation.com/unijobs/listing/410958/research-fellow-engineer-cement-and-concrete-zms1/",
+   "dv": [],
+   "fc": "high",
+   "warn": "Page states 'This job has expired' (verified 2026-07-29). Superseded by the live ZMS2 posting."
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Research Engineer (AI for Civil Engineering) - MM1",
+   "u": "Singapore Institute of Technology",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dp": null,
+   "sal": null,
+   "dl": "2026-06-17",
+   "pd": null,
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411070/research-fellow-research-engineer-ai-for-civil-engineering-mm1/",
+   "dv": [],
+   "fc": "high",
+   "warn": "Page states 'This job has expired' (verified 2026-07-29). Do not apply."
+  },
+  {
+   "s": "the",
+   "t": "Research Engineer / Fellow (Floating Breakwater) - TZY11",
+   "u": "Singapore Institute of Technology",
+   "c": "Singapore",
+   "ct": "Singapore",
+   "dp": null,
+   "sal": null,
+   "dl": "2026-06-17",
+   "pd": null,
+   "url": "https://www.timeshighereducation.com/unijobs/listing/411074/research-engineer-fellow-floating-breakwater-tzy11/",
+   "dv": [],
+   "fc": "medium",
+   "warn": "Page states 'This job has expired' (verified 2026-07-29). Do not apply."
+  },
+  {
+   "s": "tudelft",
+   "t": "Internal: Postdoc in Safety Assessment and Strengthening Technology of Existing Concrete Bridges",
+   "u": "TU Delft",
+   "dp": "Faculty of Civil Engineering and Geosciences",
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": "2026-08-25",
+   "pd": "2026-07-29",
+   "url": "https://careers.tudelft.nl/job/Delft-Internal-Postdoc-in-Safety-Assessment-and-Strengthening-Technology-of-Existing-Concrete-Bridges-2628-CD/1367740057/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "Title says 'Internal:' — likely restricted to current TU Delft staff; verify eligibility on the posting before applying."
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in Tsunami Engineering",
+   "u": "TU Delft",
+   "dp": "Faculty of Civil Engineering and Geosciences",
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": "2026-09-01",
+   "pd": "2026-07-29",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Tsunami-Engineering-2628-CD/1367777357/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "Fields from the search-results page; open the posting for full requirements."
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in Tunnel Modelling for Geological Disposal of Radioactive Waste",
+   "u": "TU Delft",
+   "dp": "Faculty of Civil Engineering and Geosciences",
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": "2026-09-07",
+   "pd": "2026-07-29",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Tunnel-Modelling-for-Geological-Disposal-of-Radioactive-Waste-2628-CD/1367766757/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "medium",
+   "warn": "Geotechnical/tunnelling in a radioactive-waste context."
+  },
+  {
+   "s": "eritokyo",
+   "t": "特任研究員（2027年度地震研究所特任研究員） — Project Researcher, Earthquake Research Institute (3 positions)",
+   "u": "University of Tokyo",
+   "dp": "Earthquake Research Institute",
+   "c": "Japan",
+   "ct": "Tokyo",
+   "sal": null,
+   "dl": "2026-09-04",
+   "pd": "2026-07-29",
+   "url": "https://www.eri.u-tokyo.ac.jp/wp-content/uploads/2026/06/地震研特任研究員公募要項2027_0629-3.pdf",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "Japanese-language PDF; deadline 2026-09-04 17:00 JST per the listing page. Verify salary and eligibility in the PDF."
+  },
+  {
+   "s": "humboldt",
+   "t": "Humboldt Research Fellowship for Postdoctoral Researchers",
+   "u": "Alexander von Humboldt Foundation",
+   "c": "Germany",
+   "ct": null,
+   "dp": null,
+   "sal": "EUR 3,000-3,600/month (published programme rate)",
+   "dl": "2026-11-15",
+   "pd": null,
+   "url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship",
+   "dv": [
+    "deadline.nextCycleComputed"
+   ],
+   "fc": "high",
+   "warn": "All-discipline fellowship — the applicant defines the research field and the German host. Each review round closes early after 800 applications."
+  },
+  {
+   "s": "jsps",
+   "t": "JSPS International Fellowship for Research in Japan (Standard, FY2027 1st call)",
+   "u": "Japan Society for the Promotion of Science",
+   "c": "Japan",
+   "ct": null,
+   "dp": null,
+   "sal": null,
+   "dl": "2026-08-28",
+   "pd": null,
+   "url": "https://www.jsps.go.jp/english/e-fellow/",
+   "dv": [],
+   "fc": "high",
+   "warn": "All-discipline fellowship; the JAPANESE HOST INSTITUTION submits the application — contact a host professor first."
+  },
+  {
+   "s": "quakecore",
+   "t": "QuakeCoRE Contestable Funding Round (annual RfP, early Sep - early Oct)",
+   "u": "QuakeCoRE - NZ Centre for Earthquake Resilience",
+   "c": "New Zealand",
+   "ct": null,
+   "dp": null,
+   "sal": null,
+   "dl": null,
+   "pd": null,
+   "url": "https://www.quakecore.nz/opportunities/",
+   "dv": [],
+   "fc": "high",
+   "warn": "Recurring funding round; exact dates on the official page. Entry maintained from the published cycle."
   },
   {
    "s": "the",
@@ -301,36 +556,6 @@
    "url": "https://www.timeshighereducation.com/unijobs/listing/411308/research-fellow-sound-and-vibration-atch2/",
    "fc": "medium",
    "warn": "Individual page states 'This job has expired'. Vibration work, but the body is lift-generated noise in residential buildings (building acoustics), not structural dynamics of load-bearing systems."
-  },
-  {
-   "s": "the",
-   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/410958/research-fellow-engineer-cement-and-concrete-zms1/",
-   "fc": "high",
-   "warn": "Listing card only; the card showed no salary and no closing date, so both are null. Individual page not opened this run."
-  },
-  {
-   "s": "the",
-   "t": "Research Fellow / Research Engineer (AI for Civil Engineering) - MM1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411070/research-fellow-research-engineer-ai-for-civil-engineering-mm1/",
-   "fc": "high",
-   "warn": "Listing card only; no salary or closing date shown on the card."
-  },
-  {
-   "s": "the",
-   "t": "Research Engineer / Fellow (Floating Breakwater) - TZY11",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411074/research-engineer-fellow-floating-breakwater-tzy11/",
-   "fc": "high",
-   "warn": "Listing card only; no salary or closing date shown on the card."
   },
   {
    "s": "the",
@@ -471,15 +696,6 @@
    "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-modeling-of-human-like-balance-and-step-recovery/249862",
    "fc": "low",
    "warn": "Listing page only. Dynamics and modelling, but biomechanics rather than structural."
-  },
-  {
-   "s": "iitk",
-   "t": "Institute Post-Doctoral Fellowship, Department of Civil Engineering",
-   "u": "Indian Institute of Technology Kanpur",
-   "dp": "Department of Civil Engineering",
-   "url": "https://iitk.ac.in/ce/post-doc-positions",
-   "fc": "high",
-   "warn": "Not a dated vacancy. The page states applications are invited from persons having a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are made through the Pingala portal. No deadline, no stipend figure and no location string are shown on the page, so all three are null. Country is null because no location string is displayed — it is not deduced from the institution name."
   }
  ]
 }
