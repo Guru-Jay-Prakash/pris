@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-29",
+ "fetchedAt": "2026-07-30",
  "sources": [
   {
    "id": "the",
@@ -7,13 +7,9 @@
    "status": "OK",
    "listUrls": [
     "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/",
-    "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/2/",
-    "https://www.timeshighereducation.com/unijobs/listings/civil-engineering/postdocs/",
-    "https://www.timeshighereducation.com/unijobs/listings/engineering-and-technology/",
-    "https://www.timeshighereducation.com/unijobs/listings/mechanical-and-aerospace-engineering/",
-    "https://www.timeshighereducation.com/unijobs/listings/other-research-related/2/"
+    "https://www.timeshighereducation.com/unijobs/listings/postdoctoral/"
    ],
-   "note": "CONTROL PROBE DEGRADED THIS RUN. The mandated invalid-URL probe could not be executed: this run's fetch layer refuses any URL that has not been surfaced by a search engine or by an already-fetched page, so a deliberately fabricated URL cannot be submitted at all. Substituted a DIFFERENTIAL probe that targets the same failure mode (the JREC-IN signature of identical/plausible content returned for distinct requests): fetch several distinct real identifiers on the domain and require that the responses differ from one another and are internally consistent. THE PASSED: the civil-engineering (39 hits), engineering-and-technology (309), mechanical-and-aerospace (64) and other-research-related (144) slugs each returned distinct content, and distinct numeric ids for the same NYUAD job title returned distinct posted/closing dates with correct 'This job has expired' notices rather than byte-identical text. TRAPS CONFIRMED THIS RUN: (1) expired ads stay listed, so status must come from the individual page; (2) the listing cards' relative countdown text is UNRELIABLE - the Adelaide ARC card read '18 days ago' while its own posting page shows a closing date of 7 August 2026, still open. Countdown text was therefore never converted into a deadline; deadlines come only from individual pages. (3) Pagination on this route is a /2/ path suffix, not ?page=2. (4) The engineering-and-technology listing truncates its hrefs to the bare numeric id, and a bare-id URL could not be opened this run, so those rows were DROPPED rather than reconstructed - a real coverage loss of roughly 20 newer NYUAD/SIT/Lingnan postings visible but unreachable."
+   "note": "Civil-engineering and postdoctoral listing routes (robots-permitted; the RSS feed is not). Cards omit deadlines; expired ads persist — status is computed from what is printed. [probe returned HTTP 404 (clean)]"
   },
   {
    "id": "academicpositions",
@@ -21,106 +17,101 @@
    "status": "OK",
    "listUrls": [
     "https://academicpositions.com/jobs/position/post-doc/field/engineering",
-    "https://academicpositions.com/jobs/position/post-doc/field/engineering?page=2",
     "https://academicpositions.com/jobs/position/post-doc"
    ],
-   "note": "The engineering postdoc feed reports 125 jobs across 5 pages; pages 1-2 and the all-fields post-doc listing were read this run. Listing pages only - individual /ad/ pages were not opened, so department and posted date are never populated. TRAP CONFIRMED: the narrower slugs /field/structural-engineering and /field/engineering-civil-engineering both returned HTTP 403 this run even though search results show them carrying 3 and several postdocs respectively; nothing was taken from them. Substantive finding: across the ~85 engineering and all-fields postdocs read, NOT ONE is structural, civil, earthquake or geotechnical engineering - the feed is dominated by photonics, robotics, quantum, energy chemistry and Mohammed VI Polytechnic life-sciences ads. Many listed deadlines are already in the past, so this feed is not recency-sorted."
-  },
-  {
-   "id": "iitk",
-   "name": "IIT Kanpur - Civil Engineering",
-   "status": "OK",
-   "listUrls": [
-    "https://iitk.ac.in/ce/post-doc-positions"
-   ],
-   "note": "Departmental postdoc page. States applications are invited from persons holding a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are submitted through the Pingala portal. No dated vacancy, no deadline, no stipend figure and no location string are shown, so all are null. Country is null because the page displays no location string - it is deliberately NOT deduced from the institution name."
-  },
-  {
-   "id": "researchersjob",
-   "name": "researchersjob.com",
-   "status": "OK",
-   "listUrls": [
-    "https://researchersjob.com/"
-   ],
-   "note": "Front page read this run. The four most recent items are frontier AI (EPFL), pharmacometrics (Uppsala), and two Indian teaching-faculty adverts. ZERO structural, civil, earthquake, geotechnical or mechanical engineering postings. This repeats the previous run's finding and is information, not a fetch failure. The ?s= field searches could not be run this run because the fetch layer would not accept those query URLs without prior provenance."
+   "note": "Engineering postdoc feed + general feed, server-rendered. Failure mode is an empty shell without /ad/ links — detected and reported as FAILED. [probe soft-200 but no job markup — pages are validated by content, not status]"
   },
   {
    "id": "jobsacuk",
    "name": "jobs.ac.uk",
-   "status": "QUARANTINED",
+   "status": "OK",
    "listUrls": [
-    "https://www.jobs.ac.uk/search/?keywords=structural+engineering&sort=re",
-    "https://www.jobs.ac.uk/search/?keywords=civil+engineering&sort=re",
-    "https://www.jobs.ac.uk/search/?keywords=finite+element&sort=re",
-    "https://www.jobs.ac.uk/search/?keywords=structural+dynamics&sort=re",
-    "https://www.jobs.ac.uk/search/?keywords=computational+mechanics&sort=re",
-    "https://www.jobs.ac.uk/search/?keywords=earthquake+engineering&sort=re"
+    "https://www.jobs.ac.uk/search/?keywords=structural+engineering",
+    "https://www.jobs.ac.uk/search/?keywords=civil+engineering",
+    "https://www.jobs.ac.uk/search/?keywords=postdoctoral"
    ],
-   "note": "QUARANTINED BY CONTROL PROBE - FAILED. The keyword parameter is not honoured. Seven different queries (structural engineering, civil engineering, finite element, structural dynamics, computational mechanics, earthquake engineering, and the deliberate nonsense string 'zzzqqxnonsenseterm', plus the off-discipline control 'medieval poetry') EACH returned the SAME 16 jobs, all civil/built-environment. A nonsense string and 'medieval poetry' returning 16 civil-engineering postings is the exact confabulation signature this probe exists to catch. Because the discovery layer is unreliable, no posting discovered through it can be trusted to be current or correctly associated, so ZERO records were accepted - including the handful that individually resolved. Note for contrast: individual /job/<ref>/ pages DID return coherent, correctly-expired content when opened directly, so the defect appears to be in the search endpoint rather than in the posting pages. Needs re-checking next run. This is the single largest coverage loss this run: jobs.ac.uk supplied a large share of the previous build."
+   "note": "Field-targeted keyword searches. Years absent next to dates are resolved and marked derived (dv: deadline.year). [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "iitd",
-   "name": "IIT Delhi",
-   "status": "FAILED",
+   "id": "eth",
+   "name": "ETH Zurich jobs board",
+   "status": "OK",
    "listUrls": [
-    "https://home.iitd.ac.in/jobs-iitd/index.php"
+    "https://jobs.ethz.ch/"
    ],
-   "note": "NOT POLLED THIS RUN. The fetch layer refused the URL for lack of provenance (it accepts only URLs surfaced by a search engine or by an already-fetched page, and this run was unattended so the permission prompt could not be answered). No data carried forward from the previous build, because a stale record presented as current is exactly the hazard this system exists to avoid."
+   "note": "University-wide board, fully open robots. Structural/seismic content appears here; titles are classified by the validator. [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "iitr",
-   "name": "IIT Roorkee",
-   "status": "FAILED",
+   "id": "tudelft",
+   "name": "TU Delft careers (q=structural)",
+   "status": "OK",
    "listUrls": [
-    "https://iitr.ac.in/Careers/Other%20job%20openings/Post%20Doctoral%20Fellowship%20Position.html"
+    "https://careers.tudelft.nl/search/?q=structural&locale=en_US"
    ],
-   "note": "NOT POLLED THIS RUN. Same provenance refusal as IIT Delhi. Nothing carried forward."
+   "note": "Server-rendered SuccessFactors search filtered to 'structural'. Soft-404 host: pages validated by content. [probe soft-200 but no job markup — pages are validated by content, not status]"
   },
   {
-   "id": "indiabioscience",
-   "name": "IndiaBioscience",
-   "status": "FAILED",
+   "id": "uiuc",
+   "name": "UIUC Civil & Environmental Engineering",
+   "status": "OK",
    "listUrls": [
-    "https://indiabioscience.org/jobs"
+    "https://cee.illinois.edu/about/employment"
    ],
-   "note": "NOT POLLED THIS RUN (provenance refusal). Life sciences only - it has never carried this field and its absence costs this dataset nothing in-discipline."
+   "note": "Department employment page; postings link to the Illinois jobs portal. No postdoc-level rows on the page this run — monitored. [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "indiaeng",
-   "name": "Indian engineering-postdoc aggregators",
-   "status": "FAILED",
+   "id": "toronto",
+   "name": "University of Toronto Civil & Mineral Engineering",
+   "status": "OK",
    "listUrls": [
-    "https://www.facultyplus.com/category/research-jobs/post-doctoral-fellow/",
-    "https://facultytick.com/tag/civil-engineering/"
+    "https://civmin.utoronto.ca/about-civmin/opportunities/"
    ],
-   "note": "No Indian aggregator covers engineering postdocs; confirmed over successive runs. FacultyPlus and FacultyTick carry teaching-faculty and administrative posts, not structural/civil postdocs. The realistic route for this field in India is per-institution project-position pages."
+   "note": "Department opportunities page; some postings are .docx/.pdf attachments — open the original. [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "jrecin",
-   "name": "JREC-IN Portal (Japan)",
-   "status": "QUARANTINED",
+   "id": "nus",
+   "name": "NUS Civil & Environmental Engineering",
+   "status": "OK",
    "listUrls": [
-    "https://jrecin.jst.go.jp/seek/SeekJorSearch"
+    "https://cde.nus.edu.sg/cee/about-us/careerscee/"
    ],
-   "note": "QUARANTINED BY CONTROL PROBE. Requests for three deliberately invalid job IDs each returned complete, plausible postings instead of an error; two were byte-identical. The site executes search via POST with server-side session state and renders rows client-side, so a plain GET returns no listings and the fetch layer confabulated. Zero records accepted. Needs a JS-capable browser fetch. Not re-probed this run - a fabricated URL cannot be submitted through this run's fetch layer."
+   "note": "Department careers hub; researcher-position subpage often empty — monitored for when it is not. No postdoc-level rows on the page this run — monitored. [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "ajo",
-   "name": "Academic Jobs Online",
-   "status": "FAILED",
+   "id": "eritokyo",
+   "name": "University of Tokyo Earthquake Research Institute",
+   "status": "OK",
    "listUrls": [
-    "https://academicjobsonline.org/ajo/jobs"
+    "https://www.eri.u-tokyo.ac.jp/recruitinfo/"
    ],
-   "note": "Rows were readable with [POSTDOC] tags and deadlines, but no per-row hyperlink survived the fetch. Records without an individual posting URL are rejected by policy, so all were dropped. Every visible row was also long expired."
+   "note": "Entirely earthquake research. Postings are Japanese-language PDFs — titles kept verbatim; open the original. [probe returned HTTP 404 (clean)]"
   },
   {
-   "id": "irdiitd",
-   "name": "IIT Delhi IRD vacancies board",
-   "status": "REJECTED",
+   "id": "humboldt",
+   "name": "Humboldt Research Fellowship",
+   "status": "OK",
    "listUrls": [
-    "https://ird.iitd.ac.in/vacancies"
+    "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
    ],
-   "note": "DEAD DATA. Every row carries a 2017 advertisement number (IITD/IRD/117-125/2017) with deadlines in July-August 2017. Also serves a TLS certificate that does not match its own hostname. Nothing taken from it, deliberately not polled."
+   "note": "Recurring programme. Entry maintained from the published cycle (15 Mar / 15 Jul / 15 Nov), verified 2026-07-29 — not scraped daily."
+  },
+  {
+   "id": "jsps",
+   "name": "JSPS International Fellowships",
+   "status": "OK",
+   "listUrls": [
+    "https://www.jsps.go.jp/english/e-fellow/"
+   ],
+   "note": "Recurring programme. FY2027 deadlines published: 2026-08-28 and 2027-04-23 (host institution submits). Verified 2026-07-29."
+  },
+  {
+   "id": "quakecore",
+   "name": "QuakeCoRE (NZ)",
+   "status": "OK",
+   "listUrls": [
+    "https://www.quakecore.nz/opportunities/"
+   ],
+   "note": "Recurring earthquake-resilience funding rounds. Site blocklists AI crawlers, so it is not crawled; the entry carries the published cycle."
   },
   {
    "id": "euraxess",
@@ -129,16 +120,25 @@
    "listUrls": [
     "https://euraxess.ec.europa.eu/jobs/search"
    ],
-   "note": "robots.txt ends with 'Disallow: /jobs/*' and 'Disallow: /*?', closing the search and every detail page plus all pagination. Not polled. This remains the single biggest coverage loss for European structural engineering - the only sanctioned integration is institutions pushing XML in, via support@euraxess.eu."
+   "note": "robots.txt disallows /jobs/* and /*? — the search and every detail page. Not polled; respected, not worked around. The single biggest coverage loss for European structural engineering."
   },
   {
    "id": "nature",
    "name": "Nature Careers",
    "status": "BLOCKED",
    "listUrls": [
-    "https://www.nature.com/naturecareers/jobs/search"
+    "https://www.nature.com/naturecareers/"
    ],
-   "note": "robots.txt disallows /naturecareers/jobs/search and /naturecareers/jobsrss/, and issues 'Disallow: /' for User-Agent anthropic-ai and ClaudeBot by name. Not polled."
+   "note": "robots.txt disallows the job search and RSS, and blocks AI agents by name. Not polled."
+  },
+  {
+   "id": "higheredjobs",
+   "name": "HigherEdJobs",
+   "status": "BLOCKED",
+   "listUrls": [
+    "https://www.higheredjobs.com/"
+   ],
+   "note": "WAF challenge on all paths. Not pollable."
   },
   {
    "id": "findapostdoc",
@@ -147,1124 +147,1870 @@
    "listUrls": [
     "https://www.findapostdoc.com/"
    ],
-   "note": "403 on robots.txt and every listing path. The one route that responds served postings with 2017 deadlines. Rejected as a stale-data hazard."
+   "note": "403s on listing paths; the one responding route served 2017-vintage postings. Excluded as a stale-data hazard."
   },
   {
-   "id": "higheredjobs",
-   "name": "HigherEdJobs",
+   "id": "jrecin",
+   "name": "JREC-IN Portal (Japan)",
+   "status": "QUARANTINED",
+   "listUrls": [
+    "https://jrecin.jst.go.jp/"
+   ],
+   "note": "Failed the control probe on 2026-07-28: invalid job IDs returned complete plausible postings. Not trusted by plain fetch."
+  },
+  {
+   "id": "purdue",
+   "name": "Purdue careers portal",
+   "status": "REJECTED",
+   "listUrls": [
+    "https://careers.purdue.edu/"
+   ],
+   "note": "Failed the control probe (soft-200 on invalid URLs) and renders via JavaScript. Excluded."
+  },
+  {
+   "id": "canterbury",
+   "name": "University of Canterbury NZ jobs",
    "status": "BLOCKED",
    "listUrls": [
-    "https://www.higheredjobs.com/rss/"
+    "https://jobs.canterbury.ac.nz/"
    ],
-   "note": "Incapsula WAF challenge on both the RSS path and search. Not pollable without dedicated anti-bot handling."
+   "note": "robots.txt disallows the jobs host outright. Not polled, despite NZ's strength in earthquake engineering."
   },
   {
-   "id": "indiagov",
-   "name": "ANRF / CSIR / DST (India, government)",
+   "id": "jsonly",
+   "name": "JS-only portals (DTU, NTNU, Bristol, SNSF, DAAD, MSCA portal, EPFL, Polimi, HKUST)",
    "status": "FAILED",
    "listUrls": [
-    "https://anrfonline.in/ANRF/HomePage",
-    "https://csirhrdg.res.in/",
-    "https://dst.gov.in/whatsnew/announcement"
+    "https://www.dtu.dk/",
+    "https://www.ntnu.edu/vacancies",
+    "https://www.bristol.ac.uk/jobs/",
+    "https://www.snf.ch/",
+    "https://www.daad.de/",
+    "https://marie-sklodowska-curie-actions.ec.europa.eu/calls"
    ],
-   "note": "ANRF renders calls into empty client-side containers. CSIR-HRDG's front door is a language-selection splash and its RA page is a static guidelines document with no announcement stream. DST's announcement list carries no dates at all. Payloads are PDFs. No per-position stream exists to ingest."
+   "note": "Listings render only in JavaScript (or the domain blocks AI agents / times out), invisible to this fetcher. Several likely have JSON APIs — future work, tracked in the README."
   }
  ],
  "records": [
   {
-   "s": "academicpositions",
-   "t": "Postdocs on ultrafast soft-X-ray metrology and high-harmonic metrology",
-   "u": "Advanced Research Center for Nanolithography ARCNL",
-   "c": "The Netherlands",
-   "ct": "Amsterdam",
-   "url": "https://academicpositions.com/ad/advanced-research-center-for-nanolithography-arcnl/2024/postdocs-on-ultrafast-soft-x-ray-metrology-and-high-harmonic-metrology/227494",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral researcher in on-chip solid-state lasers for quantum systems",
-   "u": "imec",
-   "c": "Belgium",
-   "ct": "Ghent",
-   "url": "https://academicpositions.com/ad/imec/2026/postdoctoral-researcher-in-on-chip-solid-state-lasers-for-quantum-systems/250125",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Doctor-assistent in the domain of wireless communications",
-   "u": "KU Leuven",
-   "c": "Belgium",
-   "ct": "Leuven",
-   "dl": "2026-06-29",
-   "url": "https://academicpositions.com/ad/ku-leuven/2026/doctor-assistent-in-the-domain-of-wireless-communications/249943",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Researcher in nuclear fuel materials",
-   "u": "KTH Royal Institute of Technology",
-   "c": "Sweden",
-   "ct": "Stockholm",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/researcher-in-nuclear-fuel-materials/249949",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-doctoral Fellowship in Diffusion Neuroimaging – 24-month Fixed-Term Contract",
-   "u": "IMT Atlantique",
-   "c": "France",
-   "ct": "Nantes",
-   "sal": "€35.8k",
-   "dl": "2026-07-01",
-   "url": "https://academicpositions.com/ad/imt-atlantique/2026/post-doctoral-fellowship-in-diffusion-neuroimaging-24-month-fixed-term-contract/249668",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Light-Driven CO2 Capture",
-   "u": "ETH Zürich",
-   "c": "Switzerland",
-   "ct": "Zurich",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoctoral-researcher-in-light-driven-co2-capture/249971",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdocs in Machine Learning for Odor Perception",
-   "u": "KTH Royal Institute of Technology",
-   "c": "Sweden",
-   "ct": "Stockholm",
-   "dl": "2026-06-27",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdocs-in-machine-learning-for-odor-perception/249185",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Research and Development Engineer or Post-doc in Control Systems – 12-month Fixed-term Contract",
-   "u": "IMT Atlantique",
-   "c": "France",
-   "ct": "Nantes",
-   "dl": "2026-07-02",
-   "url": "https://academicpositions.com/ad/imt-atlantique/2026/research-and-development-engineer-or-post-doc-in-control-systems-12-month-fixed-term-contract/249670",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "PostDoc in Data Anonymization - Computer/Information Systems",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "sal": "€85,176/year",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2025/postdoc-in-data-anonymization-computerinformation-systems/235388",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in SLAM & Situational Awareness for Robotics",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2025/postdoc-in-slam-situational-awareness-for-robotics/235468",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Scientist / PostDoc position to work on the integration of CCUS processes to energy system models",
-   "u": "Empa",
-   "c": "Switzerland",
-   "ct": "Dübendorf",
-   "url": "https://academicpositions.com/ad/empa/2026/scientist-postdoc-position-to-work-on-the-integration-of-ccus-processes-to-energy-system-models/250006",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Research and Development Engineer or Post-doc in Automatic Control and Robotics – 24-month Fixed-term Contract",
-   "u": "IMT Atlantique",
-   "c": "France",
-   "ct": "Nantes",
-   "sal": "€33.6–35.8k",
-   "dl": "2026-07-02",
-   "url": "https://academicpositions.com/ad/imt-atlantique/2026/research-and-development-engineer-or-post-doc-in-automatic-control-and-robotics-24-month-fixed-term-contract/249672",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral researcher in optimization for robust railway timetables",
-   "u": "ETH Zürich",
-   "c": "Switzerland",
-   "ct": "Zurich",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoctoral-researcher-in-optimization-for-robust-railway-timetables/248734",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral studies in regulatory genomics in neuroscience (scholarship)",
-   "u": "Karolinska Institutet",
-   "c": "Sweden",
-   "ct": "Stockholm",
-   "dl": "2026-07-16",
-   "url": "https://academicpositions.com/ad/karolinska-institutet/2026/postdoctoral-studies-in-regulatory-genomics-in-neuroscience-scholarship/250011",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Research and Development Engineer or Post-doc in Control Systems – 16-month Fixed-term Contract",
-   "u": "IMT Atlantique",
-   "c": "France",
-   "ct": "Nantes",
-   "dl": "2026-07-02",
-   "url": "https://academicpositions.com/ad/imt-atlantique/2026/research-and-development-engineer-or-post-doc-in-control-systems-16-month-fixed-term-contract/249674",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "University Assistant Post-Doc (all genders) 40 hours/week | limited to 2 years - Institute of Materials Chemistry",
-   "u": "TU Wien",
-   "c": "Austria",
-   "ct": "Vienna",
-   "sal": "€5,014/month",
-   "dl": "2026-07-02",
-   "url": "https://academicpositions.com/ad/tu-wien/2026/university-assistant-post-doc-all-genders-40-hoursweek-limited-to-2-years-institute-of-materials-chemistry/249837",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Modeling of Human-like Balance and Step Recovery",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
-   "dl": "2026-08-15",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-modeling-of-human-like-balance-and-step-recovery/249862",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "PostDoc in AI Development for Telecommunication Systems",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2025/postdoc-in-ai-development-for-telecommunication-systems/238953",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Researcher in methods and statistics, specializing in programming and structural equation modelling",
-   "u": "University of Twente",
-   "c": "The Netherlands",
-   "ct": "Enschede",
-   "dl": "2026-07-31",
-   "url": "https://academicpositions.com/ad/university-of-twente/2026/researcher-in-methods-and-statistics-specializing-in-programming-and-structural-equation-modelling/250021",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "A postdoctoral researcher on optimizing synchromodal transport networks for construction logistics",
-   "u": "Eindhoven University of Technology",
-   "c": "The Netherlands",
-   "ct": "Eindhoven",
-   "dl": "2026-07-16",
-   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/a-postdoctoral-researcher-on-optimizing-synchromodal-transport-networks-for-construction-logistics/250022",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Researcher or Researcher (II) (JECR2026)",
-   "u": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC)",
-   "c": "Japan",
-   "ct": "Yokosuka",
-   "dl": "2026-07-12",
-   "url": "https://academicpositions.com/ad/japan-agency-for-marine-earth-science-and-technology-jamstec/2026/researcher-or-researcher-ii-jecr2026/249019",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral fellow opening: Ambulatory Biomechanics, Sensor Fusion, and Machine Learning for Wearable Robotics",
-   "u": "University of Twente",
-   "c": "The Netherlands",
-   "ct": "Enschede",
-   "dl": "2026-07-13",
-   "url": "https://academicpositions.com/ad/university-of-twente/2026/postdoctoral-fellow-opening-ambulatory-biomechanics-sensor-fusion-and-machine-learning-for-wearable-robotics/250136",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc position in AI and Machine Learning for Electromobility",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-position-in-ai-and-machine-learning-for-electromobility/250038",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in High-Precision Tuning of Quantum Devices",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
-   "dl": "2026-08-02",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-high-precision-tuning-of-quantum-devices/250041",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Trustworthy DevOps for autonomous vehicles",
-   "u": "KTH Royal Institute of Technology",
-   "c": "Sweden",
-   "ct": "Stockholm",
-   "dl": "2026-06-26",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-trustworthy-devops-for-autonomous-vehicles/249044",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Tx/Rx Isolation Measurements of FMCW radar using a reverberation chamber (TRIM)",
-   "u": "Eindhoven University of Technology",
-   "c": "The Netherlands",
-   "ct": "Eindhoven",
-   "dl": "2026-07-05",
-   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/postdoc-txrx-isolation-measurements-of-fmcw-radar-using-a-reverberation-chamber-trim/249657",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "PostDoc in Snow Isotope Modelling 80-100%, (f/m/d)",
-   "u": "Swiss Federal Institute for Forest, Snow and Landscape Research WSL",
-   "c": "Switzerland",
-   "ct": "Davos Dorf",
-   "url": "https://academicpositions.com/ad/swiss-federal-institute-for-forest-snow-and-landscape-research-wsl/2026/postdoc-in-snow-isotope-modelling-80-100-fmd/249262",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral researcher in Robotics Manipulation",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-robotics-manipulation/244998",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Hydropower Modellering",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-hydropower-modellering/247794",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "PostDoc position in 3D X-ray histopathology of colorectal tumors",
-   "u": "Empa",
-   "c": "Switzerland",
-   "ct": "Dübendorf",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-in-3d-x-ray-histopathology-of-colorectal-tumors/250045",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Real-Time Computational Biomechanics",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Esch-sur-Alzette",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-real-time-computational-biomechanics/244126",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Advanced Communication Systems",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "sal": "€85,176/year",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-advanced-communication-systems/244129",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Marie Curie Postdoc Fellow in Advanced Wireless Communications",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/marie-curie-postdoc-fellow-in-advanced-wireless-communications/244869",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Position: Efficient Foundation Model Inference Across the Computing Continuum",
-   "u": "Aarhus University",
-   "c": "Denmark",
-   "ct": "Aarhus",
-   "dl": "2026-08-10",
-   "url": "https://academicpositions.com/ad/aarhus-university/2026/postdoc-position-efficient-foundation-model-inference-across-the-computing-continuum/245329",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Computer Vision",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-computer-vision/245106",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Far-Infrared Semiconductor Electronics",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
-   "dl": "2026-08-14",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-far-infrared-semiconductor-electronics/245163",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "GSMI - Postdoctoral Researcher – Non-Conventional Phosphates Beneficiation",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-researcher-non-conventional-phosphates-beneficiation/245388",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "PostDoc – Scientist – Solid-State Quantum Systems on Chip",
-   "u": "Silicon Austria Labs (SAL)",
-   "c": "Austria",
-   "ct": "Villach",
-   "url": "https://academicpositions.com/ad/silicon-austria-labs-sal/2026/postdoc-scientist-solid-state-quantum-systems-on-chip-all-genders-job-id-211-1/245664",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "GSMI - Postdoctoral Researcher in Valorization of Complex Phosphate Ores",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-researcher-in-valorization-of-complex-phosphate-ores/245809",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ACER CoE - Postdoc in Optical and Laser Diagnostics for Plasma Propagation and Plasma-Surface Interactions",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/acer-coe-postdoc-in-optical-and-laser-diagnostics-for-plasma-propagation-and-plasma-surface-interactions/246093",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ACER CoE - Postdoc in Non-Thermal Plasma-Based Hydrogen Production (002)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/acer-coe-postdoc-in-non-thermal-plasma-based-hydrogen-production-002/246111",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher on CO2 Solid Adsorbent Shaping and Degradation",
-   "u": "Empa",
-   "c": "Switzerland",
-   "ct": "Dübendorf",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoctoral-researcher-on-co2-solid-adsorbent-shaping-and-degradation/246155",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Position in CO2 Electrocatalysis Under Realistic Conditions",
-   "u": "Empa",
-   "c": "Switzerland",
-   "ct": "Dübendorf",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-in-co2-electrocatalysis-under-realistic-conditions/246532",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Position: Chemist for Selective Ion Scavenging in Batteries",
-   "u": "Empa",
-   "c": "Switzerland",
-   "ct": "St. Gallen",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-chemist-for-selective-ion-scavenging-in-batteries/251252",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc In Dynamic Modelling of Alkaline Water Electrolyzers",
-   "u": "Eindhoven University of Technology",
-   "c": "The Netherlands",
-   "ct": "Eindhoven",
-   "dl": "2026-08-20",
-   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/postdoc-in-dynamic-modelling-of-alkaline-water-electrolyzers/251394",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Position in Soft Optical Fiber-Based Artificial Muscle for Biomedical Applications",
-   "u": "ETH Zürich",
-   "c": "Switzerland",
-   "ct": "Zurich",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoc-position-in-soft-optical-fiber-based-artificial-muscle-for-biomedical-applications/247675",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Position in Light Multiplexed, Fiber-Based Artificial Sensorimotor Network",
-   "u": "ETH Zürich",
-   "c": "Switzerland",
-   "ct": "Zurich",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoc-position-in-light-multiplexed-fiber-based-artificial-sensorimotor-network/247729",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc (3 Years) on Numerical Simulation of Composite Hydrogen Tanks",
-   "u": "Ghent University",
-   "c": "Belgium",
-   "ct": "Ghent",
-   "sal": "From €2,900/month",
-   "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-3-years-on-numerical-simulation-of-composite-hydrogen-tanks/248127",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc (4 Years) on Simulation and Optimization of Snap Fit Joints",
-   "u": "Ghent University",
-   "c": "Belgium",
-   "ct": "Ghent",
-   "sal": "From €2,900/month",
-   "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-4-years-on-simulation-and-optimization-of-snap-fit-joints/248130",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "AGSB - Postdoctoral Researcher in Advanced Fertilizers and Sustainable Nutrient Delivery Systems for Agriculture",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agsb-postdoctoral-researcher-in-advanced-fertilizers-and-sustainable-nutrient-delivery-systems-for-agriculture/251235",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Artificial Intelligence & Robotics",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-artificial-intelligence-robotics/248510",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Software Engineering for Cyber-Physical Systems",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Luxembourg",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-software-engineering-for-cyber-physical-systems/248558",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Hardware Design and Design Automation",
-   "u": "KTH Royal Institute of Technology",
-   "c": "Sweden",
-   "ct": "Stockholm",
-   "dl": "2026-08-31",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-hardware-design-and-design-automation/248828",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Computational Modelling of Energy Systems & Industry Transformation",
-   "u": "Interdisciplinary Transformation University (IT:U)",
-   "c": "Austria",
-   "ct": "Linz",
-   "sal": "From €67,000/year",
-   "url": "https://academicpositions.com/ad/interdisciplinary-transformation-university-it-u/2026/postdoc-in-computational-modelling-of-energy-systems-industry-transformation/249146",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Industrial Transformation, Hydrogen & Renewable Energy Systems",
-   "u": "Interdisciplinary Transformation University (IT:U)",
-   "c": "Austria",
-   "ct": "Linz",
-   "sal": "From €67,000/year",
-   "url": "https://academicpositions.com/ad/interdisciplinary-transformation-university-it-u/2026/postdoc-in-industrial-transformation-hydrogen-renewable-energy-systems/249202",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "2 Independent Postdoctoral Researchers (f/m/d)",
-   "u": "University of Bremen",
-   "c": "Germany",
-   "ct": "Bremen",
-   "sal": "TV-L 14 with €10,000/year budget",
-   "url": "https://academicpositions.com/ad/university-of-bremen/2026/2-independent-postdoctoral-researchers-f-m-d/249250",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Doctor-Assistant (Full-Time Postdoctoral Researcher, AAP) in Biotech Data Science",
-   "u": "Ghent University Global Campus",
-   "c": "South Korea",
-   "ct": "Incheon",
-   "url": "https://academicpositions.com/ad/ghent-university-global-campus/2026/doctor-assistant-full-time-postdoctoral-researcher-aap-in-biotech-data-science/249266",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ACER CoE - Post Doctoral Fellowship: Development of a 'Battery Management System' for Lithium-Ion Batteries (11834)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/acer-coe-post-doctoral-fellowship-development-of-a-battery-management-system-for-lithium-ion-batteries-11834/218977",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "SUSMAT- Post-Doctoral Fellow Position in Formulation chemistry 12244",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/susmat-post-doctoral-fellow-position-in-formulation-chemistry-12244/221451",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CUS - Postdoctoral Researcher in Earth Observation and Spatial Analytics for Urban Systems",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-earth-observation-and-spatial-analytics-for-urban-systems/246761",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CBS - Postdoctoral Research position: Proteomics and Drug Development. (11579)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cbs-postdoc-in-proteomics-and-drug-development-11579/229767",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CBS- Postdoctoral Fellow in Applied microbiology and Bioprocess",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cbs-postdoctoral-fellow-in-applied-microbiology-and-bioprocess/229768",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CBS- Postdoctoral position in environmental chemistry -11444",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cbs-postdoctoral-position-in-environmental-chemistry-11444/229769",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-doctoral researcher in reproducible experimentation and network acceleration for generative AI – 18-month Fixed-Term Contract",
-   "u": "IMT Atlantique",
-   "c": "France",
-   "ct": "Nantes",
-   "dl": "2026-07-01",
-   "url": "https://academicpositions.com/ad/imt-atlantique/2026/post-doctoral-researcher-in-reproducible-experimentation-and-network-acceleration-for-generative-ai-18-month-fixed-term-contract/249665",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Acer - Post Doctoral Fellowship: Conversion of phosphate rocks into added value product 12697",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/acer-post-doctoral-fellowship-conversion-of-phosphate-rocks-into-added-value-product-12697/230527",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "GSMI - 10219 Post-doctoral Position in Structural Geology with a Focus on Hydrocarbon Reservoir Systems",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-10219-post-doctoral-position-in-structural-geology-with-a-focus-on-hydrocarbon-reservoir-systems/230529",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "COLCOM - Postdoctoral Researcher: Genomic Language Models for Bacterial Genomes",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/colcom-postdoctoral-researcher-genomic-language-models-for-bacterial-genomes/230704",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "COLCOM - Post doc position at College of Computing",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/colcom-post-doc-position-at-college-of-computing/230868",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "COLCOM - Postdoctoral fellow Position in Omics and Soil Microbiome Research (2 years)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/colcom-postdoctoral-fellow-in-omics-and-soil-microbiome-research/230999",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "GTI - Postdoctoral Researcher – AI/ML for Energy Systems",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "dl": "2026-06-16",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gti-postdoctoral-researcher-ai-ml-for-energy-systems/231024",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Position in Agrifood Science",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-agrifood-science/231325",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Position in Animal Food Industry and Valorization",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-animal-food-industry-and-valorization/231327",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Position in Marine Biology (seaweeds biology)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-marine-biology-seaweeds-biology/231328",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Position in desert and arid land agriculture",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-desert-and-arid-land-agriculture/231329",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Position in Veterinary Sciences",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-veterinary-sciences/231330",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI- Postdoctoral Position in Formulation and coating biotechnology",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-position-in-formulation-and-coating-biotechnology/231331",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-Doctoral Fellow in Embryonic Development of the Spinal Cord and Peripheral Nervous System",
-   "u": "The Hebrew University of Jerusalem",
-   "c": "Israel",
-   "ct": "Jerusalem",
-   "dl": "2026-06-18",
-   "url": "https://academicpositions.com/ad/the-hebrew-university-of-jerusalem/2025/post-doctoral-fellow-in-embryonic-development-of-the-spinal-cord-and-peripheral-nervous-system/231842",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "ASARI - Postdoctoral Fellow in Plant Nutrition and Fertilization",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "dl": "2026-06-16",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/asari-postdoctoral-fellow-in-plant-nutrition-and-fertilization/232478",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "University Assistant with Doctorate (m/f/d)",
-   "u": "University of Graz",
-   "c": "Austria",
-   "ct": "Graz",
-   "sal": "€70,200+",
-   "dl": "2026-06-17",
-   "url": "https://academicpositions.com/ad/university-graz/2026/university-assistant-with-doctorate-mfd/248543",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "COLCOM - Postdoc Position in WSN and IoT (10056)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/colcom-postdoc-position-in-wsn-and-iot-10056/233007",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "COLCOM - Postdoctoral Fellow in Federated Learning Over Wireless Networks (5118)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/colcom-postdoctoral-fellow-in-federated-learning-over-wireless-networks-5118/233008",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "College of computing - Postdoctoral fellow in Computational Biology - 10705",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/college-of-computing-postdoctoral-fellow-in-computational-biology-10705/233009",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CUS - Postdoctoral Researcher in Nature-Based Solutions (NBS) 12238",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-nature-based-solutions-nbs-12238/233013",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CUS - Postdoctoral Researcher in Urban Economics and Finance 12241",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-urban-economics-and-finance-12241/233015",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "CUS - Postdoctoral Researcher in Urban Water Management and Hydric Resilience",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "dl": "2026-06-16",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-urban-water-management-and-hydric-resilience/233019",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
-   "s": "academicpositions",
-   "t": "GSMI - Postdoctoral in Water Resources Engineering with focus on the hydrologic cycle at catchment scale (10167)",
-   "u": "Mohammed VI Polytechnic University",
-   "c": "Morocco",
-   "ct": "Benguerir",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-in-water-resources-engineering-with-focus-on-the-hydrologic-cycle-at-catchment-scale-10167/233026",
-   "warn": "Read from the AcademicPositions listing pages only; individual /ad/ pages were not opened, so department is never populated and posted date is never shown. Salary and deadline appear only where the listing card printed them."
-  },
-  {
    "s": "the",
-   "t": "Post-doctoral Fellow in Intelligent Structural Engineering in the Department of Civil Engineering",
-   "u": "THE UNIVERSITY OF HONG KONG",
-   "dp": "Department of Civil Engineering",
-   "c": "Hong Kong",
-   "ct": "Pok Fu Lam",
-   "sal": "Competitive salary",
-   "dl": "2026-09-20",
-   "pd": "2026-07-16",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/413462/post-doctoral-fellow-in-intelligent-structural-engineering-in-the-department-of-civil-engineering/",
-   "warn": "Advert body names physics deep learning, digital twin, smart and resilient infrastructure. Individual page states job reference 536424 and does not show an expiry notice."
-  },
-  {
-   "s": "the",
-   "t": "Post-Doctoral Associate in the Division of Engineering (Civil Engineering) - Dr. Mostafa Mobasher",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Division of Engineering; Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES)",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "dl": "2026-08-15",
-   "pd": "2026-07-16",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/413417/post-doctoral-associate-in-the-division-of-engineering-civil-engineering-dr-mostafa-mobasher/",
-   "warn": "Advert body: machine-learning powered digital twin for the structural performance of civil engineering structures; structural and geotechnical modelling, structural sensing, physical experiments, computational model validation. Salary not shown on the page."
-  },
-  {
-   "s": "the",
-   "t": "ARC Grant-Funded Researcher (A)",
-   "u": "ADELAIDE UNIVERSITY",
-   "dp": "School of Civil Engineering and Construction, College of Engineering and Information Technology",
-   "c": "Australia",
-   "ct": "Mawson Lakes, SA",
-   "sal": "$102,024 - $109,307 per annum (plus 17% superannuation)",
-   "dl": "2026-08-07",
-   "pd": "2026-07-10",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/413208/arc-grant-funded-researcher-a-/",
-   "warn": "CONTRADICTION recorded, not resolved silently: the /listings/civil-engineering/2/ card showed the countdown '18 days ago' (i.e. closed) while the individual posting page shows a closing date of 7 August 2026 (still open). Body value taken. Topic: low-carbon concrete using calcined halloysite, recycled plastic fibres and AI-assisted optimisation."
-  },
-  {
-   "s": "the",
-   "t": "Senior / Research Fellow (Land Reclamation) - HJH3",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "dp": "Engineering Division",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "dl": "2026-08-01",
-   "pd": "2026-07-02",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/412930/senior-research-fellow-land-reclamation-hjh3/?LinkSource=PremiumListing",
-   "warn": "Advert body: sustainable geomaterials for land reclamation; carbonation-engineered geomaterials (demolition fines, incineration bottom ash), laboratory testing, pilot-scale trials, field validation. Geotechnical. Salary not shown."
-  },
-  {
-   "s": "the",
-   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS2",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "dp": "Engineering Division",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "dl": "2026-08-01",
-   "pd": "2026-07-02",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/412928/research-fellow-engineer-cement-and-concrete-zms2/?LinkSource=PremiumListing",
-   "warn": "Advert body: ultra-low carbon concrete systems including LC3- and steel slag-based materials and steel fibre reinforced concrete (SFRC); mix design optimisation, durability, XRD/SEM-EDX/TGA. Salary not shown."
-  },
-  {
-   "s": "the",
-   "t": "Research Fellow / Engineer (Steel Structures and AI) - ZLL1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "dl": "2026-06-17",
-   "pd": "2026-05-18",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411067/research-fellow-engineer-steel-structures-and-ai-zll1/",
-   "warn": "Individual page states 'This job has expired'. Closest single match to the steel-structures / structural-optimisation interest found this run. Body: advanced welding and automation for steel fabrication; AI-enabled structural analysis, optimisation and design tools for low-carbon composite building systems."
-  },
-  {
-   "s": "the",
-   "t": "Post-Doctoral Associate in the Center for (SHORES) - Dr. Tarek Abdoun",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Center for Sand Hazards and Opportunities in Resilience, Energy, and Sustainability (SHORES), Division of Engineering, Civil and Urban Engineering Program",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "dl": "2026-07-26",
-   "pd": "2026-06-26",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/412722/post-doctoral-associate-in-the-center-for-shores-dr-tarek-abdoun/",
-   "warn": "Individual page states 'This job has expired' (closed 26 July 2026, three days before this run). Body: development, testing and analysis of resilient geotechnical systems using centrifuge modelling, laboratory testing and numerical simulation."
+   "t": "Post-Doctoral Associate In the Water Research Center (WRC) - Dr. Nidal Hilal",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413859/post-doctoral-associate-in-the-water-research-center-wrc-dr-nidal-hilal/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
    "t": "Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Center for (SHORES)",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "sal": "Competitive",
-   "dl": "2026-07-23",
-   "pd": "2026-06-22",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/412499/post-doctoral-associate-in-the-center-for-shores-mostafa-mobasher/",
-   "warn": "Individual page states 'This job has expired'. NYUAD re-lists this role monthly under a new numeric id (411312 closed 20 Jun 2026, 412499 closed 23 Jul 2026, and a further id 413858 appears in the engineering-and-technology listing but could not be opened this run for lack of a full slug URL). Treat as a recurring reposting."
+   "u": "Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher",
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413858/post-doctoral-associate-in-the-center-for-shores-mostafa-mobasher/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Post-Doctoral Associate in the Division of Engineering (Civil and Urban Engineering)",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "S.M.A.R.T. Construction Research Group",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "dl": "2026-08-13",
-   "pd": "2026-07-13",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/413330/post-doctoral-associate-in-the-division-of-engineering-civil-and-urban-engineering-/",
-   "warn": "Civil and Urban Engineering by department, but the advert body is digital construction technologies and cybersecurity (automation, AI, robotics, digital twins, BIM) rather than structural mechanics. Classified adjacent on the body text, not on the department name."
+   "t": "Post-Doctoral Associate in the Center for (SHORES) - Dr. Tarek Abdoun",
+   "u": "Post-Doctoral Associate in the Center for (SHORES) - Dr. Tarek Abdoun",
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413851/post-doctoral-associate-in-the-center-for-shores-dr-tarek-abdoun/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Fellow (Sound and Vibration) - ATCH2",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "dp": "Engineering Cluster",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "dl": "2026-06-20",
-   "pd": "2026-05-21",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411308/research-fellow-sound-and-vibration-atch2/",
-   "warn": "Individual page states 'This job has expired'. Vibration work, but the body is lift-generated noise in residential buildings (building acoustics), not structural dynamics of load-bearing systems."
+   "t": "IWRI - Postdoctoral Researcher in Pretreatment Processes for Seawater Desalination",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413707/iwri-postdoctoral-researcher-in-pretreatment-processes-for-seawater-desalination/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/410958/research-fellow-engineer-cement-and-concrete-zms1/",
-   "warn": "Listing card only; the card showed no salary and no closing date, so both are null. Individual page not opened this run."
+   "t": "Research Fellow in Geospatial Mapping and Analysis",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,636 to £41,064 Per Annum UNIVERSITY OF SOUTHAMPT",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413569/research-fellow-in-geospatial-mapping-and-analysis/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
    "t": "Research Fellow / Research Engineer (AI for Civil Engineering) - MM1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411070/research-fellow-research-engineer-ai-for-civil-engineering-mm1/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "u": "Research Fellow / Research Engineer (AI for Civil Engineering) - MM1",
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413534/research-fellow-research-engineer-ai-for-civil-engineering-mm1/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Engineer / Fellow (Floating Breakwater) - TZY11",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411074/research-engineer-fellow-floating-breakwater-tzy11/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "t": "Research Fellow / Engineer (Steel Structures and AI) - ZLL1",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413530/research-fellow-engineer-steel-structures-and-ai-zll1/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "Post-doctoral Fellow in Intelligent Structural Engineering in the Department of Civil Engineering",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413462/post-doctoral-fellow-in-intelligent-structural-engineering-in-the-department-of-civil-engineering/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
    "t": "Research Fellow / Engineer (Coastal and Hydrodynamic Modelling) - EA6-1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/410969/research-fellow-engineer-coastal-and-hydrodynamic-modelling-ea6-1/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "u": "Research Fellow / Engineer (Coastal and Hydrodynamic Modelling) - EA6-1",
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413449/research-fellow-engineer-coastal-and-hydrodynamic-modelling-ea6-1/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Fellow (in AI-enabled cloud analytics and BIM-based Digital Twin systems) - NTQ1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411309/research-fellow-in-ai-enabled-cloud-analytics-and-bim-based-digital-twin-systems-ntq1/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "t": "Post-Doctoral Associate in the Division of Engineering (Civil Engineering) - Dr. Mostafa Mobasher",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413417/post-doctoral-associate-in-the-division-of-engineering-civil-engineering-dr-mostafa-mobasher/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Fellow (Building Energy Optimization and Predictive Control) - DS1",
-   "u": "SINGAPORE INSTITUTE OF TECHNOLOGY (SIT)",
-   "c": "Singapore",
-   "ct": "Singapore",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411310/research-fellow-building-energy-optimization-and-predictive-control-ds1/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "t": "Post-Doctoral Associate in the Division of Engineering (Civil and Urban Engineering)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413330/post-doctoral-associate-in-the-division-of-engineering-civil-and-urban-engineering-/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
    "t": "Post-Doctoral Associate / Associate Research Scientist in the Division of Engineering",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Division of Engineering",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "sal": "Competitive",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/413221/post-doctoral-associate-associate-research-scientist-in-the-division-of-engineering/",
-   "warn": "Listing card only, surfaced under the civil-engineering/postdocs slug; the card does not name a sub-discipline, so field confidence is low. No closing date on the card."
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413221/post-doctoral-associate-associate-research-scientist-in-the-division-of-engineering/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Post-Doctoral Associate in the Division of Engineering (Mechanical Engineering) - Dr. Mohammed Daqaq",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Division of Engineering (Mechanical Engineering)",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411573/post-doctoral-associate-in-the-division-of-engineering-mechanical-engineering-dr-mohammed-daqaq/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "t": "Research Fellow / Engineer (Renewable Energy and Coastal Protection) - TZY6",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413185/research-fellow-engineer-renewable-energy-and-coastal-protection-tzy6/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Post-Doctoral Associate in the Center on Stability, Instability and Turbulence, Dr. Nader Masmoudi",
-   "u": "NEW YORK UNIVERSITY ABU DHABI",
-   "dp": "Center on Stability, Instability and Turbulence",
-   "c": "United Arab Emirates",
-   "ct": "Abu Dhabi",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411398/post-doctoral-associate-in-the-center-on-stability-instability-and-turbulence-dr-nader-masmoudi-/",
-   "warn": "Listing card only; no salary or closing date shown on the card."
+   "t": "MOE START Scheme (Applied Research Fellowship) - Engineering",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413175/moe-start-scheme-applied-research-fellowship-engineering/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "the",
-   "t": "Research Fellow in Experimental Fluid Mechanics",
-   "u": "UNIVERSITY OF SOUTHAMPTON",
-   "c": "United Kingdom",
-   "ct": "Southampton",
-   "sal": "£38,784 to £43,482 per annum",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/411346/research-fellow-in-experimental-fluid-mechanics/",
-   "warn": "Listing card only; no closing date shown on the card."
+   "t": "Senior / Research Fellow (Land Reclamation) - HJH3",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-02",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412930/senior-research-fellow-land-reclamation-hjh3/?LinkSource=PremiumListing",
+   "dv": []
   },
   {
    "s": "the",
-   "t": "Research Fellow in Materials' Degradation in Energy Systems",
-   "u": "CRANFIELD UNIVERSITY",
-   "c": "United Kingdom",
-   "ct": "Cranfield",
-   "sal": "£37,897 to £38,887 per annum",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/410927/research-fellow-in-materials-degradation-in-energy-systems/",
-   "warn": "Listing card only. Card showed the countdown '1 day left' rather than a date; countdown text is not a date and the Adelaide record on this same source proves the countdowns can be wrong, so deadline is left null."
+   "t": "Research Fellow / Engineer (Cement and Concrete) - ZMS2",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-02",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/412928/research-fellow-engineer-cement-and-concrete-zms2/?LinkSource=PremiumListing",
+   "dv": []
+  },
+  {
+   "s": "the",
+   "t": "Post-doctoral Fellow (PDF) in the Department of Electrical and Computer Engineering",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413981/post-doctoral-fellow-pdf-in-the-department-of-electrical-and-computer-engineering/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Research Engineer (Healthcare Design and Business) - (LJY)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413952/research-fellow-research-engineer-healthcare-design-and-business-ljy-/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "Research Fellow / Research Engineer (MedTech / HealthTech Engineering) - (LJY)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413951/research-fellow-research-engineer-medtech-healthtech-engineering-ljy-/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "Research Engineer/ Research Fellow (Design Factory) - NCP2",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/413949/research-engineer-research-fellow-design-factory-ncp2/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
-   "t": "Postdoc (3 Years) on Numerical Simulation of Composite Hydrogen Tanks",
-   "u": "Ghent University",
-   "c": "Belgium",
-   "ct": "Ghent",
-   "sal": "From €2,900/month",
+   "t": "CUS - Postdoctoral Researcher in Urban Water Management and Hydric Resilience Institution OverviewMohammed VI Polytechnic University (UM6P) is a research-driven institution focused on innovation and development in Africa. The university is committed to addressing global challenges by fostering cutting-edge research, develop...",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-urban-water-management-and-hydric-resilience/233019",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "CBS - Postdoc in Sustainable Hydrometallurgy Join a dynamic research team focused on sustainable hydrometallurgy. Contribute to innovative recycling processes for critical metals and collaborate with interdisciplinary partners.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cbs-postdoc-in-sustainable-hydrometallurgy/232935",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "PostDoc Research Position on Developing Technology for Subjective Sporting Experiences Lead HCI in sports tracking research: design wearable/mobile systems capturing athletes’ feelings, deliver context-aware feedback, evaluate in real-world studies; collaborate with ML.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-13",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/university-of-twente/2026/postdoc-research-position-on-developing-technology-for-subjective-sporting-experiences/251389",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "GSMI -Postdoctoral Researcher in Autogenous Grinding and Phosphate Ore Valorization. Seeking a Postdoctoral Researcher for a 12-month project on autogenous grinding and phosphate ore valorization.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-researcher-in-autogenous-grinding-and-phosphate-ore-valorization/238147",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "PostDoc in AI Development for Telecommunication Systems Join the SIGCOM Research Group to develop AI-driven algorithms for 6G networks. Requires Ph.D. in related field, ML expertise, and Python proficiency. Full-time, 24-month contract in Luxembourg.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/university-of-luxembourg/2025/postdoc-in-ai-development-for-telecommunication-systems/238953",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "CUS- Postdoctoral researcher specialized in electronics and embedded systems Design and deploy IoT solutions for environmental monitoring. Expertise in embedded systems, sensors, cloud integration, and IoT protocols required. Fluency in French and English essential.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-specialized-in-electronics-and-embedded-systems/241973",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "IWRI - Postdoctoral Fellow: Membrane-Based Pretreatment for SWRO Desalination Seeking a postdoc with expertise in membrane-based seawater desalination pretreatment, data analysis, lab/pilot testing, and strong scientific communication skills. 1-year contract, English/French required.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/iwri-postdoctoral-fellow-membrane-based-pretreatment-for-swro-desalination/243165",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc Position: Efficient foundation model inference across the computing continuum 1-year full-time postdoc (extension possible) on communication-efficient, distributed foundation model inference from Cloud to Edge. Research: token pruning/compression, MoE, latency/resource-aware optimization.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-10",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/aarhus-university/2026/postdoc-position-efficient-foundation-model-inference-across-the-computing-continuum/245329",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "GSMI - Postdoctoral Researcher – non-conventional phosphates beneficiation Lead lab-scale beneficiation research on non-conventional phosphates (classification, grinding, flotation), incl. characterization, process optimization, techno-economic & environmental assessment, publications.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-researcher-non-conventional-phosphates-beneficiation/245388",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc position in CO2 electrocatalysis under realistic conditions Postdoc on CO2 electroreduction: build modular reactors, run operando electrochem/spectroscopy & synchrotron studies to uncover degradation and boost electrode durability.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-in-co2-electrocatalysis-under-realistic-conditions/246532",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc In Dynamic Modelling of Alkaline Water Electrolyzers Develop coupled dynamic model of alkaline water electrolyzer; predict KPIs & degradation, validate with EU partners/experiments, integrate system sims, supervise students. 2.5y full-time.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-20",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/postdoc-in-dynamic-modelling-of-alkaline-water-electrolyzers/251394",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc position in soft optical fiber-based artificial muscle for biomedical applications Postdoc to build light-controlled biocompatible soft actuators on optical fibers; microfabrication, multiplexing & sensing for minimally invasive/implantable biomedical tools; supervise/TA.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoc-position-in-soft-optical-fiber-based-artificial-muscle-for-biomedical-applications/247675",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc position in light multiplexed, fiber-based artificial sensorimotor network Develop light-multiplexed soft optical fibers with self-sensing multimodal actuators; microfabrication, feedback control, robotics demos; supervise students/TA.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoc-position-in-light-multiplexed-fiber-based-artificial-sensorimotor-network/247729",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc (3 years) on numerical simulation of composite hydrogen tanks 3-year postdoc: finite-element modelling/design of pressurized composite hydrogen tanks (pressurization, depletion, thermo-mechanics) with automotive partners. Net pay from €2900/mo.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
    "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-3-years-on-numerical-simulation-of-composite-hydrogen-tanks/248127",
-   "warn": "Listing page only; individual /ad/ page not opened. No deadline shown on the listing."
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
-   "t": "Postdoc (4 Years) on Simulation and Optimization of Snap Fit Joints",
-   "u": "Ghent University",
-   "c": "Belgium",
-   "ct": "Ghent",
-   "sal": "From €2,900/month",
-   "url": "https://academicpositions.com/ad/ghent-university/2026/postdoc-4-years-on-simulation-and-optimization-of-snap-fit-joints/248130",
-   "warn": "Listing page only. Connection/joint simulation and optimisation, adjacent to the connection-topology and structural-optimisation interest, but the substrate is polymer snap-fit joints, not steel connections."
+   "t": "AGSB - Postdoctoral Researcher in advanced fertilizers and sustainable nutrient delivery systems for agriculturee Postdoc to develop biodegradable biopolymer/biochar nutrient carriers from waste; materials characterization (FTIR/SEM/BET), controlled NPK release & greenhouse trials for drought soils.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agsb-postdoctoral-researcher-in-advanced-fertilizers-and-sustainable-nutrient-delivery-systems-for-agriculture/251235",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
-   "t": "Postdoc in Real-Time Computational Biomechanics",
-   "u": "University of Luxembourg",
-   "c": "Luxembourg",
-   "ct": "Esch-sur-Alzette",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-real-time-computational-biomechanics/244126",
-   "warn": "Listing page only. Computational mechanics methods, biological application domain."
+   "t": "Postdoctoral Researcher in Artificial Intelligence & Robotics Postdoc developing GNSS-denied autonomous ground vehicle: VLA/VLM perception, semantic SLAM, LiDAR/radar/cam fusion, EW-resilient planning; ROS2 Python/C++. EU/EEA/NATO.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-artificial-intelligence-robotics/248510",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
-   "t": "A postdoctoral researcher on optimizing synchromodal transport networks for construction logistics",
-   "u": "Eindhoven University of Technology",
-   "c": "The Netherlands",
-   "ct": "Eindhoven",
-   "dl": "2026-07-16",
-   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/a-postdoctoral-researcher-on-optimizing-synchromodal-transport-networks-for-construction-logistics/250022",
-   "warn": "Listing page only. Deadline shown on the listing has already passed relative to this run date."
+   "t": "Postdoc in Computational Modelling of Energy Systems & Industry Transformation Postdoctoral research on energy transition & heavy-industry modelling. Develop open-source simulation/optimization code (Python/R, Git), publish, supervise. Linz; up to 4 yrs; €67k+.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/interdisciplinary-transformation-university-it-u/2026/postdoc-in-computational-modelling-of-energy-systems-industry-transformation/249146",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
-   "t": "Postdoc in Modeling of Human-like Balance and Step Recovery",
-   "u": "Chalmers University of Technology",
-   "c": "Sweden",
-   "ct": "Gothenburg",
+   "t": "Postdoc in Industrial Transformation, Hydrogen & Renewable Energy Systems Postdoc (4y, full-time, Linz): research industrial decarbonisation—hydrogen, steel/chemicals & renewables. Publish high-impact papers; techno-economic & policy analysis. From €67k.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/interdisciplinary-transformation-university-it-u/2026/postdoc-in-industrial-transformation-hydrogen-renewable-energy-systems/249202",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "2 independent postdoctoral researchers (f/m/d) Lead an independent 3-year postdoc project in interdisciplinary sustainability/space engineering. Full-time TV-L 14 with €10k/yr budget, mentoring & career coaching.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/university-of-bremen/2026/2-independent-postdoctoral-researchers-f-m-d/249250",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Doctor-Assistant (Full-Time Postdoctoral Researcher, AAP) in Biotech Data Science Full-time postdoc in deep-learning biotech data science (sequence + biomedical image/video). Songdo, Korea. Teach bioinformatics labs (≤30%). 2-year renewable; housing/travel for non-Koreans.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/ghent-university-global-campus/2026/doctor-assistant-full-time-postdoctoral-researcher-aap-in-biotech-data-science/249266",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Scientist (f/m/div) in the Area Resource-Efficient Controlled Environment Horticulture Postdoc role developing sensor- & model-based (AI/Digital Twin) strategies to optimize resource-efficient greenhouse/indoor crops. 3+3 yrs, TV-L E13, 32h+ / up to 50% remote.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-09-30",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/leibniz-institute-for-horticultural-sciences-igz/2026/scientist-f-m-div-in-the-area-resource-efficient-controlled-environment-horticulture/251462",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc position – Unraveling the mechanobiology of the OA knee joint 2-year ERC-funded postdoc studying knee osteoarthritis mechanobiology: recruit patients, motion capture/wearables, imaging & musculoskeletal modeling to link movement, joint loading and cartilage degeneration.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-14",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/ku-leuven/2026/postdoc-position-unraveling-the-mechanobiology-of-the-oa-knee-joint/249500",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in Resilient and Equitable Mobility Systems Postdoc in Gothenburg, Sweden developing dynamic synthetic populations & mobility digital twins for resilient/equitable transport under disruptions. ABM, networks, mobility data, generative models.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-11",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-resilient-and-equitable-mobility-systems/249790",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in Modeling of Human-like Balance and Step Recovery Postdoc: use RL/whole-body MPC and multibody simulation to model human balance & step recovery in public transport; develop validated, parameterized human models.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
    "dl": "2026-08-15",
+   "pd": "2026-07-30",
    "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-modeling-of-human-like-balance-and-step-recovery/249862",
-   "warn": "Listing page only. Dynamics and modelling, but biomechanics rather than structural."
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
-   "s": "iitk",
-   "t": "Institute Post-Doctoral Fellowship, Department of Civil Engineering",
-   "u": "Indian Institute of Technology Kanpur",
-   "dp": "Department of Civil Engineering",
-   "url": "https://iitk.ac.in/ce/post-doc-positions",
-   "warn": "Not a dated vacancy. The page states applications are invited from persons having a PhD in Civil Engineering or a closely related field, are accepted round the year and given prompt consideration, and are made through the Pingala portal. No deadline, no stipend figure and no location string are shown on the page, so all three are null. Country is null because no location string is displayed — it is not deduced from the institution name."
+   "s": "academicpositions",
+   "t": "Postdoc in Trustworthy AI for Localization and Sensing Develop trustworthy AI for cellular radio localization/sensing: hybrid physical models+ML, robustness to shifts/adversaries, uncertainty quantification & integrity monitoring. 2-year postdoc.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-trustworthy-ai-for-localization-and-sensing/249915",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in Stochastic PDEs for Transport Networks 2-year postdoc in PRONTO: model public transport networks via stochastic PDEs. Interdisciplinary applied math/control/data science; publish and present, optional teaching.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-20",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-stochastic-pdes-for-transport-networks/249923",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Post-doc assignment holders - Electronics (Prof. Münzenrieder, Niko) Postdoc research on flexible/unconventional electronics: fabricate sustainable thin‑film transistors & sensors on natural substrates using oxide semiconductors and transient metals.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/free-university-of-bozen-bolzano/2026/post-doc-assignment-holders-electronics-prof-munzenrieder-niko/251321",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "CBS - Postdoc in Inorganic Chemistry About Mohammed VI Polytechnic University (UM6P)Mohammed VI Polytechnic University (UM6P) is an internationally oriented institution of higher learning, that is committed to an educational system based on the highest standards of teaching and resea...",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cbs-postdoc-in-inorganic-chemistry/232953",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "CEPH - Postdoctoral Opportunity : Nuclear Physics and Applications – UM6P Seeking a Postdoctoral Researcher in nuclear physics for phosphate industry applications. Requires expertise in radiochemistry, nuclear analysis, and advanced detection techniques.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/ceph-postdoctoral-opportunity-nuclear-physics-and-applications-um6p/234403",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "CUS - Postdoctoral Researcher in Spatial Data Science Seeking a postdoc in urban modeling to develop cost estimation models for urbanization. Requires Ph.D., experience in urban projects, proficiency in modeling tools, and fluency in French and English.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/cus-postdoctoral-researcher-in-spatial-data-science/237947",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "AGBS - Postdoctoral Researcher in Molecular Plant Physiology Join our Plant Stress Physiology team to study molecular mechanisms in plant responses to stress. Requires Ph.D., molecular biology skills, and publication record.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agbs-postdoctoral-researcher-in-molecular-plant-physiology/238745",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "AGBS - Post-Doctoral in Genomics and Bioinformatics Seeking a post-doc in Genomics and Bioinformatics to research rhizobia genomic characterization. Requires Ph.D., bioinformatics expertise, and publication record. Excellent English needed.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agbs-post-doctoral-in-genomics-and-bioinformatics/238168",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "AgBS - Post-Doctoral in Modeling and Crop Yield Prediction in Africa(8992) Seeking a post-doctoral fellow to develop crop yield prediction models in Africa. Requires Ph.D. in Agronomy or related field, expertise in geospatial analysis, machine learning, and programming.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agbs-post-doctoral-in-modeling-and-crop-yield-prediction-in-africa-8992/238171",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "ARC_AIR - Postdoctoral Research Position in Agricultural Emissions Monitoring Monitor agricultural emissions in Africa using satellite data, atmospheric modeling, and deep learning. Requires Ph.D., programming skills, and experience in remote sensing or machine learning.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/arc-air-postdoctoral-research-position-in-agricultural-emissions-monitoring/242399",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoctoral Researcher in Advanced Materials Characterization 2-year postdoc in Grenoble on frustrated magnetic oxides: single-crystal neutron diffraction (polarized) + resonant X-ray scattering; beamtime proposals, data analysis, travel Spain/Europe.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-30",
+   "pd": "2026-07-30",
+   "url": "https://academicpositions.com/ad/institut-laue-langevin/2026/postdoctoral-researcher-in-advanced-materials-characterization/251560",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate in Structure Determination for Materials Discovery",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,906 to £46,049 per annum Date Placed: 29 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK705/postdoctoral-research-associate-in-structure-determination-for-materials-discovery",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow / Postdoctoral Researcher in Political Economy of Structural Transformation (x 5 positions)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£43,297.57 to £50,562.57 per annum inclusive of London Allowan",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH278/research-fellow-postdoctoral-researcher-in-political-economy-of-structural-transformation-x-5-positions",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Geospatial Mapping and Analysis",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,636 to £41,064 Per Annum Date Placed: 20 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH942/research-fellow-in-geospatial-mapping-and-analysis",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Acoustofluidics",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,636 to £46,049 Grade 7 Date Placed: 09 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSE833/research-fellow-in-acoustofluidics",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Assistant in Impact Engineering Composite Experimenting and Modelling for Aerospace Applications",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 per annum. Research Grade 7 Date Placed: 20",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH760/postdoctoral-research-assistant-in-impact-engineering-composite-experimenting-and-modelling-for-aerospace-applications",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £46,049 per annum, pro rata if part time, Grade 7 D",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH210/research-fellow",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "UCD Post-doctoral Research Fellow Level 1",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,117.87 per annum Date Placed: 06 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSC920/ucd-post-doctoral-research-fellow-level-1",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate in ubiquitin signalling",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£42,794 to £47,779 per annum Date Placed: 21 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI268/postdoctoral-research-associate-in-ubiquitin-signalling",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Researcher in Quantitative Cell Biology/Biochemistry (10404)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,500 per annum (depending on skills and experience) Date Pl",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI516/postdoctoral-researcher-in-quantitative-cell-biology-biochemistry-10404",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Post Doctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£45,031 to £52,514 per annum inclusive of London Weighting All",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI869/post-doctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Associate in Cell Biophysics & Biological Active Matter (Fixed Term)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £46,049 per annum Date Placed: 14 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSG260/research-associate-in-cell-biophysics-and-biological-active-matter-fixed-term",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Computational Engineering",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £46,049 per annum Date Placed: 27 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK132/research-fellow-in-computational-engineering",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Computational Biology",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £43,482 Grade 6 Date Placed: 21 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI353/research-fellow-in-computational-biology",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Fellow in Computational Biology",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 21 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI183/postdoctoral-research-fellow-in-computational-biology",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Computational Biology and AI",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,433 to £41,833 Date Placed: 22 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI621/research-fellow-in-computational-biology-and-ai",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Associate on Cardiac Digital Twins",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £41,636 per annum inclusive of Oxford University we",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK078/research-associate-on-cardiac-digital-twins",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow (Sustainability for AI)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,636 to £46,049 with potential progression once in post to",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK437/research-fellow-sustainability-for-ai",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 17 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH257/postdoctoral-fellow",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH906/postdoctoral-fellow",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Researcher",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSG171/postdoctoral-researcher",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Scientist",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 Research Grade 7 Date Placed: 14 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSG188/postdoctoral-scientist",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Researcher",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 24 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSJ494/postdoctoral-researcher",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £46,049 Date Placed: 27 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK011/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Assistant",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 per annum. Grade 7 Date Placed: 27 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSJ949/postdoctoral-research-assistant",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 Date Placed: 17 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH252/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £46,618 per annum. Date Placed: 28 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK369/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£42,091 to £51,755 Date Placed: 18 Jun",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DRY539/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£45,031 to £46,189 per annum inclusive of London Weighting All",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK341/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£45,031 to £52,514 per annum including London Weighting Allowa",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH419/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £51,755 per annum Date Placed: 20 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSH888/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 per annum (pro rata) Date Placed: 29 Jun",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSB625/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Officer",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £46,049 per annum (Grade 7) Date Placed: 29 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSK691/postdoctoral-research-officer",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSC531/postdoctoral-research-fellow",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 with a discretionary range to £53,483 (pro-",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSC583/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £46,049 per annum Date Placed: 21 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI235/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £51,755 per annum. (Candidates close to completion",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSD473/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Scientist",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £43,984 p.a. Research Grade 7. This is inclusive of",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI316/postdoctoral-research-scientist",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£48,607 per annum, including London Weighting Allowance Date P",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSE090/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,906 to £46,049 Grade 7 Date Placed: 06 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSD849/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 07 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSE281/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum, pro rata if part-time. Grade UE0",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI530/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£44,288 to £51,755 per annum. Date Placed: 22 Jul",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSI502/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral fellowship on translational research in daylighting for human health and well-being 100%, Zurich, fixed-term 10.07.2026 | Department of Architecture",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_tw2NqKjprjOKgicyhv",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researcher - Forest Management and Economics 100%, Zurich, fixed-term 08.07.2026 | Institute for Terrestrial Ecosystems (ITES)",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_koy4mdv9gRtEdvKgje",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoc position in towards a circular plastics economy within the planetary boundaries 100%, Zurich, fixed-term 29.06.2026 | Energy and Process Systems Engineering",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_itjl3I5FPoAN98mLxA",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researcher – Iterative Learning Control of Industrial Systems 100%, Zurich, permanent 26.06.2026 | Partnerinserat | inspire AG",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/11834",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researcher in Multimodal Reasoning Models for Oncology 100%, Basel, fixed-term 22.06.2026 | Department of Biosystems Science and Engineering (D-BSSE)",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_VDe7HVKqNZVZdvUAmt",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researchers for 3-year projects on quantum networks and quantum sensing 100%, Zurich, fixed-term 18.06.2026 | Optical Nanomaterial Laboratory in the Physics Department at ETH Zurich",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_TjHEAJOI8dRecXyJlK",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researcher in Light-Driven CO2 Capture 100%, Zurich, fixed-term 15.06.2026 | Electrochemical Energy Systems Laboratory",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_SEsDjBg4yDbJBXzxEY",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoc position in light multiplexed, fiber-based artificial sensorimotor network 100%, Zurich, fixed-term 22.04.2026 | Department of Materials (D-MATL)",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_Nak0hmCItjOLBSrryW",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoc position in soft optical fiber-based artificial muscle for biomedical applications 100%, Zurich, fixed-term 21.04.2026 | Department of Materials",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_mlRP2d7pXqRQcS4l5r",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoc Position in Experimental Quantum Engineering (EQE) Group 100%, Zurich, fixed-term 12.02.2026 | AMO physics, Quantum optics, Quantum simulation, Quantum computation",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_opiPoY6wNmVdhqPzn8",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Internal: Postdoc in Safety Assessment and Strengthening Technology of Existing Concrete Bridges",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Internal-Postdoc-in-Safety-Assessment-and-Strengthening-Technology-of-Existing-Concrete-Bridges-2628-CD/1367740057/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in Tsunami Engineering",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Tsunami-Engineering-2628-CD/1367777357/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc In-Situ Cryo-ET",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-In-Situ-Cryo-ET-2628-CD/1366991857/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in Tunnel Modelling for Geological Disposal of Radioactive Waste",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Tunnel-Modelling-for-Geological-Disposal-of-Radioactive-Waste-2628-CD/1367766757/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in Physical and Theoretical Chemistry, Department of Quantum Nanoscience, TU Delft",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Physical-and-Theoretical-Chemistry%2C-Department-of-Quantum-Nanoscience%2C-TU-Delft-2628-CD/1367880457/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc Multi-Scale Mechanobiological Cardiac Growth and Remodelling",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Multi-Scale-Mechanobiological-Cardiac-Growth-and-Remodelling-2628-CD/1366959457/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc Theoretical Biophysics Sars-Cov2",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Theoretical-Biophysics-Sars-Cov2-2628-CD/1367919757/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc in the Stritvaiz Project",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-the-Stritvaiz-Project-2628-CD/1366121057/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "toronto",
+   "t": "Postdoctoral Fellow",
+   "u": "University of Toronto",
+   "dp": "Civil & Mineral Engineering",
+   "c": "Canada",
+   "ct": "Toronto",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://civmin.utoronto.ca/wp-content/uploads/2026/02/020526-RCA-Revised-NP-Postdoc-Position.docx",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "toronto",
+   "t": "Postdoctoral Fellow",
+   "u": "University of Toronto",
+   "dp": "Civil & Mineral Engineering",
+   "c": "Canada",
+   "ct": "Toronto",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://civmin.utoronto.ca/wp-content/uploads/2026/02/020526-RCA-Revised-UF-Postdoc-Position.docx",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eritokyo",
+   "t": "特任研究員（2027年度地震研究所特任研究員）/ERI Project Researcher 2027",
+   "u": "University of Tokyo",
+   "dp": "Earthquake Research Institute",
+   "c": "Japan",
+   "ct": "Tokyo",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.eri.u-tokyo.ac.jp/wp-content/uploads/2026/06/地震研特任研究員公募要項2027_0629-3.pdf",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "Japanese-language posting; details in the linked PDF."
+  },
+  {
+   "s": "humboldt",
+   "t": "Humboldt Research Fellowship for Postdoctoral Researchers",
+   "u": "Alexander von Humboldt Foundation",
+   "dp": null,
+   "c": "Germany",
+   "ct": null,
+   "sal": "EUR 3,000–3,600/month (published programme rate)",
+   "dl": "2026-11-15",
+   "pd": "2026-07-30",
+   "url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship",
+   "dv": [
+    "deadline.nextCycleComputed",
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "All-discipline fellowship — the applicant defines the research field and German host. Each review round closes early after 800 applications."
+  },
+  {
+   "s": "jsps",
+   "t": "JSPS International Fellowship for Research in Japan (Standard, FY2027 1st call)",
+   "u": "Japan Society for the Promotion of Science",
+   "dp": null,
+   "c": "Japan",
+   "ct": null,
+   "sal": null,
+   "dl": "2026-08-28",
+   "pd": "2026-07-30",
+   "url": "https://www.jsps.go.jp/english/e-fellow/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "All-discipline fellowship; the JAPANESE HOST INSTITUTION submits the application, not the fellow — contact a host professor first."
+  },
+  {
+   "s": "quakecore",
+   "t": "QuakeCoRE Contestable Funding Round (annual RfP, early Sep – early Oct)",
+   "u": "QuakeCoRE — NZ Centre for Earthquake Resilience",
+   "dp": null,
+   "c": "New Zealand",
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.quakecore.nz/opportunities/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ],
+   "fc": "high",
+   "warn": "Recurring funding round, window published as early-September to early-October; exact dates on the official page. Not crawled daily (site restricts bots); entry maintained from the published cycle."
   }
  ]
 }
