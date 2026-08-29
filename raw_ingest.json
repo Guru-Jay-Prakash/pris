@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-08-28",
+ "fetchedAt": "2026-08-29",
  "sources": [
   {
    "id": "the",
@@ -203,9 +203,7 @@
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.timeshighereducation.com/unijobs/listing/414940/post-doctoral-associate-in-the-water-research-center-wrc-dr-nidal-hilal/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "the",
@@ -218,9 +216,7 @@
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.timeshighereducation.com/unijobs/listing/414939/post-doctoral-associate-in-the-center-for-shores-mostafa-mobasher/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "the",
@@ -233,9 +229,7 @@
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.timeshighereducation.com/unijobs/listing/414934/post-doctoral-associate-in-the-center-for-shores-dr-tarek-abdoun/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "the",
@@ -356,45 +350,15 @@
   },
   {
    "s": "the",
-   "t": "Post-Doctoral Associate in the Center for Translational Medical Devices (CENTMED)",
+   "t": "COLCOM - Postdoctoral in AI: Human-centered Autonomous Discovery Platform for Energy Materials",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
    "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/414937/post-doctoral-associate-in-the-center-for-translational-medical-devices-centmed-/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "the",
-   "t": "Post-Doctoral Associate in the Center for Artificial Intelligence and Robotics (CAIR)",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/414936/post-doctoral-associate-in-the-center-for-artificial-intelligence-and-robotics-cair-/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "the",
-   "t": "Post-Doctoral Associate in the Center on Stability, Instability and Turbulence, Dr. Nader Masmoudi",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/414935/post-doctoral-associate-in-the-center-on-stability-instability-and-turbulence-dr-nader-masmoudi-/?LinkSource=PremiumListing",
+   "pd": "2026-08-29",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/414961/colcom-postdoctoral-in-ai-human-centered-autonomous-discovery-platform-for-energy-materials/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -631,9 +595,7 @@
    "dl": "2026-09-25",
    "pd": "2026-08-28",
    "url": "https://academicpositions.com/ad/university-of-turku/2026/two-postdoctoral-researchers-in-memristor-materials-and-devices/252265",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "academicpositions",
@@ -659,9 +621,7 @@
    "dl": "2026-09-25",
    "pd": "2026-08-28",
    "url": "https://academicpositions.com/ad/university-of-turku/2026/postdoctoral-researcher-in-multiphysics-modelling-of-high-temperature-superconductor-quench-protection/252267",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "academicpositions",
@@ -675,6 +635,21 @@
    "pd": "2026-08-12",
    "url": "https://academicpositions.com/ad/tampere-university/2026/postdoctoral-researcher-orbit-consortium-management-and-organizations/251855",
    "dv": []
+  },
+  {
+   "s": "academicpositions",
+   "t": "Postdoc in electrocatalysis 2-year postdoc: design single-atom & dilute-alloy electrocatalysts for CO2 reduction and H2 fuel cells; synthesis, in situ/synchrotron characterization, CO2 electrolyzer tests.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-electrocatalysis/251828",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
@@ -834,6 +809,21 @@
   },
   {
    "s": "jobsacuk",
+   "t": "Research Associate / Senior Research Associate in Mathematical and Data Modelling",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,906 to £44,746 per annum (Grade I/Grade J) depending on ex",
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DSO940/research-associate-senior-research-associate-in-mathematical-and-data-modelling",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
    "t": "Research Associate",
    "u": null,
    "dp": null,
@@ -912,19 +902,6 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Assistant in Cell Biology",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£47,779 per annum: Research Grade 7.8 Date Placed: 13 Aug",
-   "dl": null,
-   "pd": "2026-08-14",
-   "url": "https://www.jobs.ac.uk/job/DSP357/postdoctoral-research-assistant-in-cell-biology",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
    "t": "Research Associate/Senior Research Associate in Intracellular Transport and Protein Design",
    "u": null,
    "dp": null,
@@ -948,6 +925,36 @@
    "pd": "2026-08-01",
    "url": "https://www.jobs.ac.uk/job/DSL634/research-associate-in-topological-data-analysis-for-cell-biology-10407",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Post Doctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£45,031 to £52,514 per annum inclusive of London Weighting All",
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DSI869/post-doctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Fellow in Computational Modelling of Energy Geotechnics",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £39,906 per annum Date Placed: 28 Aug",
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DSQ985/research-fellow-in-computational-modelling-of-energy-geotechnics",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -990,19 +997,6 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Researcher",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£37,694 to £46,049 Date Placed: 24 Aug",
-   "dl": null,
-   "pd": "2026-08-25",
-   "url": "https://www.jobs.ac.uk/job/DSS055/postdoctoral-researcher",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
    "t": "Research Fellow in Experimental Geotechnics",
    "u": null,
    "dp": null,
@@ -1034,10 +1028,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": null,
+   "sal": "£37,694 to £46,049 Grade 7 Date Placed: 17 Aug",
    "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://www.jobs.ac.uk/job/DSG171/postdoctoral-researcher",
+   "pd": "2026-08-18",
+   "url": "https://www.jobs.ac.uk/job/DSP631/postdoctoral-researcher",
    "dv": []
   },
   {
@@ -1047,10 +1041,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£37,694 to £46,049 Grade 7 Date Placed: 17 Aug",
+   "sal": null,
    "dl": null,
-   "pd": "2026-08-18",
-   "url": "https://www.jobs.ac.uk/job/DSP631/postdoctoral-researcher",
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSG171/postdoctoral-researcher",
    "dv": []
   },
   {
@@ -1081,54 +1075,15 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Fellow in Law",
+   "t": "Postdoctoral Researcher",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": null,
+   "sal": "£37,694 to £46,049 Date Placed: 24 Aug",
    "dl": null,
-   "pd": "2026-08-24",
-   "url": "https://www.jobs.ac.uk/job/DSP267/postdoctoral-fellow-in-law",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Fellow",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://www.jobs.ac.uk/job/DSC531/postdoctoral-research-fellow",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum pro-rata if part-time (Grade 7) D",
-   "dl": null,
-   "pd": "2026-08-26",
-   "url": "https://www.jobs.ac.uk/job/DSS549/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,424 to £47,779 with a discretionary range to £53,483 (pro-",
-   "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://www.jobs.ac.uk/job/DSC583/postdoctoral-research-associate",
+   "pd": "2026-08-25",
+   "url": "https://www.jobs.ac.uk/job/DSS055/postdoctoral-researcher",
    "dv": []
   },
   {
@@ -1151,13 +1106,11 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£38,419 to £51,755 Date Placed: 26 Aug",
+   "sal": "£41,064 to £48,822 per annum pro-rata if part-time (Grade 7) D",
    "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSS728/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "pd": "2026-08-26",
+   "url": "https://www.jobs.ac.uk/job/DSS549/postdoctoral-research-associate",
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1166,10 +1119,62 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£38,419 to £51,755 per annum. Date Placed: 13 Jul",
+   "sal": "£38,419 to £51,755 Date Placed: 26 Aug",
    "dl": null,
-   "pd": "2026-08-08",
-   "url": "https://www.jobs.ac.uk/job/DSF830/postdoctoral-research-associate",
+   "pd": "2026-08-28",
+   "url": "https://www.jobs.ac.uk/job/DSS728/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 with a discretionary range to £53,483 (pro-",
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSC583/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-07-30",
+   "url": "https://www.jobs.ac.uk/job/DSC531/postdoctoral-research-fellow",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,355 to £45,413 per annum Date Placed: 27 Aug",
+   "dl": null,
+   "pd": "2026-08-28",
+   "url": "https://www.jobs.ac.uk/job/DSS789/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 26 Aug",
+   "dl": null,
+   "pd": "2026-08-28",
+   "url": "https://www.jobs.ac.uk/job/DSS784/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1187,46 +1192,16 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Fellow",
+   "t": "Postdoctoral Data Scientist",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 14 Aug",
+   "sal": "£39,424 to £46,476 Date Placed: 18 Aug",
    "dl": null,
    "pd": "2026-08-24",
-   "url": "https://www.jobs.ac.uk/job/DSP573/postdoctoral-research-fellow",
+   "url": "https://www.jobs.ac.uk/job/DSQ463/postdoctoral-data-scientist",
    "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,355 to £45,413 per annum Date Placed: 27 Aug",
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSS789/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 26 Aug",
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSS784/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
   },
   {
    "s": "jobsacuk",
@@ -1243,6 +1218,21 @@
   },
   {
    "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £51,755 per annum. Date Placed: 28 Aug",
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DST407/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
    "t": "Postdoctoral Research Fellow",
    "u": null,
    "dp": null,
@@ -1256,19 +1246,6 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Data Scientist",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,424 to £46,476 Date Placed: 18 Aug",
-   "dl": null,
-   "pd": "2026-08-24",
-   "url": "https://www.jobs.ac.uk/job/DSQ463/postdoctoral-data-scientist",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
    "t": "Postdoctoral Research Scientist",
    "u": null,
    "dp": null,
@@ -1278,21 +1255,6 @@
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.jobs.ac.uk/job/DSQ621/postdoctoral-research-scientist",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 03 Aug",
-   "dl": null,
-   "pd": "2026-08-24",
-   "url": "https://www.jobs.ac.uk/job/DSM088/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1306,9 +1268,20 @@
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.jobs.ac.uk/job/DSQ837/postdoctoral-research-fellow",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Scientist",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 per annum: Grade 7 Date Placed: 19 Aug",
+   "dl": null,
+   "pd": "2026-08-28",
+   "url": "https://www.jobs.ac.uk/job/DSQ937/postdoctoral-research-scientist",
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1330,13 +1303,39 @@
    "dp": null,
    "c": null,
    "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 03 Aug",
+   "dl": null,
+   "pd": "2026-08-24",
+   "url": "https://www.jobs.ac.uk/job/DSM088/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £46,618 per annum Date Placed: 20 Aug",
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DSR280/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
    "sal": null,
    "dl": null,
    "pd": "2026-08-28",
    "url": "https://www.jobs.ac.uk/job/DSM604/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1345,10 +1344,55 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£39,424 to £47,779 per annum: Grade 7 Date Placed: 19 Aug",
+   "sal": "£39,253 to £45,505 subject to experience, plus relocation allo",
    "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSQ937/postdoctoral-research-scientist",
+   "pd": "2026-08-29",
+   "url": "https://www.jobs.ac.uk/job/DSR120/postdoctoral-research-scientist",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Fellowship at Design++ 100%, Zurich, fixed-term 28.08.2026 | Center for Augmented Computational Design in Architecture, Engineering and Construction",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_sKGJYv288uud0RYkmK",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Fellow / Process Engineer for metal assisted chemical etching 100%, Zurich, fixed-term 28.08.2026 | Institute for Biomedical Engineering (D-ITET) - Professur for X-ray imaging and PSI Center for Photon Science - Paul Scherrer Institut",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_7qpUJghiPxjjg3LgH1",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "eth",
+   "t": "Postdoc in modelling of early prokaryote evolution and interaction with earth geodynamics 100%, Zurich, fixed-term 28.08.2026 | Environmental Systems and Planetary Science (D-EAPS)",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-08-29",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_xPEbTe5DV76cK9b0qO",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -1588,7 +1632,7 @@
    "c": "Japan",
    "ct": null,
    "sal": null,
-   "dl": "2026-08-28",
+   "dl": "2027-04-23",
    "pd": "2026-07-30",
    "url": "https://www.jsps.go.jp/english/e-fellow/",
    "dv": [],
