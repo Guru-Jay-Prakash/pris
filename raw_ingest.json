@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-08-29",
+ "fetchedAt": "2026-08-30",
  "sources": [
   {
    "id": "the",
@@ -359,9 +359,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://www.timeshighereducation.com/unijobs/listing/414961/colcom-postdoctoral-in-ai-human-centered-autonomous-discovery-platform-for-energy-materials/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "academicpositions",
@@ -453,6 +451,21 @@
    "pd": "2026-07-30",
    "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/gsmi-postdoctoral-researcher-non-conventional-phosphates-beneficiation/245388",
    "dv": []
+  },
+  {
+   "s": "academicpositions",
+   "t": "KAUST Global Fellowship Program - Postdoctoral Fellowship (Call 2027) 3-year postdoctoral fellowship in Thuwal, Saudi Arabia: lead independent research (Food/Water/Energy/Health/AI/Red Sea). $75k stipend + $20–40k/yr research, benefits.",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": "2026-09-30",
+   "pd": "2026-08-30",
+   "url": "https://academicpositions.com/ad/king-abdullah-university-science-technology-kaust/2026/kaust-global-fellowship-program-postdoctoral-fellowship-call-2027/251999",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "academicpositions",
@@ -638,21 +651,6 @@
   },
   {
    "s": "academicpositions",
-   "t": "Postdoc in electrocatalysis 2-year postdoc: design single-atom & dilute-alloy electrocatalysts for CO2 reduction and H2 fuel cells; synthesis, in situ/synchrotron characterization, CO2 electrolyzer tests.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-29",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-electrocatalysis/251828",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "academicpositions",
    "t": "CBS - Postdoc in Inorganic Chemistry About Mohammed VI Polytechnic University (UM6P)Mohammed VI Polytechnic University (UM6P) is an internationally oriented institution of higher learning, that is committed to an educational system based on the highest standards of teaching and resea...",
    "u": null,
    "dp": null,
@@ -818,9 +816,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://www.jobs.ac.uk/job/DSO940/research-associate-senior-research-associate-in-mathematical-and-data-modelling",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -937,9 +933,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://www.jobs.ac.uk/job/DSI869/post-doctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -952,9 +946,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://www.jobs.ac.uk/job/DSQ985/research-fellow-in-computational-modelling-of-energy-geotechnics",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1093,36 +1085,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 25 Aug",
-   "dl": null,
-   "pd": "2026-08-26",
-   "url": "https://www.jobs.ac.uk/job/DSS582/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
    "sal": "£41,064 to £48,822 per annum pro-rata if part-time (Grade 7) D",
    "dl": null,
    "pd": "2026-08-26",
    "url": "https://www.jobs.ac.uk/job/DSS549/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,419 to £51,755 Date Placed: 26 Aug",
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSS728/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1158,10 +1124,23 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£39,355 to £45,413 per annum Date Placed: 27 Aug",
+   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 25 Aug",
+   "dl": null,
+   "pd": "2026-08-26",
+   "url": "https://www.jobs.ac.uk/job/DSS582/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £51,755 Date Placed: 26 Aug",
    "dl": null,
    "pd": "2026-08-28",
-   "url": "https://www.jobs.ac.uk/job/DSS789/postdoctoral-research-associate",
+   "url": "https://www.jobs.ac.uk/job/DSS728/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1184,10 +1163,36 @@
    "dp": null,
    "c": null,
    "ct": null,
+   "sal": "£39,355 to £45,413 per annum Date Placed: 27 Aug",
+   "dl": null,
+   "pd": "2026-08-28",
+   "url": "https://www.jobs.ac.uk/job/DSS789/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
    "sal": "£45,031 to £52,514 per annum, including London Weighting Allow",
    "dl": null,
    "pd": "2026-08-08",
    "url": "https://www.jobs.ac.uk/job/DSF333/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £46,049 per annum (Grade 7) Date Placed: 24 Jul",
+   "dl": null,
+   "pd": "2026-08-16",
+   "url": "https://www.jobs.ac.uk/job/DSJ474/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1210,26 +1215,11 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£38,784 to £46,049 per annum (Grade 7) Date Placed: 24 Jul",
-   "dl": null,
-   "pd": "2026-08-16",
-   "url": "https://www.jobs.ac.uk/job/DSJ474/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
    "sal": "£38,419 to £51,755 per annum. Date Placed: 28 Aug",
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://www.jobs.ac.uk/job/DST407/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1272,6 +1262,19 @@
   },
   {
    "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 03 Aug",
+   "dl": null,
+   "pd": "2026-08-24",
+   "url": "https://www.jobs.ac.uk/job/DSM088/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
    "t": "Postdoctoral Research Scientist",
    "u": null,
    "dp": null,
@@ -1298,31 +1301,16 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
+   "t": "Postdoctoral Research Scientist",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 03 Aug",
-   "dl": null,
-   "pd": "2026-08-24",
-   "url": "https://www.jobs.ac.uk/job/DSM088/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,419 to £46,618 per annum Date Placed: 20 Aug",
+   "sal": "£39,253 to £45,505 subject to experience, plus relocation allo",
    "dl": null,
    "pd": "2026-08-29",
-   "url": "https://www.jobs.ac.uk/job/DSR280/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "url": "https://www.jobs.ac.uk/job/DSR120/postdoctoral-research-scientist",
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1339,18 +1327,16 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Scientist",
+   "t": "Postdoctoral Research Associate",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£39,253 to £45,505 subject to experience, plus relocation allo",
+   "sal": "£38,419 to £46,618 per annum Date Placed: 20 Aug",
    "dl": null,
    "pd": "2026-08-29",
-   "url": "https://www.jobs.ac.uk/job/DSR120/postdoctoral-research-scientist",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "url": "https://www.jobs.ac.uk/job/DSR280/postdoctoral-research-associate",
+   "dv": []
   },
   {
    "s": "eth",
@@ -1363,9 +1349,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_sKGJYv288uud0RYkmK",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
@@ -1378,9 +1362,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_7qpUJghiPxjjg3LgH1",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
@@ -1393,9 +1375,7 @@
    "dl": null,
    "pd": "2026-08-29",
    "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_xPEbTe5DV76cK9b0qO",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
