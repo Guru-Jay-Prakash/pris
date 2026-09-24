@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-09-23",
+ "fetchedAt": "2026-09-24",
  "sources": [
   {
    "id": "the",
@@ -14,12 +14,12 @@
   {
    "id": "academicpositions",
    "name": "AcademicPositions.com",
-   "status": "OK",
+   "status": "FAILED",
    "listUrls": [
     "https://academicpositions.com/jobs/position/post-doc/field/engineering",
     "https://academicpositions.com/jobs/position/post-doc"
    ],
-   "note": "Engineering postdoc feed + general feed, server-rendered. Failure mode is an empty shell without /ad/ links — detected and reported as FAILED. [probe soft-200 but no job markup — pages are validated by content, not status]"
+   "note": "Engineering postdoc feed + general feed, server-rendered. Failure mode is an empty shell without /ad/ links — detected and reported as FAILED. RUN ERROR: HTTP 403 — likely a site redesign; ask Claude to repair scraper.py."
   },
   {
    "id": "jobsacuk",
@@ -53,20 +53,20 @@
   {
    "id": "uiuc",
    "name": "UIUC Civil & Environmental Engineering",
-   "status": "OK",
+   "status": "FAILED",
    "listUrls": [
     "https://cee.illinois.edu/about/employment"
    ],
-   "note": "Department employment page; postings link to the Illinois jobs portal. No postdoc-level rows on the page this run — monitored. [probe returned HTTP 404 (clean)]"
+   "note": "Department employment page; postings link to the Illinois jobs portal. RUN ERROR: HTTPSConnectionPool(host='cee.illinois.edu', port=443): Max retries exceeded with url: /about/employment (Caused by Conn — likely a site redesign; ask Claude to repair scraper.py."
   },
   {
    "id": "toronto",
    "name": "University of Toronto Civil & Mineral Engineering",
-   "status": "OK",
+   "status": "FAILED",
    "listUrls": [
     "https://civmin.utoronto.ca/about-civmin/opportunities/"
    ],
-   "note": "Department opportunities page; some postings are .docx/.pdf attachments — open the original. [probe returned HTTP 404 (clean)]"
+   "note": "Department opportunities page; some postings are .docx/.pdf attachments — open the original. RUN ERROR: HTTPSConnectionPool(host='civmin.utoronto.ca', port=443): Max retries exceeded with url: /about-civmin/opportunities/ (C — likely a site redesign; ask Claude to repair scraper.py."
   },
   {
    "id": "nus",
@@ -207,19 +207,6 @@
   },
   {
    "s": "the",
-   "t": "Post-Doctoral Associate In the Water Research Center (WRC) - Dr. Nidal Hilal",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/414940/post-doctoral-associate-in-the-water-research-center-wrc-dr-nidal-hilal/?LinkSource=PremiumListing",
-   "dv": []
-  },
-  {
-   "s": "the",
    "t": "Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher",
    "u": "Post-Doctoral Associate in the Center for (SHORES) - Mostafa Mobasher",
    "dp": null,
@@ -298,654 +285,108 @@
   },
   {
    "s": "the",
-   "t": "Research Fellow - Prevention Research Support Program",
+   "t": "University Assistant Postdoctoral, Physics",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "$132,533 - $157,381+ 17% superannuation UNIVERSITY O",
+   "sal": null,
    "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/415786/research-fellow-prevention-research-support-program/?LinkSource=PremiumListing",
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415854/university-assistant-postdoctoral-physics/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
    "s": "the",
-   "t": "Magma Research Associate / Magma Research Fellow",
+   "t": "Post-Doctoral Associate in the Arabian Center for Climate and Environmental Sciences",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "$113,634 - $157,381 + 17% superannuation UNIVERSITY",
+   "sal": null,
    "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/415787/magma-research-associate-magma-research-fellow/?LinkSource=PremiumListing",
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415855/post-doctoral-associate-in-the-arabian-center-for-climate-and-environmental-sciences/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
    "s": "the",
-   "t": "Research Fellow in Molecular Microbiology",
+   "t": "Research Fellow in Responsible AI Translation",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£68906.09 - £81822.67 per annum + plus 17% super UNI",
+   "sal": "£36,636 to £44,746 Per annum UNIVERSITY OF SOUTHAMPT",
    "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/415788/research-fellow-in-molecular-microbiology/?LinkSource=PremiumListing",
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415851/research-fellow-in-responsible-ai-translation/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
    "s": "the",
-   "t": "Post-doctoral Fellow in Peptide Chemistry and Bioconjugation",
+   "t": "Postdoctoral Researcher in Photomemristor Arrays for Optogenetic-Neuromorphic Interfaces",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
    "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/415783/post-doctoral-fellow-in-peptide-chemistry-and-bioconjugation/?LinkSource=PremiumListing",
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415850/postdoctoral-researcher-in-photomemristor-arrays-for-optogenetic-neuromorphic-interfaces/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher, Photonics for Quantum Postdoc in quantum integrated photonics: develop QPICs, wafer-scale process & EO characterization, build projects/funding, publish & supervise; work with academia/industry. 3-year term.",
+   "s": "the",
+   "t": "Post-Doctoral Associate in the Center for Behavioral Institutional Design (C-BID)",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-09-22",
-   "url": "https://academicpositions.com/ad/vtt/2026/postdoctoral-researcher-photonics-for-quantum/253217",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-doctoral researcher in Construction Business Postdoc: study digital & green transition in construction/real estate—digital twins, data interoperability, material passports, decision support. Lahti (Finland), hybrid; 2-year.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-04",
-   "pd": "2026-09-15",
-   "url": "https://academicpositions.com/ad/lut-university/2026/post-doctoral-researcher-in-construction-business/252954",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "ENGINEER/POST-DOC POSITION OFFER : in Stretchable Electronics & Optics for Artificial Skin – 12 months Postdoc/ingénieur R&D (12 mois) : guides d’onde optiques étirables pour peau artificielle (pression/temp.), intégration LED/photodiodes, cleanroom, Python.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-12-15",
-   "pd": "2026-09-23",
-   "url": "https://academicpositions.com/ad/mines-saint-etienne/2026/engineer-post-doc-position-offer-in-stretchable-electronics-optics-for-artificial-skin-12-months/253266",
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415848/post-doctoral-associate-in-the-center-for-behavioral-institutional-design-c-bid-/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
-   "s": "academicpositions",
-   "t": "Post-doctoral researcher in Building Services Postdoc researching HVAC/automation for sustainable, user-safe buildings: demand control, energy efficiency, IAQ/comfort. Lahti, Finland (hybrid). 2 yrs. €4.3–5k/mo.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-04",
-   "pd": "2026-09-15",
-   "url": "https://academicpositions.com/ad/lut-university/2026/post-doctoral-researcher-in-building-services/252955",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-doctoral researcher in Urban Physics on Heat Waves and Air Quality Postdoc: high-fidelity CFD/building-energy modelling of urban heat waves & air pollution, validated with on-site measurements; publish, proposals, supervise. Lahti, Finland (hybrid).",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-04",
-   "pd": "2026-09-15",
-   "url": "https://academicpositions.com/ad/lut-university/2026/post-doctoral-researcher-in-urban-physics-on-heat-waves-and-air-quality/252956",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "KAUST Global Fellowship Program - Postdoctoral Fellowship (Call 2027) 3-year postdoctoral fellowship in Thuwal, Saudi Arabia: lead independent research (Food/Water/Energy/Health/AI/Red Sea). $75k stipend + $20–40k/yr research, benefits.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-08-30",
-   "url": "https://academicpositions.com/ad/king-abdullah-university-science-technology-kaust/2026/kaust-global-fellowship-program-postdoctoral-fellowship-call-2027/251999",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc position in CO2 electrocatalysis under realistic conditions Postdoc on CO2 electroreduction: build modular reactors, run operando electrochem/spectroscopy & synchrotron studies to uncover degradation and boost electrode durability.",
+   "s": "the",
+   "t": "Post-doctoral Associate in the Division of Social Science (Social Research and Public Policy)",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
    "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-in-co2-electrocatalysis-under-realistic-conditions/246532",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Laser Scientist 3-year postdoc in Hamburg: develop automated laser beam-shaping & quality metrics for European XFEL; Python control/analysis, optics/beam transport; AI/RL alignment a plus.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-18",
-   "url": "https://academicpositions.com/ad/deutsches-elektronen-synchrotron-desy/2026/postdoctoral-laser-scientist/253130",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Fellow / Process Engineer for metal assisted chemical etching Join SNSF ABSOLUTE project to optimize silicon MacEtch for high-aspect microstructures. Cleanroom work on 4” wafers; photolithography, deposition, SEM/metrology; publish & present.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-01",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoctoral-fellow-process-engineer-for-metal-assisted-chemical-etching/252330",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "AGBS - Postdoctoral Researcher in advanced fertilizers and sustainable nutrient delivery systems for agriculture Postdoc to develop biodegradable biopolymer/biochar nutrient carriers from waste; materials characterization (FTIR/SEM/BET), controlled NPK release & greenhouse trials for drought soils.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agsb-postdoctoral-researcher-in-advanced-fertilizers-and-sustainable-nutrient-delivery-systems-for-agriculture/251235",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in atom probe tomography for sustainable metals 2-year postdoc in atom probe tomography for sustainable metallic alloys. Do specimen prep, APT acquisition/reconstruction & analysis; collaborate, publish. Stockholm.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-01",
-   "pd": "2026-09-01",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-atom-probe-tomography-for-sustainable-metals/252333",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Stochastic PDEs for Transport Networks 2-year postdoc in PRONTO: model public transport networks via stochastic PDEs. Interdisciplinary applied math/control/data science; publish and present, optional teaching.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-09-04",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-stochastic-pdes-for-transport-networks/249923",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc In Atomic-Scale Processing for Future Chips and Energy 3 postdoc roles in atomic-scale materials processing (ALD) for photonics, AI-driven workflows or energy storage. 2-year full-time in Eindhoven; supervise students & publish.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-11",
-   "pd": "2026-09-15",
-   "url": "https://academicpositions.com/ad/eindhoven-university-of-technology/2026/postdoc-in-atomic-scale-processing-for-future-chips-and-energy/252945",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher – Tactile Sensing for Dexterous Manipulation Lead design/fabrication of compact multi-axis tactile sensors for dexterous robotic hands; integrate and benchmark closed-loop control; co-supervise students; publish top robotics work.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-04",
-   "url": "https://academicpositions.com/ad/eth-zurich/2026/postdoctoral-researcher-tactile-sensing-for-dexterous-manipulation/251689",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in gears - manufacturing to performance Postdoc: study how manufacturing and geometry/surface variations affect gear efficiency, wear and life. Run FZG rig experiments, surface/geometry metrology; explore new materials and lubrication.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-01",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-gears-manufacturing-to-performance/252342",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in X-ray and neutron characterization of metals for AM Develop in-/ex-situ synchrotron & neutron methods at PETRA III (P21.2) to study laser/e-beam processed metals for AM/welding; analyze microstructure, phase changes & properties.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-01",
-   "pd": "2026-09-01",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoc-in-x-ray-and-neutron-characterization-of-metals-for-am/252343",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Multidisciplinary Aircraft Design and Aerodynamic Integration Postdoc advancing multidisciplinary aircraft design & aerodynamic integration: conceptual design, MDO, high‑fidelity CFD; explore unconventional, electric/hydrogen concepts with academia & industry.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-01",
-   "pd": "2026-09-02",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-multidisciplinary-aircraft-design-and-aerodynamic-integration/252449",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral researcher in learning, control, and games 2-year postdoc on closed-loop learning, control & games; develop mathematical/computational methods for AI/human decision-makers interacting with dynamical environments.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-16",
-   "pd": "2026-09-03",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoctoral-researcher-in-learning-control-and-games/252474",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Bioelectrochemical CO₂ Conversion and Electrocatalysis 24‑month industrial postdoc developing durable electrocatalysts and methanogenic bioelectrochemical reactors for CO₂‑to‑methane conversion; 12 mo university + 12 mo industry.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-09-03",
-   "url": "https://academicpositions.com/ad/university-of-jyvaskyla/2026/postdoctoral-researcher-in-bioelectrochemical-co2-conversion-and-electrocatalysis/252476",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral researcher in Human-Robot Interaction 2-year postdoc: build universal, context-adaptive robot communication; run field & lab user studies, develop theory/models, mentor junior researchers. On-site in Gothenburg.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-09",
-   "pd": "2026-09-03",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoctoral-researcher-in-human-robot-interaction/252504",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post doc in hydrogen infrastructure in energy systems Model hydrogen demand, production, distribution & storage in a high‑resolution Nordic energy system model. Techno‑economic analysis, interdisciplinary EU collaboration; some teaching/supervision.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-01",
-   "pd": "2026-09-03",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/post-doc-in-hydrogen-infrastructure-in-energy-systems/252505",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Circular Chemistry and Green Hydrogen Electrocatalysis 12-month postdoc: build circular electrocatalysts from recycled materials for green H2 and electrolyser dev; network with industry, run experiments, co-write funding proposals/papers.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-09-03",
-   "url": "https://academicpositions.com/ad/university-of-jyvaskyla/2026/postdoctoral-researcher-in-circular-chemistry-and-green-hydrogen-electrocatalysis/252478",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Scientist (f/m/div) in the Area Resource-Efficient Controlled Environment Horticulture Postdoc role developing sensor- & model-based (AI/Digital Twin) strategies to optimize resource-efficient greenhouse/indoor crops. 3+3 yrs, TV-L E13, 32h+ / up to 50% remote.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-07-30",
-   "url": "https://academicpositions.com/ad/leibniz-institute-for-horticultural-sciences-igz/2026/scientist-f-m-div-in-the-area-resource-efficient-controlled-environment-horticulture/251462",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Two Postdoctoral Researchers in Memristor Materials and Devices 2 postdoc tracks: memristor crossbar fabrication/reliability or perovskite quantum-dot nanomaterials for memristive devices. Strong experimental microfab or synthesis skills needed.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://academicpositions.com/ad/university-of-turku/2026/two-postdoctoral-researchers-in-memristor-materials-and-devices/252265",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Multiphysics Modelling of High-Temperature Superconductor Quench Protection Develop and validate FEM/multiphysics models of quench behavior in YBCO HTS tapes/coils; simulate current diverters, propose safer architectures, publish results. 2-year postdoc.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-08-28",
-   "url": "https://academicpositions.com/ad/university-of-turku/2026/postdoctoral-researcher-in-multiphysics-modelling-of-high-temperature-superconductor-quench-protection/252267",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Modeling Large Scale Effects of Electrification of Powertrains in Road-based Freight Model system-level impacts of electric/hybrid trucks on freight (grid, energy, emissions, costs). Apply dynamic systems, optimal control & stats; publish, teach, collaborate.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-09-30",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-modeling-large-scale-effects-of-electrification-of-powertrains-in-road-based-freight/250279",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "SUSMAT - 2 Post-Doctoral Fellow Positions: Development of Multifunctional Hydrogels for Agricultural Applications (2 positions) Opportunity for postdocs with experience in hydrogel formulation, polymer processing, and porous materials to develop bio-based hydrogels for agriculture in a collaborative, international project.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/susmat-2-post-doctoral-fellow-positions-development-of-multifunctional-hydrogels-for-agricultural-applications-2-positions/241669",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc position on redox-targeted flow batteries Develop PFAS-free solid booster composites for redox-targeted flow batteries; optimize morphology, in-flow UV-Vis diagnostics, 3D-print reactor prototypes; validate in lab flow cells.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/empa/2026/postdoc-position-on-redox-targeted-flow-batteries/252598",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctors in Nuclear Engineering 2-year postdoc: research thermohydraulics & safety of water/lead-cooled SMRs; analyze and support design of large-scale experimental facilities in Stockholm/Oskarshamn.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-14",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/kth-royal-institute-of-technology/2026/postdoctors-in-nuclear-engineering/250405",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Research Fellow (Mechanical and railway engineering) 2-year postdoc researching monitoring/mitigation of railway wheel out-of-roundness. Use vibration data, FE & multibody dynamics; lab + real-train testing; supervise students.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/tampere-university/2026/postdoctoral-research-fellow-mechanical-and-railway-engineering/252653",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Human-in-the-Loop Autonomous Systems 5 postdoc openings: research human-in-the-loop autonomous systems—adaptive coordination & user expectations; build prototypes/robot experiments, publish, supervise students. Full-time 2 yrs, on-site Gothenburg.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-15",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-human-in-the-loop-autonomous-systems/251681",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Post-doc Research Position: Nanofabrication for emitting devices Applications Postdoc in Thuwal, Saudi Arabia: nanofabrication of LED/laser diodes (GaN/oxides); cleanroom e-beam lithography/deposition, sputtering; competitive pay, housing & benefits.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/king-abdullah-university-science-technology-kaust/2026/post-doc-research-position-nanofabrication-for-emitting-devices-applications/251927",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc Positions: Origins of Irreversibility Three postdoc posts (math/theoretical physics or history) studying origins of entropy, randomness, chaos & irreversibility. 2-year contract, €3,706–5,760/month.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-14",
-   "pd": "2026-09-22",
-   "url": "https://academicpositions.com/ad/radboud-university/2026/postdoc-positions-origins-of-irreversibility/253218",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "AGBS - Postdoctoral Researcher in Molecular Plant Physiology Join our Plant Stress Physiology team to study molecular mechanisms in plant responses to stress. Requires Ph.D., molecular biology skills, and publication record.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://academicpositions.com/ad/mohammed-vi-polytechnic-university/2026/agbs-postdoctoral-researcher-in-molecular-plant-physiology/238745",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Metabolic Regulation of Inflammation Postdoc to dissect how metabolism rewires inflammatory signaling in human white adipocytes using perturbation, protein/chromatin assays, microscopy and metabolic phenotyping. Solna.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-16",
-   "pd": "2026-09-18",
-   "url": "https://academicpositions.com/ad/karolinska-institutet/2026/postdoctoral-researcher-in-metabolic-regulation-of-inflammation/253166",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher / Project Researcher Fixed Term Position (Mathematics) Fixed-term postdoc/project researcher in analytic number theory (2027–2028). Independent research; strong research plan required. Salary ~€3.7–4.6k/mo (postdoc).",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-20",
-   "pd": "2026-09-23",
-   "url": "https://academicpositions.com/ad/university-of-turku/2026/postdoctoral-researcher-project-researcher-fixed-term-position-mathematics/253239",
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415847/post-doctoral-associate-in-the-division-of-social-science-social-research-and-public-policy-/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
-   "s": "academicpositions",
-   "t": "Postdoc in Optical Manipulation and Single-Particle Nanosensing Postdoc: develop optical tweezers and plasmonic nanoparticle single-particle nanosensing; build instrumentation, analyze data, study interactions in complex media.",
-   "u": null,
+   "s": "the",
+   "t": "Post-doctoral Associate in the Division of Social Science (Economics)",
+   "u": "Post-doctoral Associate in the Division of Social Science (Economics)",
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
-   "dl": "2026-10-21",
-   "pd": "2026-09-23",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-optical-manipulation-and-single-particle-nanosensing/253267",
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/415846/post-doctoral-associate-in-the-division-of-social-science-economics-/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Machine Learning and Surrogate Modelling Work at the interface of machine learning, uncertainty quantification, and computational biomechanics to develop real-time probabilistic surrogate models for neurosurgical guidance systems.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-machine-learning-and-surrogate-modelling/244127",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in proteomics study of heterologous expression and PTMs of casein in bacterial hosts 2-year postdoc: use MS-based proteomics to detect/optimize casein PTMs (phosphorylation required; glycosylation a plus) in bacterial hosts; analyze MS data, collaborate.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/chalmers-university-of-technology/2026/postdoc-in-proteomics-study-of-heterologous-expression-and-ptms-of-casein-in-bacterial-hosts/246893",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher, History, Culture and Communication Studies 3-year postdoc to lead independent research on 21st‑century propaganda in Northern Europe; publish articles/monograph, collaborate in SafeEarth, seek funding, minimal teaching.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-01",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/university-of-oulu/2026/postdoctoral-researcher-history-culture-and-communication-studies/252929",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Neuromodulation of Feeding Postdoc to study neuropeptide control of feeding in Drosophila using genetics/CRISPR, imaging & bioinformatics. Lead papers, supervise students. 1-year extendable.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-12-31",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/ku-leuven/2026/postdoctoral-researcher-in-neuromodulation-of-feeding/249086",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Scientific Programmer / Post-Doctoral Researcher on Project Hippocampus: The Future of OpenML Redesign and build next-gen OpenML: develop elegant APIs and user-centered/agentic interfaces, integrate with federated data/compute platforms, improve maintainability and review OSS code. ML/web stack exp.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-10-15",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/leiden-university/2026/scientific-programmer-post-doctoral-researcher-on-project-hippocampus-the-future-of-openml/252738",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Full-time one-year postdoctotal position at the centre de Recherche en philosophie 12‑month postdoc: propose your own project on 18th‑century philosophy engaging Newton’s mathematical‑experimental paradigm (RENEW18). International mobility required; research budget & benefits.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-11-01",
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/universite-libre-de-bruxelles/2026/full-time-one-year-postdoctotal-position-at-the-centre-de-recherche-en-philosophie/252099",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoctoral Researcher in Experimental Neurodegeneration Lead iPSC-derived midbrain neuron/organoid studies in neurodegeneration; perturb Ca2+/mitochondria pathways, imaging/MEA, multiomics. 3‑yr full-time Belval; €87,306/yr.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-experimental-neurodegeneration/251995",
-   "dv": []
-  },
-  {
-   "s": "academicpositions",
-   "t": "Postdoc in Metabolomics & Lipidomics - Core Facility Postdoc supporting metabolomics/lipidomics core facility: run LC/IC/GC‑MS assays, develop/validate methods, analyse data, ensure QA, support clients. 24‑month, Belval.",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://academicpositions.com/ad/university-of-luxembourg/2026/postdoc-in-metabolomics-lipidomics-core-facility/252211",
-   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -998,6 +439,21 @@
    "pd": "2026-09-05",
    "url": "https://www.jobs.ac.uk/job/DSV360/group-leader-research-fellowship-sponsorship-scheme-at-ucl",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate in Nucleic Acid Computing and Molecular Engineering (Fixed Term)",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £46,049 Date Placed: 23 Sep",
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://www.jobs.ac.uk/job/DTA511/postdoctoral-research-associate-in-nucleic-acid-computing-and-molecular-engineering-fixed-term",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -1144,6 +600,21 @@
   },
   {
    "s": "jobsacuk",
+   "t": "Research Fellow in AI-Assisted Formal Verification",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£48,822 to £51,753 per annum Date Placed: 23 Sep",
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://www.jobs.ac.uk/job/DTA524/research-fellow-in-ai-assisted-formal-verification",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
    "t": "Senior Research Fellow on Agentic AI and Verification",
    "u": null,
    "dp": null,
@@ -1153,9 +624,7 @@
    "dl": null,
    "pd": "2026-09-23",
    "url": "https://www.jobs.ac.uk/job/DTA231/senior-research-fellow-on-agentic-ai-and-verification",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -1182,6 +651,21 @@
    "pd": "2026-09-04",
    "url": "https://www.jobs.ac.uk/job/DSU890/postdoctoral-research-assistant-in-spatial-analysis-of-spatial-transcriptomics-for-therapy-response-in-colorectal-cancer",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £47,779 per annum. Grade 7 Date Placed: 21 Sep",
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://www.jobs.ac.uk/job/DSZ779/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -1237,19 +721,6 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Fellow in Law",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-02",
-   "url": "https://www.jobs.ac.uk/job/DSP267/postdoctoral-fellow-in-law",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
    "t": "Postdoctoral Research Fellow",
    "u": null,
    "dp": null,
@@ -1263,15 +734,15 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
+   "t": "Postdoctoral Fellow in Law",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 14 Sep",
+   "sal": null,
    "dl": null,
-   "pd": "2026-09-19",
-   "url": "https://www.jobs.ac.uk/job/DSX823/postdoctoral-research-associate",
+   "pd": "2026-09-02",
+   "url": "https://www.jobs.ac.uk/job/DSP267/postdoctoral-fellow-in-law",
    "dv": []
   },
   {
@@ -1281,10 +752,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum, UE07 Date Placed: 20 Aug",
+   "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 14 Sep",
    "dl": null,
-   "pd": "2026-09-12",
-   "url": "https://www.jobs.ac.uk/job/DSR298/postdoctoral-research-associate",
+   "pd": "2026-09-19",
+   "url": "https://www.jobs.ac.uk/job/DSX823/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1320,6 +791,32 @@
    "dp": null,
    "c": null,
    "ct": null,
+   "sal": "£41,064 to £48,822 per annum, UE07 Date Placed: 20 Aug",
+   "dl": null,
+   "pd": "2026-09-12",
+   "url": "https://www.jobs.ac.uk/job/DSR298/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£34,610 to £39,906 on Grade E, depending on knowledge, skills",
+   "dl": null,
+   "pd": "2026-09-21",
+   "url": "https://www.jobs.ac.uk/job/DSY204/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
    "sal": "£38,419 to £46,618 per annum Date Placed: 24 Aug",
    "dl": null,
    "pd": "2026-09-14",
@@ -1346,10 +843,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£34,610 to £39,906 on Grade E, depending on knowledge, skills",
+   "sal": "£38,419 to £46,618 per annum. Date Placed: 16 Sep",
    "dl": null,
    "pd": "2026-09-21",
-   "url": "https://www.jobs.ac.uk/job/DSY204/postdoctoral-research-associate",
+   "url": "https://www.jobs.ac.uk/job/DSY442/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1359,10 +856,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£38,419 to £46,618 per annum. Date Placed: 16 Sep",
+   "sal": "£38,419 to £46,618 per annum Date Placed: 16 Sep",
    "dl": null,
-   "pd": "2026-09-21",
-   "url": "https://www.jobs.ac.uk/job/DSY442/postdoctoral-research-associate",
+   "pd": "2026-09-22",
+   "url": "https://www.jobs.ac.uk/job/DSY618/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1385,6 +882,19 @@
    "dp": null,
    "c": null,
    "ct": null,
+   "sal": "£41,064 to £48,822 per annum, pro rata if part time Date Place",
+   "dl": null,
+   "pd": "2026-09-22",
+   "url": "https://www.jobs.ac.uk/job/DSY797/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
    "sal": "£41,064 to £48,822 per annum (Grade 7) Date Placed: 01 Sep",
    "dl": null,
    "pd": "2026-09-20",
@@ -1398,10 +908,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£38,419 to £46,618 per annum Date Placed: 16 Sep",
+   "sal": "£41,064 to £48,822 per annum Date Placed: 17 Sep",
    "dl": null,
    "pd": "2026-09-22",
-   "url": "https://www.jobs.ac.uk/job/DSY618/postdoctoral-research-associate",
+   "url": "https://www.jobs.ac.uk/job/DSY827/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1419,15 +929,15 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
+   "t": "Postdoctoral Research Assistant",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum, pro rata if part time Date Place",
+   "sal": "£39,424 to £47,779 per annum, pro rata Date Placed: 17 Sep",
    "dl": null,
-   "pd": "2026-09-22",
-   "url": "https://www.jobs.ac.uk/job/DSY797/postdoctoral-research-associate",
+   "pd": "2026-09-23",
+   "url": "https://www.jobs.ac.uk/job/DSY974/postdoctoral-research-assistant",
    "dv": []
   },
   {
@@ -1437,10 +947,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 17 Sep",
+   "sal": "£45,031 to £52,514 per annum including London Weighting Allowa",
    "dl": null,
    "pd": "2026-09-22",
-   "url": "https://www.jobs.ac.uk/job/DSY827/postdoctoral-research-associate",
+   "url": "https://www.jobs.ac.uk/job/DSY951/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -1463,23 +973,10 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£45,031 to £52,514 per annum including London Weighting Allowa",
+   "sal": "£36,636 to £38,784 per annum, Grade 6 Date Placed: 18 Sep",
    "dl": null,
-   "pd": "2026-09-22",
-   "url": "https://www.jobs.ac.uk/job/DSY951/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Assistant",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,424 to £47,779 per annum, pro rata Date Placed: 17 Sep",
-   "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.jobs.ac.uk/job/DSY974/postdoctoral-research-assistant",
+   "pd": "2026-09-24",
+   "url": "https://www.jobs.ac.uk/job/DSZ331/postdoctoral-research-associate",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -1495,24 +992,7 @@
    "dl": null,
    "pd": "2026-09-23",
    "url": "https://www.jobs.ac.uk/job/DSV833/postdoctoral-fellowship-in-entrepreneurship",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,784 to £43,428 Date Placed: 08 Sep",
-   "dl": null,
-   "pd": "2026-09-23",
-   "url": "https://www.jobs.ac.uk/job/DSW297/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
@@ -1525,6 +1005,19 @@
    "dl": null,
    "pd": "2026-09-23",
    "url": "https://jobs.ethz.ch/job/view/12137",
+   "dv": []
+  },
+  {
+   "s": "eth",
+   "t": "Postdoctoral Researcher: Experimental Fracture Mechanics of Soft Materials 100%, Zurich, fixed-term 23.09.2026 | Institute for Building Materials (IfB)",
+   "u": "ETH Zurich",
+   "dp": null,
+   "c": "Switzerland",
+   "ct": "Zurich",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-09-24",
+   "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_URhJoxBUBdeERNqLjC",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -1657,9 +1150,7 @@
    "dl": null,
    "pd": "2026-09-23",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Computer-Vision-and-Smart-Sensing-for-Sustainable-Aluminium-Recycling-2628-CD/1372822157/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "tudelft",
@@ -1702,19 +1193,6 @@
   },
   {
    "s": "tudelft",
-   "t": "Postdoc in MRI Physics",
-   "u": "TU Delft",
-   "dp": null,
-   "c": "Netherlands",
-   "ct": "Delft",
-   "sal": null,
-   "dl": null,
-   "pd": "2026-09-10",
-   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-MRI-Physics-2628-CD/1371672357/",
-   "dv": []
-  },
-  {
-   "s": "tudelft",
    "t": "Postdoc Aircraft Noise Computations from Installed Propeller-Fuselage Interaction",
    "u": "TU Delft",
    "dp": null,
@@ -1737,9 +1215,7 @@
    "dl": null,
    "pd": "2026-09-23",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Ocean-Sea-Ice-Interactions-2628-CD/1372788657/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "tudelft",
@@ -1752,19 +1228,6 @@
    "dl": null,
    "pd": "2026-08-22",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-in-Monitoring-of-Thermally-Induced-Seismic-Events-2628-CD/1370080657/",
-   "dv": []
-  },
-  {
-   "s": "toronto",
-   "t": "Postdoctoral Fellow",
-   "u": "University of Toronto",
-   "dp": "Civil & Mineral Engineering",
-   "c": "Canada",
-   "ct": "Toronto",
-   "sal": null,
-   "dl": null,
-   "pd": "2026-07-30",
-   "url": "https://civmin.utoronto.ca/wp-content/uploads/2026/02/020526-RCA-Revised-UF-Postdoc-Position.docx",
    "dv": []
   },
   {
