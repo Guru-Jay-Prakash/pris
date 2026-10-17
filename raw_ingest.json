@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-16",
+ "fetchedAt": "2026-10-17",
  "sources": [
   {
    "id": "the",
@@ -324,6 +324,51 @@
   },
   {
    "s": "the",
+   "t": "University Assistant Postdoctoral 1, Psychology",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/416677/university-assistant-postdoctoral-1-psychology/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "University Assistant (Post-Doc) in Science and Technology Studies",
+   "u": "University Assistant (Post-Doc) in Science and Technology Studies",
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/416675/university-assistant-post-doc-in-science-and-technology-studies/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "ACER COE – Postdoctoral Researcher in Membrane and Electrode Technologies",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": null,
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/416668/acer-coe-postdoctoral-researcher-in-membrane-and-electrode-technologies/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
    "t": "Research Fellow, School of Engineering",
    "u": null,
    "dp": null,
@@ -333,24 +378,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://www.timeshighereducation.com/unijobs/listing/416658/research-fellow-school-of-engineering/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "the",
-   "t": "Doctoral Researcher and/or Post-doctoral Researcher on Compound Semiconductor Energy Converters",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-10-16",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/416649/doctoral-researcher-and-or-post-doctoral-researcher-on-compound-semiconductor-energy-converters/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -402,9 +430,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://www.jobs.ac.uk/job/DTH087/postdoctoral-research-assistant-in-civil-engineering-environmental-fluid-mechanics",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -457,6 +483,21 @@
    "pd": "2026-09-26",
    "url": "https://www.jobs.ac.uk/job/DTB240/research-associate",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Associate in Transport AI",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£35,608 Specialist and Supporting Academic Research Grade 6. S",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH741/research-associate-in-transport-ai",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -534,9 +575,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://www.jobs.ac.uk/job/DTH089/senior-research-associate-in-vegetation-and-fire-modelling",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -589,6 +628,21 @@
    "pd": "2026-10-08",
    "url": "https://www.jobs.ac.uk/job/DTE670/research-associate-for-manufacturing-oriented-computational-design",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Research Associate in Physical Biology - Mitotic Mechanisms",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,694 to £46,049 Date Placed: 16 Oct",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH726/research-associate-in-physical-biology-mitotic-mechanisms",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -657,19 +711,6 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Scientist",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,253 to £47,543 Date Placed: 02 Oct",
-   "dl": null,
-   "pd": "2026-10-03",
-   "url": "https://www.jobs.ac.uk/job/DTD490/postdoctoral-scientist",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
    "t": "Postdoctoral Researcher",
    "u": null,
    "dp": null,
@@ -683,54 +724,15 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
+   "t": "Postdoctoral Scientist",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 (Grade 7) Date Placed: 05 Oct",
+   "sal": "£39,253 to £47,543 Date Placed: 02 Oct",
    "dl": null,
-   "pd": "2026-10-10",
-   "url": "https://www.jobs.ac.uk/job/DTD877/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum. Grade UE07 Date Placed: 14 Oct",
-   "dl": null,
-   "pd": "2026-10-15",
-   "url": "https://www.jobs.ac.uk/job/DTG757/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Fellow",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£42,254 to £50,253 per annum Date Placed: 14 Oct",
-   "dl": null,
-   "pd": "2026-10-15",
-   "url": "https://www.jobs.ac.uk/job/DTG756/postdoctoral-research-fellow",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum. Grade UE07 Date Placed: 14 Oct",
-   "dl": null,
-   "pd": "2026-10-15",
-   "url": "https://www.jobs.ac.uk/job/DTG762/postdoctoral-research-associate",
+   "pd": "2026-10-03",
+   "url": "https://www.jobs.ac.uk/job/DTD490/postdoctoral-scientist",
    "dv": []
   },
   {
@@ -745,6 +747,47 @@
    "pd": "2026-09-02",
    "url": "https://www.jobs.ac.uk/job/DSP267/postdoctoral-fellow-in-law",
    "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Scientist",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,424 to £43,984 Grade 7 Date Placed: 15 Oct",
+   "dl": null,
+   "pd": "2026-10-16",
+   "url": "https://www.jobs.ac.uk/job/DTH106/postdoctoral-research-scientist",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 15 Oct",
+   "dl": null,
+   "pd": "2026-10-16",
+   "url": "https://www.jobs.ac.uk/job/DTH120/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,784 to £46,049 Grade 7 Date Placed: 16 Oct",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTE204/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "jobsacuk",
@@ -766,13 +809,11 @@
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£41,064 to £48,822 per annum Date Placed: 15 Oct",
+   "sal": "£37,694 (Grade 6) Date Placed: 06 Oct",
    "dl": null,
-   "pd": "2026-10-16",
-   "url": "https://www.jobs.ac.uk/job/DTH120/postdoctoral-research-associate",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "pd": "2026-10-11",
+   "url": "https://www.jobs.ac.uk/job/DTE422/postdoctoral-research-associate",
+   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -789,44 +830,31 @@
   },
   {
    "s": "jobsacuk",
-   "t": "Postdoctoral Research Scientist",
+   "t": "International Postdoctoral Researcher",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£39,424 to £43,984 Grade 7 Date Placed: 15 Oct",
+   "sal": null,
    "dl": null,
-   "pd": "2026-10-16",
-   "url": "https://www.jobs.ac.uk/job/DTH106/postdoctoral-research-scientist",
+   "pd": "2026-10-12",
+   "url": "https://www.jobs.ac.uk/job/DTE689/international-postdoctoral-researcher",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£44,352 on Grade F, dependent on knowledge, skills and experie",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH810/postdoctoral-research-fellow",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£37,694 (Grade 6) Date Placed: 06 Oct",
-   "dl": null,
-   "pd": "2026-10-11",
-   "url": "https://www.jobs.ac.uk/job/DTE422/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,419 to £51,755 per annum Date Placed: 16 Sep",
-   "dl": null,
-   "pd": "2026-10-05",
-   "url": "https://www.jobs.ac.uk/job/DSY610/postdoctoral-research-associate",
-   "dv": []
   },
   {
    "s": "jobsacuk",
@@ -848,75 +876,25 @@
    "dp": null,
    "c": null,
    "ct": null,
+   "sal": "£41,064 to £48,822 per annum Date Placed: 16 Oct",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH533/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
    "sal": "£39,560 to £41,885 per annum Date Placed: 07 Oct",
    "dl": null,
    "pd": "2026-10-13",
    "url": "https://www.jobs.ac.uk/job/DTE694/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "International Postdoctoral Researcher",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": null,
-   "pd": "2026-10-12",
-   "url": "https://www.jobs.ac.uk/job/DTE689/international-postdoctoral-researcher",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,424 to £47,779 per annum inclusive of Oxford University we",
-   "dl": null,
-   "pd": "2026-10-06",
-   "url": "https://www.jobs.ac.uk/job/DSZ416/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£36,636 to £38,784 per annum, Grade 6 Date Placed: 18 Sep",
-   "dl": null,
-   "pd": "2026-10-05",
-   "url": "https://www.jobs.ac.uk/job/DSZ331/postdoctoral-research-associate",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Fellow",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,784 to £46,049 p.a. Date Placed: 22 Sep",
-   "dl": null,
-   "pd": "2026-10-10",
-   "url": "https://www.jobs.ac.uk/job/DTA199/postdoctoral-research-fellow",
-   "dv": []
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Postdoctoral Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,064 to £48,822 per annum, pro rata if part-time Date Place",
-   "dl": null,
-   "pd": "2026-10-15",
-   "url": "https://www.jobs.ac.uk/job/DTF132/postdoctoral-research-associate",
    "dv": []
   },
   {
@@ -933,6 +911,77 @@
    "dv": []
   },
   {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£38,419 to £51,755 per annum Date Placed: 16 Sep",
+   "dl": null,
+   "pd": "2026-10-05",
+   "url": "https://www.jobs.ac.uk/job/DSY610/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£39,560 to £41,885 per annum. Grade 7 Date Placed: 16 Oct",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH781/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Fellow",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£44,352 to £54,367 on Grade F, depending on knowledge, skills",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTF125/postdoctoral-research-fellow",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£36,636 to £38,784 per annum, Grade 6 Date Placed: 18 Sep",
+   "dl": null,
+   "pd": "2026-10-05",
+   "url": "https://www.jobs.ac.uk/job/DSZ331/postdoctoral-research-associate",
+   "dv": []
+  },
+  {
+   "s": "jobsacuk",
+   "t": "Postdoctoral Research Associate",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£37,369 to £40,704 per annum Date Placed: 16 Oct",
+   "dl": null,
+   "pd": "2026-10-17",
+   "url": "https://www.jobs.ac.uk/job/DTH842/postdoctoral-research-associate",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
    "s": "eth",
    "t": "Postdoctoral Researcher in Adsorption and Environmental Fate of Water-Soluble Polymers 100%, Zurich, fixed-term 15.10.2026 | Department of Environmental Systems Sciences (D-USYS) - Environmental Chemistry",
    "u": "ETH Zurich",
@@ -943,9 +992,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_ymt0yMvCoPJQI5cVGV",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
@@ -958,9 +1005,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://jobs.ethz.ch/job/view/JOPG_ethz_WDKA7Txhmrk23mto0R",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "eth",
@@ -1181,21 +1226,19 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Category-Theory%2C-Computer-Proof-Assistants-and-Computer-Algebra-Systems-2628-CD/1373970157/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "tudelft",
-   "t": "Postdoc Position Whole Life Cycle Design for Climate-Responsive Buildings",
+   "t": "Postdoc System Engineeering for Floating Wind Farms",
    "u": "TU Delft",
    "dp": null,
    "c": "Netherlands",
    "ct": "Delft",
    "sal": null,
    "dl": null,
-   "pd": "2026-10-16",
-   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Position-Whole-Life-Cycle-Design-for-Climate-Responsive-Buildings-2628-CD/1372048957/",
+   "pd": "2026-10-17",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-System-Engineeering-for-Floating-Wind-Farms-2628-CD/1375104657/",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -1211,9 +1254,20 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Sustainability-and-Responsible-Innovation-for-Climate-Resilient-Water-Systems-2628-CD/1374434457/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc Position Whole Life Cycle Design for Climate-Responsive Buildings",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-10-16",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Position-Whole-Life-Cycle-Design-for-Climate-Responsive-Buildings-2628-CD/1372048957/",
+   "dv": []
   },
   {
    "s": "tudelft",
@@ -1226,9 +1280,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-EMT-Modelling-of-High-Voltage-Components-and-Protection-%28UTOPYS%29-2628-CD/1373337557/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "tudelft",
@@ -1241,9 +1293,7 @@
    "dl": null,
    "pd": "2026-10-16",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-EMT-Transmission-Backbone-and-Model-Integration-%28UTOPYS%29-2628-CD/1373337957/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "toronto",
