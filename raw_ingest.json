@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-26",
+ "fetchedAt": "2026-11-27",
  "sources": [
   {
    "id": "the",
@@ -285,45 +285,45 @@
   },
   {
    "s": "the",
-   "t": "Post-doctoral Fellow in the School of Nursing",
+   "t": "Post-doctoral Fellow in High-Energy Astrophysics in the Department of Physics",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
    "dl": null,
-   "pd": "2026-11-26",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/418061/post-doctoral-fellow-in-the-school-of-nursing/?LinkSource=PremiumListing",
+   "pd": "2026-11-27",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/418077/post-doctoral-fellow-in-high-energy-astrophysics-in-the-department-of-physics/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
   },
   {
    "s": "the",
-   "t": "ASARI - Postdoctoral Researcher in Seaweed Cultivation for Sustainable Aquaculture Systems",
+   "t": "Research Associate in Artificial Intelligence",
+   "u": null,
+   "dp": null,
+   "c": null,
+   "ct": null,
+   "sal": "£32,722 - £38,448 per annum LIVERPOOL JOHN MOORES UN",
+   "dl": null,
+   "pd": "2026-11-27",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/418076/research-associate-in-artificial-intelligence/?LinkSource=PremiumListing",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
+  },
+  {
+   "s": "the",
+   "t": "UM Postdoctoral Fellow",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
    "sal": null,
    "dl": null,
-   "pd": "2026-11-26",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/418060/asari-postdoctoral-researcher-in-seaweed-cultivation-for-sustainable-aquaculture-systems/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "the",
-   "t": "Research Associate",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£47,403 per annum inclusive of London Weighting UNIV",
-   "dl": null,
-   "pd": "2026-11-26",
-   "url": "https://www.timeshighereducation.com/unijobs/listing/418050/research-associate/?LinkSource=PremiumListing",
+   "pd": "2026-11-27",
+   "url": "https://www.timeshighereducation.com/unijobs/listing/418068/um-postdoctoral-fellow/?LinkSource=PremiumListing",
    "dv": [
     "postedDate.firstSeenByPRIS"
    ]
@@ -340,8 +340,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTR828/senior-research-associate-in-energy-demand-flexibility",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -356,8 +355,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTR833/research-associate-in-energy-demand-flexibility",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -372,8 +370,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTR285/research-associate-consumer-led-heat-flexibility",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -388,8 +385,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTR537/research-fellow-in-construction-digital-twins-and-openbim",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -404,8 +400,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTQ136/research-fellow-rail-vehicle-dynamics-and-testing",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -420,24 +415,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTO260/research-associate-in-biomedical-engineering",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 26 NovResearch Associate in Atmospheric Dispersion Modelling (SENTINEL Project)University of Leicester · Midlands of England · Placed 6 Nov£40,704 per annum, pro-rata if part-time. Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,704 per annum, pro-rata if part-time. Grade 7Read descript",
-   "dl": "2026-11-26",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTO385/research-associate-in-atmospheric-dispersion-modelling-sentinel-project",
-   "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -452,8 +430,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTO552/process-development-engineer-lithium-ion-battery-recycling-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -468,8 +445,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS506/postdoctoral-research-assistant-in-machine-learning",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -484,8 +460,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS553/postdoctoral-research-associate-in-combinatorics-and-related-fields-fixed-term",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -500,8 +475,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS583/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -516,8 +490,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS590/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -532,8 +505,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS627/postdoctoral-research-associate-in-additive-number-theory",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -548,8 +520,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS667/postdoctoral-research-associate-in-single-molecule-chemistry-for-environmental",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -564,8 +535,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS472/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -580,8 +550,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS575/postdoctoral-research-associate-in-edgeai",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -596,8 +565,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS614/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -612,8 +580,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS640/senior-postdoctoral-researcher-in-single-molecule-biophysics-of-eukaryotic",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -628,8 +595,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS660/postdoctoral-research-assistant-in-exoplanet-discovery-with-the-plato-mission",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -644,8 +610,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS663/postdoctoral-research-assistant-in-engineering-biology",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -660,8 +625,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS670/postdoctoral-researcher-motivation-and-quantitative-educational-research",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -676,8 +640,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS674/postdoctoral-research-associate-fixed-term",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -692,8 +655,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS701/postdoctoral-research-fellow",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -708,8 +670,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS124/postdoctoral-research-associate-in-quantum-condensed-matter-theory",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -724,8 +685,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS222/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -740,8 +700,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS245/postdoctoral-research-associate",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -756,8 +715,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS113/postdoctoral-research-associate-in-tandem-solar-cells",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -772,8 +730,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS155/postdoctoral-research-associate-in-metal-halide-perovskites",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -788,8 +745,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS168/postdoctoral-research-associate-in-cybersecurity",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -804,8 +760,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS273/postdoctoral-researcher",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -820,8 +775,7 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTS321/senior-postdoctoral-researcher-riyadh-university-arts-partnership-ma",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
@@ -836,21 +790,20 @@
    "pd": "2026-11-26",
    "url": "https://www.jobs.ac.uk/job/DTR657/postdoctoral-research-associate-in-algebraic-topology",
    "dv": [
-    "deadline.year",
-    "postedDate.firstSeenByPRIS"
+    "deadline.year"
    ]
   },
   {
    "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 26 NovExperienced Postdoctoral Researcher – Optical Engineer – DTIF SensABLATE Project.Atlantic Technological University · Republic of Ireland · Placed 18 Nov£48,186 to £52,405 Scale: Postdoctoral Researcher PD2Read description",
+   "t": "FeaturedAcademic & ResearchCloses 1 DecPostdoctoral Fellow Computational Biology - Lung Cancer Initiation & ProgressionThe Francis Crick Institute · London · Placed 18 Nov£47,500 with benefits, subject to skills and experienceRead description",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£48,186 to £52,405 Scale: Postdoctoral Researcher PD2Read desc",
-   "dl": "2026-11-26",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR527/experienced-postdoctoral-researcher-optical-engineer-dtif-sensablate-project",
+   "sal": "£47,500 with benefits, subject to skills and experienceRead de",
+   "dl": "2026-12-01",
+   "pd": "2026-11-27",
+   "url": "https://www.jobs.ac.uk/job/DTR665/postdoctoral-fellow-computational-biology-lung-cancer-initiation-and-progression",
    "dv": [
     "deadline.year",
     "postedDate.firstSeenByPRIS"
@@ -1049,9 +1002,7 @@
    "dl": null,
    "pd": "2026-11-26",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Researcher-in-Subsurface-Imaging-and-Scanning-Electron-Microscopy-2628-CD/1378464357/",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "tudelft",
