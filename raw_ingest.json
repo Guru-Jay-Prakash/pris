@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-27",
+ "fetchedAt": "2026-11-28",
  "sources": [
   {
    "id": "the",
@@ -294,9 +294,7 @@
    "dl": null,
    "pd": "2026-11-27",
    "url": "https://www.timeshighereducation.com/unijobs/listing/418077/post-doctoral-fellow-in-high-energy-astrophysics-in-the-department-of-physics/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "the",
@@ -309,9 +307,7 @@
    "dl": null,
    "pd": "2026-11-27",
    "url": "https://www.timeshighereducation.com/unijobs/listing/418076/research-associate-in-artificial-intelligence/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "the",
@@ -324,486 +320,19 @@
    "dl": null,
    "pd": "2026-11-27",
    "url": "https://www.timeshighereducation.com/unijobs/listing/418068/um-postdoctoral-fellow/?LinkSource=PremiumListing",
-   "dv": [
-    "postedDate.firstSeenByPRIS"
-   ]
+   "dv": []
   },
   {
    "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 18 DecSenior Research Associate in Energy Demand FlexibilityUniversity of Oxford · South East England · Placed 18 Nov£50,067 to £59,396 per annumRead description",
+   "t": "Academic & ResearchCloses 4 DecResearch Fellow in Mapping HABITS QualitativeUniversity of Southampton · South East England · Placed 23 Nov£37,369 to £45,641 Pro rata per annumRead description",
    "u": null,
    "dp": null,
    "c": null,
    "ct": null,
-   "sal": "£50,067 to £59,396 per annumRead description",
-   "dl": "2026-12-18",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR828/senior-research-associate-in-energy-demand-flexibility",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 18 DecResearch Associate in Energy Demand FlexibilityUniversity of Oxford · South East England · Placed 18 Nov£40,178 to £48,700 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 per annumRead description",
-   "dl": "2026-12-18",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR833/research-associate-in-energy-demand-flexibility",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 1 DecResearch Associate: Consumer Led Heat FlexibilityUniversity of Sheffield · Northern England · Placed 17 Nov£39,560 to £48,337Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,560 to £48,337Read description",
-   "dl": "2026-12-01",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR285/research-associate-consumer-led-heat-flexibility",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 1 DecResearch Fellow in Construction Digital Twins and openBIMUCL · London · Placed 17 Nov£44,861 to £55,099Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£44,861 to £55,099Read description",
-   "dl": "2026-12-01",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR537/research-fellow-in-construction-digital-twins-and-openbim",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 6 DecResearch Fellow (Rail Vehicle Dynamics and Testing)University of Huddersfield · Northern England · Placed 12 Nov£41,071 to £46,050Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,071 to £46,050Read description",
-   "dl": "2026-12-06",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTQ136/research-fellow-rail-vehicle-dynamics-and-testing",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 3 DecResearch Associate in Biomedical EngineeringUniversity of Sheffield · Northern England · Placed 6 Nov£39,560 to £48,337Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,560 to £48,337Read description",
-   "dl": "2026-12-03",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTO260/research-associate-in-biomedical-engineering",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 4 DecProcess Development Engineer – Lithium Ion Battery Recycling (Research Associate)University of Leicester · Midlands of England · Placed 6 Nov£40,704 to £46,970 per annum, pro-rata if part-time: Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,704 to £46,970 per annum, pro-rata if part-time: Grade 7Re",
+   "sal": "£37,369 to £45,641 Pro rata per annumRead description",
    "dl": "2026-12-04",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTO552/process-development-engineer-lithium-ion-battery-recycling-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 30 NovPostdoctoral Research Assistant in Machine LearningUniversity of Oxford · South East England · Placed 20 Nov£40,178 to £42,434 per annum (Inclusive of Oxford University Weighting). Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £42,434 per annum (Inclusive of Oxford University W",
-   "dl": "2026-11-30",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS506/postdoctoral-research-assistant-in-machine-learning",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 16 JanPostdoctoral Research Associate in Combinatorics and Related Fields (Fixed term)University of Cambridge · South East England · Placed 20 Nov£38,448 to £46,970Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,448 to £46,970Read description",
-   "dl": "2027-01-16",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS553/postdoctoral-research-associate-in-combinatorics-and-related-fields-fixed-term",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 4 DecPostdoctoral Research AssociateThe University of Edinburgh · Scotland · Placed 20 Nov£41,885 to £49,798 (Grade 7)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,885 to £49,798 (Grade 7)Read description",
-   "dl": "2026-12-04",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS583/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 7 DecPostdoctoral Research AssociateThe University of Edinburgh · Scotland · Placed 20 Nov£41,885 to £49,798 per annum (Grade 7)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,885 to £49,798 per annum (Grade 7)Read description",
-   "dl": "2026-12-07",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS590/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 11 DecPostdoctoral Research Associate in Additive Number TheoryUniversity of Oxford · South East England · Placed 20 Nov£42,434 to £48,700 per annum: Research Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£42,434 to £48,700 per annum: Research Grade 7Read description",
-   "dl": "2026-12-11",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS627/postdoctoral-research-associate-in-additive-number-theory",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 3 DecPostdoctoral Research Associate in Single-molecule Chemistry for Environmental SciencesUniversity of Oxford · South East England · Placed 20 Nov£40,178 to £48,700 Grade 7 / inclusive of Oxford University WeightingRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 Grade 7 / inclusive of Oxford University We",
-   "dl": "2026-12-03",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS667/postdoctoral-research-associate-in-single-molecule-chemistry-for-environmental",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "FeaturedAcademic & ResearchCloses 4 DecPostdoctoral Research AssociateQueen Mary University of London · London · Placed 20 Nov£39,187 to £52,790 per annum.Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£39,187 to £52,790 per annum.Read description",
-   "dl": "2026-12-04",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS472/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 11 DecPostdoctoral Research Associate in EdgeAIUniversity of Liverpool · Northern England · Placed 20 Nov£40,704 to £46,970 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,704 to £46,970 per annumRead description",
-   "dl": "2026-12-11",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS575/postdoctoral-research-associate-in-edgeai",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 4 DecPostdoctoral Research AssociateThe University of Edinburgh · Scotland · Placed 20 Nov£41,885 to £49,798 per annum (Grade 7)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,885 to £49,798 per annum (Grade 7)Read description",
-   "dl": "2026-12-04",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS614/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 3 DecSenior Postdoctoral Researcher in Single-Molecule Biophysics of Eukaryotic ReplicationUniversity of Oxford · South East England · Placed 20 Nov£50,067 to £59,396 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£50,067 to £59,396 per annumRead description",
-   "dl": "2026-12-03",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS640/senior-postdoctoral-researcher-in-single-molecule-biophysics-of-eukaryotic",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 17 DecPostdoctoral Research Assistant in Exoplanet Discovery with the PLATO MissionUniversity of Oxford · South East England · Placed 20 Nov£40,178 to £48,700 Grade 7RSRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 Grade 7RSRead description",
-   "dl": "2026-12-17",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS660/postdoctoral-research-assistant-in-exoplanet-discovery-with-the-plato-mission",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 10 DecPostdoctoral Research Assistant in Engineering BiologyUniversity of Oxford · South East England · Placed 20 Nov£40,178 to £48,700 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 per annumRead description",
-   "dl": "2026-12-10",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS663/postdoctoral-research-assistant-in-engineering-biology",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 18 DecPostdoctoral Researcher – Motivation and Quantitative Educational ResearchUniversity of Oxford · South East England · Placed 20 NovNot specifiedRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": null,
-   "dl": "2026-12-18",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS670/postdoctoral-researcher-motivation-and-quantitative-educational-research",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 6 DecPostdoctoral Research Associate (Fixed Term)University of Cambridge · South East England · Placed 20 Nov£38,448 to £46,970Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£38,448 to £46,970Read description",
-   "dl": "2026-12-06",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS674/postdoctoral-research-associate-fixed-term",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 30 NovPostdoctoral Research FellowUCL · London · Placed 20 Nov£44,861 to £55,099Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£44,861 to £55,099Read description",
-   "dl": "2026-11-30",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS701/postdoctoral-research-fellow",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 11 DecPostdoctoral Research Associate in Quantum Condensed Matter TheoryUniversity of Oxford · South East England · Placed 19 Nov£40,178 to £48,700 per annum. Research Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 per annum. Research Grade 7Read description",
-   "dl": "2026-12-11",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS124/postdoctoral-research-associate-in-quantum-condensed-matter-theory",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 3 DecPostdoctoral Research AssociateThe University of Edinburgh · Scotland · Placed 19 Nov£41,885 to £49,798 per annum (Grade 7)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,885 to £49,798 per annum (Grade 7)Read description",
-   "dl": "2026-12-03",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS222/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 3 DecPostdoctoral Research AssociateThe University of Edinburgh · Scotland · Placed 19 Nov£41,885 to £49,798 per annum (Grade 7)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£41,885 to £49,798 per annum (Grade 7)Read description",
-   "dl": "2026-12-03",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS245/postdoctoral-research-associate",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 1 DecPostdoctoral Research Associate in Tandem Solar CellsUniversity of Oxford · South East England · Placed 19 Nov£40,178 to £48,700 Research Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 Research Grade 7Read description",
-   "dl": "2026-12-01",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS113/postdoctoral-research-associate-in-tandem-solar-cells",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 6 JanPostdoctoral Research Associate in Metal Halide PerovskitesUniversity of Oxford · South East England · Placed 19 Nov£40,178 to £48,700 per annum. Grade 7Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 per annum. Grade 7Read description",
-   "dl": "2027-01-06",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS155/postdoctoral-research-associate-in-metal-halide-perovskites",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 10 DecPostdoctoral Research Associate in CybersecurityUniversity of Liverpool · Northern England · Placed 19 Nov£40,704 to £46,970 pa (or pro rata)Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,704 to £46,970 pa (or pro rata)Read description",
-   "dl": "2026-12-10",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS168/postdoctoral-research-associate-in-cybersecurity",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 29 NovPostdoctoral ResearcherBirkbeck, University of London · London · Placed 19 Nov£45,132 to £51,387 per annum.Read description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£45,132 to £51,387 per annum.Read description",
-   "dl": "2026-11-29",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS273/postdoctoral-researcher",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 2 DecSenior Postdoctoral Researcher - Riyadh University Arts Partnership (MA Architecture) - 0.4 - 1FTERoyal College of Art · London · Placed 19 Nov£50,575 to £54,732 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£50,575 to £54,732 per annumRead description",
-   "dl": "2026-12-02",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTS321/senior-postdoctoral-researcher-riyadh-university-arts-partnership-ma",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "Academic & ResearchCloses 14 DecPostdoctoral Research Associate in Algebraic TopologyUniversity of Oxford · South East England · Placed 18 Nov£40,178 to £48,700 per annumRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£40,178 to £48,700 per annumRead description",
-   "dl": "2026-12-14",
-   "pd": "2026-11-26",
-   "url": "https://www.jobs.ac.uk/job/DTR657/postdoctoral-research-associate-in-algebraic-topology",
-   "dv": [
-    "deadline.year"
-   ]
-  },
-  {
-   "s": "jobsacuk",
-   "t": "FeaturedAcademic & ResearchCloses 1 DecPostdoctoral Fellow Computational Biology - Lung Cancer Initiation & ProgressionThe Francis Crick Institute · London · Placed 18 Nov£47,500 with benefits, subject to skills and experienceRead description",
-   "u": null,
-   "dp": null,
-   "c": null,
-   "ct": null,
-   "sal": "£47,500 with benefits, subject to skills and experienceRead de",
-   "dl": "2026-12-01",
-   "pd": "2026-11-27",
-   "url": "https://www.jobs.ac.uk/job/DTR665/postdoctoral-fellow-computational-biology-lung-cancer-initiation-and-progression",
+   "pd": "2026-11-28",
+   "url": "https://www.jobs.ac.uk/job/DTS999/research-fellow-in-mapping-habits-qualitative",
    "dv": [
     "deadline.year",
     "postedDate.firstSeenByPRIS"
@@ -990,6 +519,21 @@
    "pd": "2026-11-24",
    "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Advanced-Cementitious-Composite-Materials-for-Extending-the-Lifetime-of-Infrastructure-2628-CD/1378250557/",
    "dv": []
+  },
+  {
+   "s": "tudelft",
+   "t": "Postdoc Combinatorics",
+   "u": "TU Delft",
+   "dp": null,
+   "c": "Netherlands",
+   "ct": "Delft",
+   "sal": null,
+   "dl": null,
+   "pd": "2026-11-28",
+   "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Combinatorics-2628-CD/1378706057/",
+   "dv": [
+    "postedDate.firstSeenByPRIS"
+   ]
   },
   {
    "s": "tudelft",
